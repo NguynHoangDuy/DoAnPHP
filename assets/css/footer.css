@@ -5,10 +5,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
-  width: 100%;
-  background: #eeeceb;
-}
 footer {
   background: #140b5c;
   width: 100%;
@@ -279,4 +275,9 @@ footer .bottom-details .bottom_text {
     font-size: 20px;
     margin-top: 5px;
   }
+}
+
+
+footer::before{
+  display: none;
 }
