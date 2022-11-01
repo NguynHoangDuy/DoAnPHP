@@ -6,12 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  min-height: 100vh;
   width: 100%;
   background: #eeeceb;
 }
 footer {
-  position: fixed;
   background: #140b5c;
   width: 100%;
   bottom: 0;
