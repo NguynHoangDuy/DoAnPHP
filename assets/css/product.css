@@ -2,18 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
-    justify-content: space-between;
 }
 
 .product-item{
-    width: 20%;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 20px;
+    width: calc((100% / 4) - 50px) ;
     border-radius: 12px;
     box-shadow: 0 0 0 1px #d8e0e8;
     padding: 20px;
+    margin-right: 50px;
     box-sizing: border-box;
 }
 
