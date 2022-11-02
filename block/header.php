@@ -63,6 +63,9 @@
                         <a href="#" class="header-menu--link">Giới thiệu</a>
                     </div>
                     <div class="header-menu--item">
+                        <a href="#" class="header-menu--link">Bài tập</a>
+                    </div>
+                    <div class="header-menu--item">
                         <a href="#" class="header-menu--link">Sản phẩm</a>
                     </div>
                     <div class="header-menu--item">
