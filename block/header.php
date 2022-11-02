@@ -27,21 +27,21 @@
                         <i class="fa fa-phone"></i>
                         <div class="header-method--text">
                             <strong>Hotline: 0912.077.322</strong>
-                            <br>tư vấn 24/7 miễn phí
+                            <br>Tư vấn 24/7 miễn phí
                         </div>
                     </div>
                     <div class="header-method--hotline">
                     <i class="fa fa-phone"></i>
                         <div class="header-method--text">
                             <strong>Hotline: 0945.323.666</strong>
-                            <br>tư vấn 24/7 miễn phí
+                            <br>Tư vấn 24/7 miễn phí
                         </div>
                     </div>
                     <div class="header-method--ship">
                     <i class="fas fa-truck-fast"></i>
                         <div class="header-method--text">
                             <strong>Giao hàng toàn quốc</strong>
-                            <br>ship COD tận nhà
+                            <br>Ship COD tận nhà
                         </div>
                     </div>
                 </div>
