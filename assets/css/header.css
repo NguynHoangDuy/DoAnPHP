@@ -264,7 +264,6 @@
     }
     .is-active{
         width: 100%;
-        /* padding: 10px; */
         border-radius: 20px;
     }
     .header-menu--search input::placeholder{
