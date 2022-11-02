@@ -16,6 +16,7 @@
     <?php
         include("./block/connection.php");
         include("./block/global.php");
+        include("./block/header.php")
     ?>
 
     <div class="container">
