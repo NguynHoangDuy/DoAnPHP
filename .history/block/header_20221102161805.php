@@ -36,7 +36,7 @@
                     <i class="fa fa-bars"></i>
                 </div>
                 <div class="header-content--logo">
-                    <img src="../assets/images/logo-minh-hanh-100.png" alt="" >
+                    <img src="./assets/images/logo-minh-hanh-100.png" alt="" >
                 </div>
                 <div class="header-content--method">
                     <div class="header-method--hotline">
@@ -76,6 +76,9 @@
                     </div>
                     <div class="header-menu--item">
                         <a href="#" class="header-menu--link">Giới thiệu</a>
+                    </div>
+                    <div class="header-menu--item">
+                        <a href="#" class="header-menu--link">Bài tập</a>
                     </div>
                     <div class="header-menu--item">
                         <a href="#" class="header-menu--link">Sản phẩm</a>
