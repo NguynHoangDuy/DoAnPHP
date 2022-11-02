@@ -16,12 +16,18 @@
     <?php
         include("./block/connection.php");
         include("./block/global.php");
+        include("./block/header.php")
     ?>
 
     <div class="container">
         <h3>Thạch</h3>
 
         <?php getSanPham($conn, "THA"); ?>
+    </div>
+    <div class="container">
+        <h3>Thạch</h3>
+
+        <?php getSanPham($conn, "TRA"); ?>
     </div>
         
     <?php
