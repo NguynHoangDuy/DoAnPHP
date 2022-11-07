@@ -7,7 +7,7 @@
         else {
             if(mysqli_num_rows($result) != 0)
             {
-                echo "<div class='product'>";
+                echo "<a class='product' href='#'>";
                 while($row = mysqli_fetch_array($result))
                 {
                     $src = "./assets/images/$row[hinh_anh]";
@@ -22,7 +22,7 @@
                         </div>";
                     echo "</div>";
                 }
-                echo "</div>";
+                echo "</a>";
             }
         }
     }
