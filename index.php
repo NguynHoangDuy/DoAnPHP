@@ -18,17 +18,24 @@
         include("./block/global.php");
         include("./block/header.php")
     ?>
+    <?php
+        $queryDM = "SELECT * FROM `danh_muc`";
+        $result = mysqli_query($conn, $queryDM);
 
-    <div class="container">
-        <h3>Thạch</h3>
-
-        <?php getSanPham($conn, "THA"); ?>
-    </div>
-    <div class="container">
-        <h3>Thạch</h3>
-
-        <?php getSanPham($conn, "TRA"); ?>
-    </div>
+        if($result)
+        {
+            if(mysqli_num_rows($result)!= 0){
+                while($row = mysqli_fetch_array($result))
+                    {
+                        echo "<div class='container'>
+                        <h3 class='product-header'>".$row["ten_dm"]."</h3>";
+                         getSanPham($conn, $row["ma_dm"]); 
+                        echo "</div>";
+                    }
+            }
+        }
+    ?>
+    
         
     <?php
         include("./block/footer.php");
