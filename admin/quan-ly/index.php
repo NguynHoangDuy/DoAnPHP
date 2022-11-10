@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
 <body>
+    <?php
+        session_start();
+            $hasAcc = $_SESSION["hasAcc"];
+            if($hasAcc != true)
+            {
+                header("location: ../");
+            }
+        session_write_close();
+
+        if(isset($_POST["logout"]))
+        {
+            session_start();
+                $_SESSION["hasAcc"] = false;
+                header("location: ../");
+            session_write_close();
+        }
+    ?>
     <div class="admin">
         <div class="admin-sidebar">
             <a href="" class="admin-sidebar-logo">
@@ -66,6 +83,11 @@
                 <div class="admin-avatar">
                     <p class="admin-avatar-name">Admin</p>
                     <img src="../../assets/images/avatar-admin.jpg" alt="" class="admin-avatar-img">
+                    <form action="" method="post">
+                        <button name="logout" type ="submit" class="admin-logout-btn">
+                            <img src="../../assets/images/log-out-icon.png" alt="">
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="admin-content">

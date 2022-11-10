@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
+    <?php
+        if(isset($_POST["submit"]))
+        {
+            $tk = $_POST["name"];
+            $mk = $_POST["pass"];
+
+            if($tk === "admin" || $tk === "admin@gmail.com"  && $mk == "123")
+            {
+                header("location: ./quan-ly");
+                session_start();
+                    $_SESSION["hasAcc"] = true;
+                session_write_close();
+            }
+        }
+    ?>
     <div class="login-body">
         <div class="login">
             <h3 class="login-title">Đăng nhập</h3>
@@ -24,7 +39,7 @@
                     <button type="submit" name="submit" class="login-btn">Đăng nhập</button>
                 </form>
                 <div class="login-back">
-                    <a href="../index.php">Quay lại với Nguyên Liệu Trà Sữa</a>
+                    <a href="../">Quay lại với Nguyên Liệu Trà Sữa</a>
                 </div>
             </div>
         </div>
