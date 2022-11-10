@@ -2,7 +2,7 @@
         <div class="header-container">
             <div class="header-info">
                 <div class="header-info--name">
-                    <a href="#">Công ty cổ phần Thạch Rau Câu Minh Hạnh</a>
+                    <a href="./index.php">Công ty cổ phần Thạch Rau Câu Minh Hạnh</a>
                 </div>
                 <div class="header-info--contact">
                 <div class="header-info--gmail">
@@ -56,7 +56,7 @@
             <div class="header-menu">
                 <div class="header-menu--list">
                     <div class="header-menu--item">
-                        <a href="#" class="header-menu--link is-active">Trang chủ</a>
+                        <a href="./index.php" class="header-menu--link">Trang chủ</a>
                     </div>
                     <div class="header-menu--item">
                         <a href="#" class="header-menu--link">Giới thiệu</a>
@@ -65,7 +65,7 @@
                         <a href="#" class="header-menu--link">Bài tập</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="#" class="header-menu--link">Sản phẩm</a>
+                        <a href="./san-pham.php" class="header-menu--link">Sản phẩm</a>
                     </div>
                     <div class="header-menu--item">
                         <a href="#" class="header-menu--link">Tin tức</a>
