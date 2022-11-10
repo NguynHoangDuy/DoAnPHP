@@ -16,7 +16,8 @@
     <?php
         include("./block/connection.php");
         include("./block/global.php");
-        include("./block/header.php")
+        include("./block/header.php");
+        include("./block/category_slider.php");
     ?>
     <?php
         $queryDM = "SELECT * FROM `danh_muc`";
