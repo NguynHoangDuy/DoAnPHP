@@ -10,7 +10,7 @@ h1 {
 
 .category {
   display: inline-block;
-  margin: 40px 0 0 70px;
+  /* margin: 40px 0 0 70px; */
 }
 
 .select-box {
