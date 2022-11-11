@@ -12,10 +12,11 @@
 </head>
 <body>
 <?php
-        include("./block/connection.php");
-        include("./block/global.php");
-        include("./block/header.php");
+        include("../block/connection.php");
+        include("../block/global.php");
+        include("../block/header_child.php");
     ?>
+	<div class="container">
 	<main>
 		<header>
 		<img src="./assets/images/avatar-thu-phuong.jpg">
@@ -39,8 +40,10 @@
 	<p>Sđt: 0867815609</p>
 	<p>Email: phuong.ltt.61cntt@ntu.edu.vn</p>
 
+	</div>
+	
 	<?php
-        include("./block/footer.php");
+        include("../block/footer.php");
     ?>
 </body>
 </html>

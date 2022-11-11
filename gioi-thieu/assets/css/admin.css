@@ -1,0 +1,243 @@
+.login-body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #F0F0F1;
+}
+
+.login {
+    overflow: hidden;
+    max-width: 400px;
+    margin: 5vh auto 0;
+}
+
+.login-title{
+    font-size: 32px;
+    color: #1d48ba;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-content{
+    width: 100%;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 16px;
+}
+.login-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.login-label{
+    font-size: 16px;
+    color: #0D0D3C;
+    margin-bottom: 10px;
+}
+
+.login-input{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #0D0D3C;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.login-btn{
+    padding: 10px 20px;
+    border: 1px solid #0D0D3C;
+    color: white;
+    background: #1d48ba;
+    border-radius: 8px;
+    display: block;
+    cursor: pointer;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+.login-back{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #0D0D3C;
+    text-align: right;
+}
+
+img.admin-search-icon {
+    position: absolute;
+    background: #1d48ba;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+}
+
+.login-back:hover > a{
+    padding-bottom: 2px;
+    border-bottom: 1px solid #1d48ba;
+}
+
+body{
+    position: relative;
+}
+.admin{
+    position: relative;
+    background-color: #F0F0F1;
+}
+.admin-sidebar {
+    background: #4E73DF;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+.admin-sidebar-logo {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 15px;
+    align-items: center;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+    padding: 20px 20px;
+    box-shadow: 0 0px 2px 2px white;
+    background: #0b31a367;
+}
+img.admin-sidebar-img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.admin-sidebar-logo > span{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+ul.admin-sidebar-list {
+    margin-top: 10px;
+    padding: 20px;
+}
+li.admin-sidebar-item > a{
+    display: flex;
+    align-items: center;
+}
+li.admin-sidebar-item > a > .admin-sidebar-icon{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 20px;
+}
+
+li.admin-sidebar-item {
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+span.admin-sidebar-desc {
+    font-size: 16px;
+    color: white;
+}
+
+li.admin-sidebar-item:hover {
+    opacity: 0.8;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0px 2px 2px white;
+    background-color: white;
+}
+p.admin-avatar-name {
+    font-size: 18px;
+    color: #0D0D3C;
+    font-weight: bold;
+}
+.admin-main {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+}
+
+.admin-search{
+    width: 30%; 
+    position: relative;
+    margin-left: 60px;
+}
+
+input.admin-search-input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #0D0D3C;
+    padding: 20px 40px 20px 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.admin-search-icon {
+    position: absolute;
+    background: #1d48ba;
+    width: 40px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+.admin-search-icon > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+.admin-avatar {
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+img.admin-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.admin-content{
+    background: #F0F0F1;
+    height: 90vh;
+}
+
+button.admin-logout-btn {
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+button.admin-logout-btn > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
