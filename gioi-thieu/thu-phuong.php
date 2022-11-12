@@ -1,49 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nguyên Liệu Trà Sữa</title>
-	<link rel="stylesheet" href="../assets/css/main.css"/>
-	<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thu Phương</title>
+    <link rel="stylesheet" type="text/css" href="phuong.css">
 </head>
 <body>
-<?php
-        include("../block/connection.php");
-        include("../block/global.php");
-        include("../block/header_child.php");
-    ?>
-	<div class="container">
-	<main>
-		<header>
-		<img src="../assets/images/avatar-thu-phuong.jpg">
-		<h1>@lethithuphuong</h1>
-		</header>
-	<ul>
-        
-		<li>
-			<a href="https://www.facebook.com/lethithuphuong.thuphuong"><img src="../assets/images/facebook.png"
-				style="width: 30px; height: 30px; padding-bottom: 10px;">Facebook</a>
-		</li>
-
-		<li>
-			<a href="https://zalo.me/0867815609"><img src="../assets/images/zalo.jpg"
-				style="width: 30px; height: 30px; padding-bottom: 10px;">Zalo</a>
-		</li>
-	</ul>
-	</main>
-	<p>Trường Đại học Nha Trang</p>
-	<p>Khoa Công nghệ thông tin</p>
-	<p>Sđt: 0867815609</p>
-	<p>Email: phuong.ltt.61cntt@ntu.edu.vn</p>
-
-	</div>
-	
-	<?php
-        include("../block/footer.php");
-    ?>
+    <div class="container">
+        <img src="./img/avatar.jpg">
+        <h1>@lethithuphuong</h1>
+        <div class="button">
+            <ul>
+		        <li>
+			        <a href="https://www.facebook.com/lethithuphuong.thuphuong"><img src="./img/facebook.png"
+				        style="width: 30px; height: 30px; padding-bottom: auto;">Facebook</a>
+		        </li>
+		        <li>
+			        <a href="https://zalo.me/0867815609"><img src="./img/zalo.jpg"
+				        style="width: 30px; height: 30px; padding-bottom: auto;">Zalo</a>
+		        </li>
+	        </ul>
+        </div>
+        <div class="cuoi">
+            <p>Trường Đại học Nha Trang</p>
+	        <p>Khoa Công nghệ thông tin</p>
+	        <p>Sđt: 0867815609</p>
+	        <p>Email: phuong.ltt.61cntt@ntu.edu.vn</p>
+        </div>
+    </div>
 </body>
 </html>
