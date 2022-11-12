@@ -79,7 +79,7 @@ body {
 	
 }
 
-.button ul > li > a > img {
+.button ul > li > a > images {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
