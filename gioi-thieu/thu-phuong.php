@@ -9,16 +9,16 @@
 </head>
 <body>
     <div class="container">
-        <img src="./img/avatar.jpg">
+        <img src="./assets/images/avatar.jpg">
         <h1>@lethithuphuong</h1>
         <div class="button">
             <ul>
 		        <li>
-			        <a href="https://www.facebook.com/lethithuphuong.thuphuong"><img src="./img/facebook.png"
+			        <a href="https://www.facebook.com/lethithuphuong.thuphuong"><img src="./assets/images/facebook.png"
 				        style="width: 30px; height: 30px; padding-bottom: auto;">Facebook</a>
 		        </li>
 		        <li>
-			        <a href="https://zalo.me/0867815609"><img src="./img/zalo.jpg"
+			        <a href="https://zalo.me/0867815609"><img src="./assets/images/zalo.jpg"
 				        style="width: 30px; height: 30px; padding-bottom: auto;">Zalo</a>
 		        </li>
 	        </ul>
