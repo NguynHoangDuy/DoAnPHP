@@ -19,7 +19,7 @@ h1 {
   flex-direction: column;
 }
 
-.select-box .options-container {
+.select-box .options-container  {
   background: #2f3640;
   color: #f5f6fa;
   max-height: 0;
@@ -31,6 +31,9 @@ h1 {
 
   order: 1;
 }
+.option > label > a {
+  color: #f5f6fa;
+}
 
 .selected {
   background: #2f3640;
@@ -41,7 +44,9 @@ h1 {
   font-size: 18px;
   order: 0;
 }
-
+.selected > a {
+  color: #f5f6fa;
+}
 .selected::after {
   content: "";
   background: url("../images/arrow-down.svg");
@@ -65,8 +70,7 @@ h1 {
 }
 
 .select-box .options-container.active + .selected::after {
-  transform: rotateX(180deg);
-  top: -6px;
+  transform: rotateX(360deg);
 }
 
 .select-box .options-container::-webkit-scrollbar {
