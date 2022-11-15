@@ -17,29 +17,29 @@
         include("../block/header_child.php");
     ?>
 	<div class="container">
-	<main>
-		<header>
-		<img src="../assets/images/avatar-thu-phuong.jpg">
-		<h1>@lethithuphuong</h1>
-		</header>
-	<ul>
+		<div class="info-phuong">
+        	<img src="../assets/images/avatar-phuong.jpg">
+        	<h1>@lethithuphuong</h1>
+			<div class="button">
+            <ul>
+		        <li>
+			        <a href="https://www.facebook.com/lethithuphuong.thuphuong"><img src="../assets/images/facebook.png"
+				        style="width: 30px; height: 30px; padding-bottom: auto;">Facebook</a>
+		        </li>
+		        <li>
+			        <a href="https://zalo.me/0867815609"><img src="../assets/images/zalo.jpg"
+				        style="width: 30px; height: 30px; padding-bottom: auto;">Zalo</a>
+		        </li>
+	        </ul>
+        </div>
+        <div class="cuoi">
+            <p>Trường Đại học Nha Trang</p>
+	        <p>Khoa Công nghệ thông tin</p>
+	        <p>Sđt: 0867815609</p>
+	        <p>Email: phuong.ltt.61cntt@ntu.edu.vn</p>
+        </div>
+    	</div>
         
-		<li>
-			<a href="https://www.facebook.com/lethithuphuong.thuphuong"><img src="../assets/images/facebook.png"
-				style="width: 30px; height: 30px; padding-bottom: 10px;">Facebook</a>
-		</li>
-
-		<li>
-			<a href="https://zalo.me/0867815609"><img src="../assets/images/zalo.jpg"
-				style="width: 30px; height: 30px; padding-bottom: 10px;">Zalo</a>
-		</li>
-	</ul>
-	</main>
-	<p>Trường Đại học Nha Trang</p>
-	<p>Khoa Công nghệ thông tin</p>
-	<p>Sđt: 0867815609</p>
-	<p>Email: phuong.ltt.61cntt@ntu.edu.vn</p>
-
 	</div>
 	
 	<?php
