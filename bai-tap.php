@@ -33,8 +33,8 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">PHP & FORM</p>
                             <ul class="exercise-item ">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
+                                <li> <a href="./bai-tap/nguyen-hoang-duy-form/bai1.php">Exercise 1</a> </li>
+                                <li> <a href="./bai-tap/nguyen-hoang-duy-form/bai2.php">Exercise 2</a> </li>
                                 <li> <a href="">Exercise 3</a> </li>
                                 <li> <a href="">Exercise 4</a> </li>
                                 <li> <a href="">Exercise 5</a> </li>
