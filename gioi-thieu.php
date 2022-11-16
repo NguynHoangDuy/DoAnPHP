@@ -33,7 +33,7 @@
                     <span>MSSV: 61133539</span>
                 </a>
                 <a href="./gioi-thieu/thu-phuong.php" class="info-item">
-                    <img src="./assets/images/avatar-thu-phuong.jpg" alt="" class="info-img">
+                    <img src="./assets/images/avatar-phuong.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Lê Thị Thu Phương
                     </h4>
@@ -47,7 +47,7 @@
                     <span>MSSV: 61131116</span>
                 </a>
                 <a href="./gioi-thieu/mai-thi.php" class="info-item">
-                    <img src="" alt="" class="info-img">
+                    <img src="./assets/images/profile.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Nguyễn Mai Thi
                     </h4>
