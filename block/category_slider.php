@@ -4,7 +4,7 @@
         <h1>Danh mục sản phẩm</h1>
 
             <div class="select-box">
-                <div class="options-container">
+                <div class="options-container active">
     <?php
         require_once('./db_helper/DB_Helper.php');
         $DB = new DB_helper();
@@ -15,7 +15,8 @@
             echo '
                     <div class="option">
                             <input type="radio" class="radio" id="'.$category['ma_dm'].'" name="category"/>
-                            <label for="'.$category['ma_dm'].'">'.$category['ten_dm'].'</label>
+                            <label for="'.$category['ma_dm'].'"><a href="#">'.$category['ten_dm'].'</a></label>
+                            
                     </div>
             ';
         }
