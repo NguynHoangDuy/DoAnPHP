@@ -50,7 +50,6 @@
                     GIỎ HÀNG / 0 <span>đ</span>
                 </a>
                 <i class="fas fa-bag-shopping"></i>
-                    
                 </div>
             </div>
             <div class="header-menu">
