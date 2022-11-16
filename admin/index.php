@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyên liệu trà sữa</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="./assets/images/blue_tea_logo.webp">
 </head>
 <body>
     <?php

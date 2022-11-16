@@ -20,7 +20,7 @@
                     <i class="fa fa-bars"></i>
                 </div>
                 <div class="header-content--logo">
-                    <img src="../assets/images/logo-minh-hanh-100.png" alt="" >
+                    <img src="../assets/images/blue_tea_logo.webp" alt="" width="100" height="100">
                 </div>
                 <div class="header-content--method">
                     <div class="header-method--hotline">
@@ -50,7 +50,6 @@
                     GIỎ HÀNG / 0 <span>đ</span>
                 </a>
                 <i class="fas fa-bag-shopping"></i>
-                    
                 </div>
             </div>
             <div class="header-menu">

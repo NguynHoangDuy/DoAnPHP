@@ -20,7 +20,7 @@
                     <i class="fa fa-bars"></i>
                 </div>
                 <div class="header-content--logo">
-                    <img src="./assets/images/logo-minh-hanh-100.png" alt="" >
+                    <img src="./assets/images/blue_tea_logo.webp" alt="" width="100" height="100">
                 </div>
                 <div class="header-content--method">
                     <div class="header-method--hotline">
@@ -91,6 +91,7 @@
         const btnOpen = document.querySelector(".header-content--mobile");
         const btnClose = document.querySelector(".header-menu--close");
         const headerMenu = document.querySelector(".header-menu");
+        const menuList = document.querySelector(".header-menu--list")
         btnOpen.addEventListener("click", function(){
             headerMenu.style="transform: translate(0%)";
         });
