@@ -3,7 +3,7 @@
     <div class="top">
       <div class="logo-details">
         <i class="fab fa-slack"></i>
-        <span class="logo_name">PHP Project</span>
+        <span class="logo_name">Trà Sữa</span>
       </div>
       <div class="media-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -40,9 +40,9 @@
       </ul>
 
       <ul class="box input-box">
-        <li class="link_name link_name-subscribe">Subscribe team</li>
-        <li><input type="text" placeholder="Enter your email" /></li>
-        <li><input type="button" value="Subscribe" /></li>
+        <li class="link_name link_name-subscribe">Liên Hệ</li>
+        <li><input type="text" placeholder="Nhập email" /></li>
+        <li><input type="button" value="Liên Hệ" /></li>
       </ul>
     </div>
   </div>
@@ -50,7 +50,7 @@
     <div class="bottom_text">
       <span class="copyright_text"
         >Copyright © 2022
-        <a href="https://github.com/danganhphu">danganhphu.</a></span
+        <a href="#"></a></span
       >
       <a href="#" class="go-top"
         ><i class="fa-sharp fa-solid fa-circle-up"></i
