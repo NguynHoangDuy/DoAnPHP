@@ -24,35 +24,40 @@
                 Thông tin cá nhân
             </h3>
             <div class="info-main">
-                <a href="" class="info-item">
-                    <img src="" alt="" class="info-img">
+                <a href="./gioi-thieu/hoang-duy.php" class="info-item">
+                    <img src="./assets/images/avatar-hoang-duy.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Nguyễn Hoàng Duy
                     </h4>
+                    <span>MSSV: 61133539</span>
                 </a>
-                <a href="" class="info-item">
-                    <img src="" alt="" class="info-img">
+                <a href="./gioi-thieu/thu-phuong.php" class="info-item">
+                    <img src="./assets/images/avatar-thu-phuong.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Lê Thị Thu Phương
                     </h4>
+                    <span>MSSV: 61130888</span>
                 </a>
                 <a href="" class="info-item">
                     <img src="" alt="" class="info-img">
                     <h4 class="info-content">
                         Đặng Anh Phú
                     </h4>
+                    <span>MSSV: 61131116</span>
                 </a>
                 <a href="" class="info-item">
                     <img src="" alt="" class="info-img">
                     <h4 class="info-content">
                         Nguyễn Mai Thi
                     </h4>
+                    <span>MSSV: 61131116</span>
                 </a>
                 <a href="" class="info-item">
                     <img src="" alt="" class="info-img">
                     <h4 class="info-content">
                         Tôn Huỳnh Phương Lan
                     </h4>
+                    <span>MSSV: 61133848</span>
                 </a>
             </div>
         </div>
