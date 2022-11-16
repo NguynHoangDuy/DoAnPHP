@@ -1,4 +1,4 @@
-<footer>
+<footer style="background-color: #1d48ba;">
   <div class="content">
     <div class="top">
       <div class="logo-details">
@@ -33,20 +33,20 @@
       <ul class="box">
         <li class="link_name">Liên hệ</li>
         <li><a href="#">VPGD: 02 Nguyễn Đình Chiểu - Nha Trang</a></li>
-        <li><a href="#">Tư Vấn Kỹ Thuật: 0945323666 Mr Duy Hạnh</a></li>
-        <li><a href="#">Bán Hàng :091 2077322 Mrs Thu Hồng</a></li>
+        <li><a href="#">Tư Vấn Kỹ Thuật: 0945323666 Mr Hoàng Duy</a></li>
+        <li><a href="#">Bán Hàng :091 2077322 Mrs Thu Phương</a></li>
         <li><a href="#">Email 1: phpproject@gmail.com</a></li>
         <li><a href="#">Email 2: trasuantu@gmail.com</a></li>
       </ul>
 
       <ul class="box input-box">
         <li class="link_name link_name-subscribe">Liên Hệ</li>
-        <li><input type="text" placeholder="Nhập email" /></li>
+        <li><input type="text" placeholder="Nhập email" class="input-contact"style="border: 1px solid #1d48ba; background-color: white; color: #1d48ba"/></li>
         <li><input type="button" value="Liên Hệ" /></li>
       </ul>
     </div>
   </div>
-  <div class="bottom-details">
+  <div class="bottom-details" style="background: #002794">
     <div class="bottom_text">
       <span class="copyright_text"
         >Copyright © 2022

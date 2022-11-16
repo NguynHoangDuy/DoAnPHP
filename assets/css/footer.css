@@ -6,7 +6,6 @@
   font-family: "Poppins", sans-serif;
 }
 footer {
-  background: #140b5c;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -161,7 +160,7 @@ footer .content .link-boxes {
   margin-top: 5px;
 }
 .link-boxes .input-box input::placeholder {
-  color: #afafb6;
+  color: #1d48ba;
   font-size: 16px;
 }
 .link-boxes .input-box input[type="button"] {
@@ -180,7 +179,8 @@ footer .content .link-boxes {
 }
 footer .bottom-details {
   width: 100%;
-  background: #0f0844;
+  background: #002794;
+  opacity: 0.6;
 }
 footer .bottom-details .bottom_text {
   max-width: 1250px;
@@ -209,7 +209,6 @@ footer .bottom-details .bottom_text {
   font-size: 27px;
   margin-top: 10px;
 }
-
 @media (max-width: 900px) {
   footer .content .link-boxes {
     flex-wrap: wrap;
