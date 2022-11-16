@@ -42,7 +42,7 @@
                         Đặng Anh Phú
                     </h4>
                 </a>
-                <a href="" class="info-item">
+                <a href="./gioi-thieu/mai-thi.php" class="info-item">
                     <img src="" alt="" class="info-img">
                     <h4 class="info-content">
                         Nguyễn Mai Thi
