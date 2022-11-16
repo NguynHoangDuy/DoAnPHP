@@ -62,7 +62,7 @@
                         <a href="./gioi-thieu.php" class="header-menu--link">Giới thiệu</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="#" class="header-menu--link">Bài tập</a>
+                        <a href="./bai-tap.php" class="header-menu--link">Bài tập</a>
                     </div>
                     <div class="header-menu--item">
                         <a href="./san-pham.php" class="header-menu--link">Sản phẩm</a>

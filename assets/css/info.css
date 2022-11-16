@@ -6,7 +6,7 @@ h3.info-header {
 
 .info-main {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     margin-top: 40px;
 }
@@ -171,12 +171,14 @@ img.infos-item-img {
     box-shadow: 5px -5px 7px #d5d5d5, -5px 5px 7px #ebebeb;
     border-radius: 10px;
     overflow: hidden;
+    background: white;
 }
 
 .exercise-list {
     display: flex;
     font-family: sans-serif;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 p.exercise-title {
@@ -212,4 +214,14 @@ ul.exercise-item > li > a:hover {
     background: #003ecb;
     color: white;
     border-radius: 10px;
+}
+
+.w100{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.w100:first-child{
+    margin-top: 40px;
 }
