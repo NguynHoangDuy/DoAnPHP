@@ -1,5 +1,5 @@
 .header-info{
-    background-color: #303030;
+    background-color: #1d48ba;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -151,7 +151,7 @@ display: none;
     transition: all .25s ease-in;
     /* padding: 0 10px; */
 }
-.header-menu--link:hover{
+.header-menu--item:hover .header-menu--link{
     color: #1d48ba;
 }
 .header-menu--link{

@@ -3,8 +3,8 @@
     <div class="category">
         <h1>Danh mục sản phẩm</h1>
 
-            <div class="select-box">
-                <div class="options-container active">
+            <div class="select-box" >
+                <div class="options-container active" style="background-color: #1d48ba">
     <?php
         require_once('./db_helper/DB_Helper.php');
         $DB = new DB_helper();
@@ -13,7 +13,7 @@
 
         foreach ($categoryList as $category) {
             echo '
-                    <div class="option">
+                    <div class="option" style="background-color: #1d48ba">
                             <input type="radio" class="radio" id="'.$category['ma_dm'].'" name="category"/>
                             <label for="'.$category['ma_dm'].'"><a href="#">'.$category['ten_dm'].'</a></label>
                             
@@ -22,7 +22,7 @@
         }
     ?>
             </div>
-            <div class="selected">
+            <div class="selected" style="background-color: #1d48ba">
                 Chọn danh mục
             </div>
         </div>

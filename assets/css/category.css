@@ -20,7 +20,7 @@ h1 {
 }
 
 .select-box .options-container  {
-  background: #2f3640;
+  background: #1d48ba;
   color: #f5f6fa;
   max-height: 0;
   width: 100%;
@@ -36,7 +36,7 @@ h1 {
 }
 
 .selected {
-  background: #2f3640;
+  background: #1d48ba;
   border-radius: 8px;
   margin-bottom: 8px;
   color: #D6E4E5;
