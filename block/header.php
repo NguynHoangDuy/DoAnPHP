@@ -116,17 +116,6 @@
         btnClose.addEventListener("click", function(){
             headerMenu.style="transform: translate(-100%)";
         });
-        window.addEventListener("scroll", function() {
-            const windowScrollTop = pageYOffset;
-            if (windowScrollTop > headerMenu.offsetTop - headerMenu.offsetHeight /2){
-                headerMenu.classList.add("header-menu--sticky");
-                
-            }
-            else{
-                headerMenu.classList.remove("header-menu--sticky");
-                
-            }
-        })
         const listMenuItem = document.querySelectorAll(".header-menu--link");
         console.log(listMenuItem);
         [...listMenuItem].forEach(item => item.addEventListener("click", function (e){

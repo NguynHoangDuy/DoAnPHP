@@ -40,17 +40,17 @@
                 $resultSearch =  mysqli_query($conn, $query);
                 if ($resultSearch){
                     if ($numRowSearch> 0 && $search!=""){
-                        echo "<p style='font-size: 18px'>Tìm thấy ";
+                        echo "<p style='font-size: 18px; padding: 0 0px 20px'>Tìm thấy ";
                         echo "<span style='font-weight: bold'>$numRowSearch</span>";
                         echo " kết quả với từ khóa ";
                         echo "<span style='font-weight: bold'>$search</span>";
                         echo "</p>";
                         if (!mysqli_num_rows($resultSearch)==0){
-                            echo "<a class='product' href='#'>";
-                    while($row = mysqli_fetch_assoc($resultSearch))
-                    {
+                            echo '<div class="product">';
+                            while($row = mysqli_fetch_assoc($resultSearch))
+                            {
+                        echo "<a class='product-item' href='./chi-tiet-san-pham.php?id=$row[ma_sp]'>";
                         $src = "./assets/images/$row[hinh_anh]";
-                        echo "<div class='product-item'>";
                             echo "<div class='product-img'>
                             <img src='".$src."'>
                                 </div>";
@@ -59,9 +59,9 @@
                                 <p class='product-name'>$row[ten_sp]</p>
                                 <p class='product-price'> <span class='money'>$row[gia]</span> VNĐ</p>
                             </div>";
-                        echo "</div>";
+                        echo "</a>";
                     }
-                    echo "</a>";
+                    echo "</div>";
                     echo "<div class='phanTrang'>";
                 $firstPage = 1;
                 echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."?page=".$firstPage.">";
