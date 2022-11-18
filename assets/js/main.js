@@ -138,7 +138,7 @@ if(baitapBtn)
     
 }
 
-const inputCount = document.querySelector(".input-count")
+const inputCount = document.querySelector(".input-count.only")
 if(inputCount)
 {
     const btnDecr = document.querySelector(".btn-decr")

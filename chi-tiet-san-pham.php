@@ -76,7 +76,7 @@
                     <p style="font-size: 20px; font-weight: bold;">Chọn số lượng:</p>
                     <div class="detail-count-content">
                         <button class="detail-btn btn-decr" type="button">-</button>
-                        <input type="number" class="input-count" value="1" name="amount">
+                        <input type="number" class="input-count only" value="1" name="amount">
                         <button class="detail-btn btn-incr" type="button">+</button>
                     </div>
                 </div>
