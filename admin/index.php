@@ -15,7 +15,7 @@
             $tk = $_POST["name"];
             $mk = $_POST["pass"];
 
-            if($tk === "admin" || $tk === "admin@gmail.com"  && $mk == "123")
+            if(($tk === "admin" || $tk === "admin@gmail.com")  && $mk == "123")
             {
                 header("location: ./quan-ly");
                 session_start();

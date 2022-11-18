@@ -89,11 +89,11 @@ body{
 }
 .admin{
     position: relative;
-    background-color: #F0F0F1;
 }
 .admin-sidebar {
     background: #4E73DF;
-    width: 300px;
+    width: 250px;
+    margin-top: 71px;
     position: fixed;
     top: 0;
     left: 0;
@@ -109,19 +109,18 @@ body{
     align-items: center;
     border-bottom: 1px solid white;
     justify-content: space-between;
-    padding: 20px 20px;
-    box-shadow: 0 0px 2px 2px white;
-    background: #0b31a367;
+    padding: 10px 30px 10px 30px;
 }
 img.admin-sidebar-img {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 .admin-sidebar-logo > span{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: #1d48ba;
 }
 
 ul.admin-sidebar-list {
@@ -154,12 +153,14 @@ li.admin-sidebar-item:hover {
 }
 
 .admin-header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    box-shadow: 0 0px 2px 2px white;
+    box-shadow: 0 0px 2px 2px lightgrey;
     background-color: white;
+    position: fixed;
+    z-index: 1000;
 }
 p.admin-avatar-name {
     font-size: 18px;
@@ -167,8 +168,10 @@ p.admin-avatar-name {
     font-weight: bold;
 }
 .admin-main {
-    width: calc(100% - 300px);
-    margin-left: 300px;
+    /* width: calc(100% - 300px);
+    margin-left: 300px; */
+    width: 100%;
+    position: relative;
 }
 
 .admin-search{
@@ -193,8 +196,9 @@ input.admin-search-input{
     width: 40px;
     height: 100%;
     box-sizing: border-box;
-    padding: 5px;
-    border-radius: 10px;
+    color: white;
+    /* padding: 5px; */
+    border-radius: 0 10px 10px 0;
     cursor: pointer;
     top: 0;
     right: 0;
@@ -222,22 +226,45 @@ img.admin-avatar-img {
 }
 
 .admin-content{
-    background: #F0F0F1;
-    height: 90vh;
+    top: 80px;
+    position: absolute;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    height: auto;
 }
 
 button.admin-logout-btn {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border: 0;
     border-radius: 8px;
     overflow: hidden;
     margin-left: 15px;
     cursor: pointer;
 }
-
-button.admin-logout-btn > img {
-    display: block;
+button.admin-logout-btn > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
+}
+.admin-sidebar--toggle{
+    border-radius: 10px;
+    border: 1px solid #1d48ba;
+    color: #1d48ba;
+    cursor: pointer;
+    padding: 10px;
+    transition: all .25s linear;
+}
+.admin-sidebar--toggle:hover{
+    background-color: #1d48ba;
+    color: white;
+    transition: all .25s linear;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 40px;
 }

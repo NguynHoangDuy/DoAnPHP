@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyên Liệu Trà Sữa</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="icon" type="image/x-icon" href="./assets/images/blue_tea_logo.webp">
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
 </head>
 <body>
     <?php
@@ -28,10 +32,7 @@
     ?>
     <div class="admin">
         <div class="admin-sidebar">
-            <a href="" class="admin-sidebar-logo">
-                <img src="../../assets/images/laugh-wink-solid.png" alt="" class="admin-sidebar-img">
-                <span>NLTS ADMIN</span>
-            </a>
+            
             <ul class="admin-sidebar-list">
                 <li class="admin-sidebar-item">
                     <a href="">
@@ -73,25 +74,121 @@
         </div>
         <div class="admin-main">
             <div class="admin-header">
+                <div class="flex">
+                <a href="" class="admin-sidebar-logo">
+                    <img src="../../assets/images/blue_tea_logo.webp" alt="" class="admin-sidebar-img">
+                    <span>BLUE TEA</span>
+                </a>
+                <div class="admin-sidebar--toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
                 <div class="admin-search">
                     <form action="" method="post">
                         <input type="text" placeholder="Tìm kiếm ..." class="admin-search-input">
                         <button type="submit" class="admin-search-icon">
-                            <img src="../../assets/images/search-solid.png" alt="">
+                            <div class="fas fa-magnifying-glass"></div>
                         </button>
                     </form>
                 </div>
                 <div class="admin-avatar">
-                    <p class="admin-avatar-name">Admin</p>
                     <img src="../../assets/images/avatar-admin.jpg" alt="" class="admin-avatar-img">
                     <form action="" method="post">
-                        <button name="logout" type ="submit" class="admin-logout-btn">
-                            <img src="../../assets/images/log-out-icon.png" alt="">
+                        <button name="logout" type ="submit" class="admin-logout-btn" title="Đăng xuất tài khoản">
+                        <i class="fa-solid fa-right-from-bracket"></i>
                         </button>
                     </form>
                 </div>
             </div>
             <div class="admin-content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus velit minus eligendi quod, cum mollitia officia consequatur quos sequi sapiente aut voluptatum, quo ullam aperiam asperiores molestias ad error. Maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, commodi consequuntur facilis minus pariatur, voluptatum adipisci cumque quas placeat vitae alias eligendi repellendus saepe necessitatibus quia rerum. Quo, totam neque.
             </div>
         </div>
     </div>
