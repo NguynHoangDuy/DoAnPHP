@@ -26,7 +26,7 @@
 .product-item:hover > .product-content > p.product-name {
     color: white;
 }
-.product-item:hover > .product-content > span.product-price {
+.product-item:hover > .product-content > .product-price {
     color: white;
 }
 .product-content {
@@ -85,7 +85,7 @@ p.product-name {
     text-transform: uppercase;
 }
 
-span.product-price {
+.product-price {
     color: #1d48ba;
     font-size: 18px;
     text-align: right;

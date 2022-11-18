@@ -47,7 +47,21 @@
                 </div>
                 <div class="header-content--product">
                     <a href="http://" class="header-product--text">
-                    GIỎ HÀNG / 0 <span>đ</span>
+                    GIỎ HÀNG / <?php
+                        session_start();
+                        if(isset($_SESSION["gioHang"]))
+                        {
+                            $gia = 0;
+                            $gioHang = $_SESSION["gioHang"];
+                            for($i = 0; $i < count($gioHang); $i++)
+                            {
+                                $gia = $gia + $gioHang[$i]["gia"];
+                            }
+                            echo "<span class='money'>$gia</span>";
+                        }
+                        else echo "0";
+                        session_write_close();
+                        ?>  <span>đ</span>
                 </a>
                 <i class="fas fa-bag-shopping"></i>
                 </div>
