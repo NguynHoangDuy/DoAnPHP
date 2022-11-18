@@ -90,10 +90,13 @@
                         <a href="#" class="header-menu--link">liên hệ</a>
                     </div>
                 </div>
+                <form action="../../tim-kiem.php" method="get">
                 <div class="header-menu--search">
-                    <input type="text" name="" id="" placeholder="Bạn cần tìm gì?...">
-                    <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
+                    <input type="text" name="search" id="" placeholder="Bạn cần tìm gì?..."
+                    value="<?php if (isset(($_GET["search"]))) echo $_GET["search"]; else echo "" ?>">
+                    <button type="submit" name="timKiem"><i class="fas fa-magnifying-glass"></i></button>
                 </div>
+                </form>
                 <div class="header-menu--close">
                     <i class="fa fa-times"></i>
                 </div>
