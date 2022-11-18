@@ -119,6 +119,9 @@ display: none;
     font-weight: bold;
     color: white;
 }
+i.fas.fa-bag-shopping {
+    margin-left: 5px;
+}
 .header-menu{
     display: flex;
     color: #1d48ba;

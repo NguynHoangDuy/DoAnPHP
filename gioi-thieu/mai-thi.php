@@ -38,10 +38,5 @@
         include("../block/footer.php");
     ?>
 </body>
+<script src="../assets/js/main.js"></script>
 </html>
-
-<!--
-<i class="fab fa-instagram"></i>
-<i class="fab fa-facebook"></i>
-<i class="fab fa-email"></i>
--->

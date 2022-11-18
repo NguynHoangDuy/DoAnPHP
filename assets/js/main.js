@@ -137,3 +137,30 @@ if(baitapBtn)
     })
     
 }
+
+const inputCount = document.querySelector(".input-count")
+if(inputCount)
+{
+    const btnDecr = document.querySelector(".btn-decr")
+    const btnIncr = document.querySelector(".btn-incr")
+
+    btnDecr.addEventListener("click", ()=>{
+        if(inputCount.value == 1)
+        {
+            inputCount.value = 1
+        }
+        else inputCount.value--
+    })
+    btnIncr.addEventListener("click", ()=>{
+        inputCount.value++
+    })
+}
+
+const moneyType = document.querySelectorAll(".money")
+if(moneyType)
+{
+    console.log(moneyType)
+    moneyType.forEach((item)=>{
+        item.textContent = Number(Number(item.textContent).toFixed(1)).toLocaleString()
+    })
+}
