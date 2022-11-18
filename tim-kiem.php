@@ -7,6 +7,14 @@
     <title>Nguyên liệu trà sữa</title>
     <link rel="stylesheet" href="./assets/css/main.css"/>
     <link rel="icon" type="image/x-icon" href="./assets/images/blue_tea_logo.webp">
+    <style>
+        ul{
+            list-style-position: inside;
+        }
+        ul li{
+            padding: 5px 0;
+        }
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -40,7 +48,7 @@
                 $resultSearch =  mysqli_query($conn, $query);
                 if ($resultSearch){
                     if ($numRowSearch> 0 && $search!=""){
-                        echo "<p style='font-size: 18px; padding: 0 0px 20px'>Tìm thấy ";
+                        echo "<p style='font-size: 18px; padding: 0 0px 20px;  border-bottom: 1px solid lightgray;'>Tìm thấy ";
                         echo "<span style='font-weight: bold'>$numRowSearch</span>";
                         echo " kết quả với từ khóa ";
                         echo "<span style='font-weight: bold'>$search</span>";
@@ -96,12 +104,24 @@
                 echo "</div>";
                         }
                     }
+                    else {
+                        echo "<p style='font-size: 18px; padding: 0 0px 20px; border-bottom: 1px solid lightgray;'>Không tìm thấy kết quả với từ khóa '<span style='font-weight: bold'>$search</span>'</p>";
+                        echo "<ul style='margin-top: 10px;list-style-type: disc; padding: 0 20px'><span style='font-weight: bold'>Hãy thử lại bằng cách</span>
+                            <li> Kiểm tra lỗi chính tả của từ khóa đã nhập.</li>
+                            <li> Thử lại bằng từ khóa khác.</li>
+                            <li> Thử lại bằng những từ khóa tổng quát hơn.</li>
+                            <li> Thử lại bằng những từ khóa ngắn gọn hơn.</li>
+                            </ul>
+                        ";
+
+                    }
                 }
                 else {
                     echo "Không xem được";
                 }
             }
         }
+        include("./block/product-hot.php");
     echo "</div>";
     ?>
     <?php
