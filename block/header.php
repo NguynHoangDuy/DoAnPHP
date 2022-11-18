@@ -92,10 +92,13 @@
                         <a href="#" class="header-menu--link">liên hệ</a>
                     </div>
                 </div>
+                <form action="./tim-kiem.php" method="get">
                 <div class="header-menu--search">
-                    <input type="text" name="" id="" placeholder="Bạn cần tìm gì?...">
-                    <button type="submit"><i class="fas fa-magnifying-glass"></i></button>
+                    <input type="text" name="search" id="" placeholder="Bạn cần tìm gì?..."
+                    value="<?php if (isset(($_GET["search"]))) echo $_GET["search"]; else echo "" ?>">
+                    <button type="submit" name="timKiem"><i class="fas fa-magnifying-glass"></i></button>
                 </div>
+                </form>
                 <div class="header-menu--close">
                     <i class="fa fa-times"></i>
                 </div>
@@ -113,6 +116,17 @@
         btnClose.addEventListener("click", function(){
             headerMenu.style="transform: translate(-100%)";
         });
+        window.addEventListener("scroll", function() {
+            const windowScrollTop = pageYOffset;
+            if (windowScrollTop > headerMenu.offsetTop - headerMenu.offsetHeight /2){
+                headerMenu.classList.add("header-menu--sticky");
+                
+            }
+            else{
+                headerMenu.classList.remove("header-menu--sticky");
+                
+            }
+        })
         const listMenuItem = document.querySelectorAll(".header-menu--link");
         console.log(listMenuItem);
         [...listMenuItem].forEach(item => item.addEventListener("click", function (e){

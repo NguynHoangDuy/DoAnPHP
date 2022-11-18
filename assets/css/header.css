@@ -130,6 +130,15 @@ i.fas.fa-bag-shopping {
     flex-flow: row nowrap;
     background-color: #1d48ba;
     padding: 0 70px; 
+    top: 50px;
+}
+.header-menu--sticky{
+    transition: all .25s linear;
+    animation: stuckMoveDown .5s;
+    position: -webkit-sticky;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
 }
 .header-menu--list{
     display: flex;
@@ -166,18 +175,20 @@ i.fas.fa-bag-shopping {
 .header-menu--search input{
     height: 30px;
     width: 300px;
-    color: white;
+    color: #1d48ba;
+    padding-left: 10px;
     background-color: white;
     border: 1px solid #1d48ba;
     border-radius: 20px;
 }
 .header-menu--search{
-    color:white;
+    color:#1d48ba;
     position: relative;
 }
 .header-menu--search button{
     border-radius: 20px;
     margin-left: 10px;
+    cursor: pointer;
     border: none;
     color: #1d48ba;
     background-color: white;
@@ -197,6 +208,14 @@ i.fas.fa-bag-shopping {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@keyframes stuckMoveDown{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 @media screen  and (max-width: 1024px){
     .header-info--contact{

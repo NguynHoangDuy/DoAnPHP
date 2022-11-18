@@ -1,13 +1,13 @@
-  <header>
+<header>
         <div class="header-container">
             <div class="header-info">
                 <div class="header-info--name">
-                    <a href="../../index.php">Công ty cổ phần Thạch Rau Câu Minh Hạnh</a>
+                    <a href="../../index.php">Công ty cổ phần Thạch Rau Câu Blue Tea</a>
                 </div>
                 <div class="header-info--contact">
                 <div class="header-info--gmail">
                 <i class="fa fa-envelope"></i>
-                    <a href="#">kunhantea@gmail.com</a>
+                    <a href="#">bluetea@gmail.com</a>
                 </div>
                 <div class="header-info--tel">
                 <i class="fa fa-phone"></i>
@@ -110,6 +110,7 @@
         btnClose.addEventListener("click", function(){
             headerMenu.style="transform: translate(-100%)";
         });
+        
         const listMenuItem = document.querySelectorAll(".header-menu--link");
         console.log(listMenuItem);
         [...listMenuItem].forEach(item => item.addEventListener("click", function (e){
