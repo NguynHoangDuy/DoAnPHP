@@ -268,3 +268,7 @@ button.admin-logout-btn > i {
     flex-flow: row nowrap;
     gap: 40px;
 }
+.active{
+    transition: all .25s linear;
+    
+}
