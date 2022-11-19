@@ -10,6 +10,7 @@
 </head>
 <body>
     <?php
+    $err="";
         if(isset($_POST["submit"]))
         {
             $tk = $_POST["name"];
@@ -22,6 +23,9 @@
                     $_SESSION["hasAcc"] = true;
                 session_write_close();
             }
+            else {
+                $err="Đăng nhập không thành công, vui lòng nhập lại tài khoản hoặc mật khẩu";
+            }
         }
     ?>
     <div class="login-body">
@@ -31,11 +35,18 @@
                 <form action="" method="post">
                     <div class="login-group">
                         <label class="login-label" aria-autocomplete="none">Tên người dùng hoặc địa chỉ email</label>
-                        <input type="text" name="name" class="login-input">
+                        <input type="text" name="name" class="login-input" value="<?php
+                        if (isset($tk)) echo $tk; else echo "";
+                        ?>">
                     </div>
                     <div class="login-group">
                         <label class="login-label">Mật khẩu</label>
-                        <input type="password" name="pass" class="login-input">
+                        <input type="password" name="pass" class="login-input" value="<?php
+                        if (isset($mk)) echo $mk; else echo "";
+                        ?>">
+                    </div>
+                    <div class="login-group" style="color: red; font-weight: bold">
+                        <?php if (isset($err)) echo $err; else echo "" ?>
                     </div>
                     <button type="submit" name="submit" class="login-btn">Đăng nhập</button>
                 </form>

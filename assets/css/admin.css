@@ -91,7 +91,7 @@ body{
     position: relative;
 }
 .admin-sidebar {
-    background: #4E73DF;
+    background: #1d48ba;
     width: 250px;
     margin-top: 71px;
     position: fixed;
@@ -99,6 +99,9 @@ body{
     left: 0;
     bottom: 0;
     overflow: auto;
+    transform: translateX(-100%);
+    z-index: 1000;
+    transition: all 0.25s linear;
 }
 
 .admin-sidebar-logo {
@@ -226,11 +229,15 @@ img.admin-avatar-img {
 }
 
 .admin-content{
-    top: 80px;
+    padding-top: 80px;
     position: absolute;
-    width: calc(100% - 250px);
-    margin-left: 250px;
+    /* width: calc(100% - 250px);
+    margin-left: 250px; */
+    width: 100%;
+    margin-left: 0;
     height: auto;
+    background: transparent;
+    transition: all .25s linear;
 }
 
 button.admin-logout-btn {
@@ -270,5 +277,64 @@ button.admin-logout-btn > i {
 }
 .active{
     transition: all .25s linear;
-    
+    transform: translateX(0%);
+}
+.isactive{
+    transition: all .25s linear;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+}
+.isshow{
+    transition: all .25s linear;
+    width: 100% !important;
+    margin-left: 0 !important;
+    background-color: #1d48ba;
+    opacity: 0.5;
+}
+.admin-header >.flex > form button.admin-logout-btn {
+    display: none;
+}
+@media screen and (max-width: 1024px){
+.flex{
+    gap:0;
+}
+.admin-sidebar{
+    width: 200px;
+}
+.admin-content{
+    width: 100%;
+    margin-left: 0;
+}
+.isactive{
+    background-color: lightgray;
+    opacity: 0.5;
+}
+}
+@media screen and (max-width: 767px){
+    .admin-sidebar-logo{
+        padding: 10px 0px 10px 0px;
+        width: 50%;
+    }
+    .admin-sidebar-logo span{
+        white-space: nowrap;
+    }
+    .admin-search, .admin-avatar img{
+        display: none;
+    }
+    .flex{
+        flex-flow: row-reverse;
+        justify-content: center;
+    gap: 30px;
+    }
+    button.admin-logout-btn{
+        display: none;
+    }
+    .admin-header >.flex > form button.admin-logout-btn {
+        display: block;
+    }
+    .admin-header{
+        display: block;
+    padding: 0 40px;
+    }
+
 }
