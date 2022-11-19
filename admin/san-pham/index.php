@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="../san-pham">
+                    <a href="../quan-ly/sanpham.php">
                         <img src="../../assets/images/coffee-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Sản phẩm</span>
                     </a>
@@ -107,6 +107,10 @@
                 </div>
             </div>
             <div class="admin-content">
+                <?php
+                include("../DoAnPHP/block/connection.php");
+                
+                ?>
             </div>
         </div>
     </div>
