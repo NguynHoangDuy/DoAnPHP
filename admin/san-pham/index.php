@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyên Liệu Trà Sữa</title>
+    <title>Sản phẩm</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
     <link
@@ -107,13 +107,104 @@
                 </div>
             </div>
             <div class="admin-content">
+                <div class="container">
                 <?php
-                include("../DoAnPHP/block/connection.php");
-                
+                include("../../block/connection.php");
+                $rowsPerPage=6;
+                if ( ! isset($_GET['page']))
+                    $_GET['page'] = 1;
+                $offset =($_GET['page']-1)*$rowsPerPage;
+                $sql ="SELECT `ma_sp`, `ten_sp`, `gia`, `mo_ta`, `ten_dm`, `hinh_anh` FROM `san_pham`
+                INNER JOIN danh_muc ON san_pham.danh_muc = danh_muc.ma_dm LIMIT $offset, $rowsPerPage";
+                $result=mysqli_query($conn, $sql);
+                if (!$result){
+                    echo "Không có sản phẩm nào";
+                }
+                else {
+                    if (!mysqli_num_rows($result)==0){
+                        echo "<h1 class='admin-product--title'>THÔNG TIN CỦA SẢN PHẨM</h1>";
+                        echo "<table align='center' class='admin-product--table'>";
+                        echo "<tr >
+                                <th>STT</th>
+                                <th>Mã sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th>Danh mục</th>
+                                <th>Đơn giá</th>
+                                <th>Chức năng</th>
+                            </tr>";
+                            $temp=$_GET['page']*$rowsPerPage;
+                            if($temp<=$rowsPerPage) $dem=0;
+                            else $dem=$temp-$rowsPerPage;
+                            $dem=0;
+                            while ($rows=mysqli_fetch_array($result)){
+                                $dem++;
+                                $id=$rows["ma_sp"];
+                                echo "<tr>";
+                                echo "<td>".$dem."</td>";
+                                echo "<td>{$rows['ma_sp']}</td>";
+                                echo "<td>{$rows['ten_sp']}</td>";
+                                echo "<td>
+                                <img src='../../assets/images/{$rows['hinh_anh']}' class='admin-product--img'>
+                                </td>";
+                                echo "<td>
+                                <span class='money'>{$rows['gia'] }</span>
+                                <span>VNĐ</span></td>";
+                                echo "<td>{$rows['ten_dm']}</td>";
+                                echo "<td align='center'><a href='../../admin/san-pham/edit.php?id=".$id."'>
+                                    <i class='fa fa-edit' title='Chỉnh sửa'></i> 
+                                </a> |
+                                <a href='../../admin/san-pham/detail.php?id=".$id."'>
+                                <i class='fa-sharp fa-solid fa-file-lines' title='Xem chi tiết'></i> 
+                                </a> | 
+                                <a href='../../admin/san-pham/delete.php?id=".$id."'>
+                                    <i class='fa fa-trash' style='color: red' title='Xóa'></i> 
+                                </a>
+                                </td>";
+                                echo "</tr>";
+                            }
+                            echo "</table>";
+                            $re = mysqli_query($conn, 'select * from san_pham');
+                            $numRows = mysqli_num_rows($re);
+                            $maxPage = floor($numRows/$rowsPerPage) + 1;
+                            echo "<div class='phanTrang'>";
+                            $firstPage=1;
+                            echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$firstPage.">";
+                            echo "<img src='../../assets/images/angle-double-left-solid.png' alt=''>";
+                            echo "</a>"; 
+                            if ($_GET['page'] > 1){
+                                echo "<a class='link-btn' href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1).">
+                                <img src='../../assets/images/angle-left-solid.png' alt=''>
+                                </a> "; 
+                            }
+                            for ($i=1 ; $i<=$maxPage ; $i++)
+                            {
+                                if ($i == $_GET['page'])
+                                {
+                                    echo '<b class="center">'.$i.'</b> ';
+                                }
+                                else {
+                                    echo "<a class='link-text' href=" . $_SERVER['PHP_SELF'] . "?page=" . $i . ">" . $i . "</a> ";
+                                }
+                            }
+                            if ($_GET['page'] < $maxPage) {
+                                echo "<a class='link-btn' href=" . $_SERVER['PHP_SELF'] . "?page=" . ($_GET['page'] + 1) . ">
+                                <img src='../../assets/images/angle-right-solid.png' alt=''>
+                                </a>";  
+                            }
+                            echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$maxPage.">";
+                            echo "<img src='../../assets/images/angle-double-right-solid.png' alt=''>";
+                            echo "</a>"; 
+                            echo"</div>";
+                    }
+                }
                 ?>
+                </div>
+                
             </div>
         </div>
     </div>
     <script src="../../assets/js/admin.js"></script>
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>
