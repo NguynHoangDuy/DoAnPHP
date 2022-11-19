@@ -73,15 +73,21 @@
             </ul>
         </div>
         <div class="admin-main">
+            <!-- PC, Tablet -->
             <div class="admin-header">
                 <div class="flex">
+                    <form action="" method="post">
+                            <button name="logout" type ="submit" class="admin-logout-btn" title="Đăng xuất tài khoản">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            </button>
+                        </form>
                 <a href="" class="admin-sidebar-logo">
                     <img src="../../assets/images/blue_tea_logo.webp" alt="" class="admin-sidebar-img">
                     <span>BLUE TEA</span>
                 </a>
                 <div class="admin-sidebar--toggle">
                     <i class="fa fa-bars"></i>
-                </div>
+                </div>  
             </div>
                 <div class="admin-search">
                     <form action="" method="post">
@@ -101,10 +107,9 @@
                 </div>
             </div>
             <div class="admin-content">
-                
             </div>
         </div>
     </div>
-    <script src="../../admin.js"></script>
+    <script src="../../assets/js/admin.js"></script>
 </body>
 </html>
