@@ -257,3 +257,30 @@ h3.cart-info-title {
     display: block;
     text-align: center;
 }
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #1d48ba;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
