@@ -18,6 +18,12 @@
     include("./block/connection.php");
     include("./block/global.php");
     include("./block/header.php");
+
+    $phiGH = 30000;
+    if(isset($gia))
+    {
+        $tong = $gia + $phiGH;
+    }
 ?>
 
 <?php
@@ -29,6 +35,7 @@
     else {
         $gioHang = $_SESSION["gioHang"];
         echo "<div class='container'>
+        <form action='' method='post' class='cart-content'>
             <div class='cart'>
                 <h2 class='cart-title'>Có ".count($gioHang)." sản phẩm trong giỏ hàng</h2>
                 <div class='cart-group'>";
@@ -49,7 +56,6 @@
                             <p class='cart-item--dm'> <b>Danh mục: </b>".$row['ten_dm']."</p>
                         </div>
                         <div class='cart-item--amount'>
-                            <form action='' method='post'>
                                 <div class='cart-item--sl'>
                                     <button class='detail-btn btn-decr' >-</button>
                                     <input type='number' class='input-count' value='$arr[sl]' name='amount'>
@@ -60,32 +66,84 @@
                                     <i class='fa-solid fa-trash-can'></i>
                                     <span>Xóa</span>
                                 </button>
-                            </form>
                         </div>
                     </div> ";
         }
                     
         echo"   </div>
             <div class='form-order'>
-                <form action='' method='post'>
                     <div class='form-order--group'>
                         <div class='form-order-radius'>
                             <label for='nam'>
-                                <input type='radio' value ='Nam' name='gt' id='nam'>
-                                <span>Nam</span>
+                                <input type='radio' value ='1' checked name='gt' id='nam'>
+                                <span>Anh</span>
                             </label>
                         </div>
                         <div class='form-order-radius'>
                             <label for='nu'>
-                                <input type='radio' value ='Nữ' name='gt' id='nu'>
-                                <span>Nữ</span>
+                                <input type='radio' value ='0' name='gt' id='nu'>
+                                <span>Chị</span>
                             </label>
                         </div>
                     </div>
-                </form>
-            </div>
-
-            </div>
+                    <div class='form-order--group'>
+                        <div class='form-order-item'>
+                            <input type='text' name='hoten' placeholder='Nhập họ và tên'>
+                        </div>
+                        <div class='form-order-item'>
+                            <input type='tel' name='sdt' placeholder='Nhập số điện thoại'>
+                        </div>
+                    </div>
+                    <div class='form-order--group'>
+                        <div class='form-order-address'>
+                            <textarea name='diachi' placeholder='Nhập địa chỉ'></textarea>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class='cart-info'>
+                    <h3 class='cart-info-title'>
+                        <i class='fa-solid fa-bag-shopping'></i>
+                        <span>Thông tin đơn hàng</span>
+                    </h3>
+                    <div class='cart-info--content'>
+                        <div class='cart-info-item'>
+                            <p class='cart-info-desc'>
+                                Tổng tiền
+                            </p>
+                            <p class='cart-info-price'>
+                                <span class='money'>".$gia."</span>
+                                 <span> VNĐ</span>
+                            </p>
+                        </div>
+                        <div class='cart-info-item'>
+                            <p class='cart-info-desc'>
+                                Phí giao hàng dự kiến
+                            </p>
+                            <p class='cart-info-price'>
+                                <span class='money'>". $phiGH."</span>
+                                 <span> VNĐ</span>
+                            </p>
+                        </div>
+                        <div class='cart-info-item'>
+                            <p class='cart-info-desc'>
+                                <b>Cần thanh toán</b>
+                            </p>
+                            <p class='cart-info-price bold'>
+                                <span class='money'>".$tong."</span>
+                                 <span> VNĐ</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class='cart-info--order'>
+                        <div class='cart-info--btn'>
+                            <button type='submit' name='dathang'>Hoàn tất đặt hàng</button>
+                        </div>
+                        <p class='cart-info-detail'>Bằng cách đặt hàng, bạn đồng ý với<br>
+                        Điều khoản sử dụng của Blue Tea</p>
+                    </div>
+                </div>
+            </form>
         </div>";
     }
 ?>
