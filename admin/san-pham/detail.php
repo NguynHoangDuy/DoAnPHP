@@ -107,6 +107,12 @@
                 </div>
             </div>
             <div class="admin-content">
+                <div class="container">
+                    <?php
+                    include("../../block/connection.php");
+                    $sql="SELECT `ma_sp`, `ten_sp`, `gia`, `mo_ta`, `ten_dm`, `hinh_anh` FROM `san_pham` WHERE";
+                    ?>
+                </div>
             </div>
         </div>
     </div>

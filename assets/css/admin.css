@@ -284,12 +284,8 @@ button.admin-logout-btn > i {
     width: calc(100% - 250px);
     margin-left: 250px;
 }
-.isshow{
-    transition: all .25s linear;
-    width: 100% !important;
-    margin-left: 0 !important;
-    background-color: #1d48ba;
-    opacity: 0.5;
+.admin-container{
+    padding: 0 20px;
 }
 .admin-header >.flex > form button.admin-logout-btn {
     display: none;
