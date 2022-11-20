@@ -92,7 +92,7 @@ body{
 }
 .admin-sidebar {
     background: #1d48ba;
-    width: 250px;
+    width: 300px;
     margin-top: 71px;
     position: fixed;
     top: 0;
@@ -273,7 +273,7 @@ button.admin-logout-btn > i {
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
-    gap: 40px;
+    
 }
 .active{
     transition: all .25s linear;
@@ -334,3 +334,8 @@ button.admin-logout-btn > i {
     }
 
 }
+
+.admin-sidebar::-webkit-scrollbar {
+    display: none;
+}
+
