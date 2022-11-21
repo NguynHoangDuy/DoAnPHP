@@ -362,3 +362,11 @@ h3.title {
     color: white;
     font-weight: bold;
 }
+
+.select> .dropdown-menu > .dropdown-content::-webkit-scrollbar{
+display: none;
+}
+
+.select-box .options-container.active::-webkit-scrollbar{
+    display: none;
+}

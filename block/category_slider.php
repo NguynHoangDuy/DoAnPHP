@@ -15,7 +15,7 @@
             echo '
                     <div class="option" style="background-color: #1d48ba">
                             <input type="radio" class="radio" id="'.$category['ma_dm'].'" name="category"/>
-                            <label for="'.$category['ma_dm'].'"><a href="#">'.$category['ten_dm'].'</a></label>
+                            <label for="'.$category['ma_dm'].'"><a href="./san-pham.php?dm='.$category['ma_dm'].'&loc=">'.$category['ten_dm'].'</a></label>
                             
                     </div>
             ';
