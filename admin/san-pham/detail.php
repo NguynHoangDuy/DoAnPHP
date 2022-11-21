@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyên Liệu Trà Sữa</title>
+    <title>Thông tin chi tiết sản phẩm</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
     <link
@@ -110,12 +110,56 @@
                 <div class="container">
                     <?php
                     include("../../block/connection.php");
-                    $sql="SELECT `ma_sp`, `ten_sp`, `gia`, `mo_ta`, `ten_dm`, `hinh_anh` FROM `san_pham` WHERE";
+                    $id=$_GET["id"];
+                    if (isset($id)){
+                        $sql ="SELECT `ma_sp`, `ten_sp`, `gia`, `mo_ta`, `ten_dm`, `hinh_anh` FROM `san_pham`
+                        INNER JOIN danh_muc ON san_pham.danh_muc = danh_muc.ma_dm WHERE ma_sp='$id'";
+                        $result=mysqli_query($conn, $sql);
+                        if (!$result){
+                            echo "Không thành công";
+                        }
+                        else {
+                            while ($row=mysqli_fetch_array($result)){
+                                echo "<h1 class='admin-product--title'>THÔNG TIN CỦA SẢN PHẨM</h1>";
+                                echo "<div class='admin-product--detail'>
+                                <div class='product-detail--img'>
+                                    <img src='../../assets/images/{$row['hinh_anh']}' alt='' title='Ảnh sản phẩm {$row['ten_sp']}'>
+                                </div>
+                                <div class='product-detail--content'>
+                                    <div class='product-detail--id'>
+                                        <span style='color: #1d48ba; font-weight: bold'>Mã sản phẩm:</span> {$row['ma_sp']}</div>
+                                    <div class='product-detail--name'>
+                                        <span style='color: #1d48ba; font-weight: bold'>Tên sản phẩm: </span> {$row['ten_sp']}</div>
+                                    <div class='product-detail--price'>
+                                        <span style='color: #1d48ba; font-weight: bold'>Giá: </span> 
+                                        <span class='money'>{$row['gia']}</span> VNĐ
+                                        </div>
+                                    <div class='product-detail--type'>
+                                        <span style='color: #1d48ba; font-weight: bold'>Danh mục: </span>{$row['ten_dm']}</div>
+                                    <div class='product-detail--desc'>
+                                        <span style='color: #1d48ba; font-weight: bold'>Mô tả: </span> {$row['mo_ta']}</div>
+                                </div>
+                            </div>";
+                            }
+                        }
+                    echo "<div class='product-link' align='center'>
+                    <a href='../../admin/san-pham/edit.php?id={$id}' class='product-link--edit'>Chỉnh sửa</a>
+                    <a href='' class='product-link--delete admin-delete'>Xóa</a>
+                </div>";
+                }
+                else {
+                    echo "Sản phẩm không tồn tại";
+                }
+                    ?>
+                    <?php
+                        include("../../block/product_delete.php");
                     ?>
                 </div>
             </div>
         </div>
     </div>
+    
     <script src="../../assets/js/admin.js"></script>
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>
