@@ -13,3 +13,4 @@ btnBarMenu.addEventListener("click", function(){
         adminContent.classList.toggle("isactive");
     }
 });
+

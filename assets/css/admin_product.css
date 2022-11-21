@@ -41,3 +41,135 @@
     margin: 0 auto;
     padding: 5px;
 }
+.admin-product--detail{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    border: 1px solid #1d48ba;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 5px lightgray;
+}
+.product-detail--img{
+    width: 50%;
+}
+.product-detail--img img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.product-detail--content{
+    font-size: 18px;
+    width: 100%;
+    line-height: 1.6;
+}
+.product-link{
+    margin-top: 20px;
+    gap: 20px;
+}
+.product-link a {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    transition: all .25s linear;
+}
+.product-link--edit{
+    border: 1px solid #1d48ba;
+    background-color: #1d48ba;
+}
+.product-link--delete{
+    background-color: red;
+    border: 1px solid red;
+    /* background-color: #1d48ba; */
+}
+.product-link--edit:hover{
+    color: #1d48ba;
+    background-color: white;
+}
+.product-link--delete:hover{
+    color: red;
+    background-color: white;
+}
+.modal{
+    position: fixed;
+    top: 50%;
+    height: 150px;
+    left: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 2px #999999;
+    transform: translate(-50%, 0%);
+}
+i.modal-content--close{
+    position: absolute;
+    right:10px;
+    top:10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.modal-content{
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.modal-content--link{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.modal-content--link button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.modal-content--delete{
+    background-color: red;
+    color: white;
+}
+.modal-hidden{
+    display: none;
+    transition: all .25s linear;
+}
+.modal-show{
+    display: block;
+    transition: all .25s linear;
+}
+.admin-delete{
+    cursor: pointer;
+}
+@keyframes animateModal{
+    0%{
+
+    }
+}
+@media screen and (max-width: 767px){
+    .admin-product--detail{
+        flex-direction: column;
+    padding: 15px;
+    }
+    .product-detail--img{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #1d48ba;
+    }
+    .product-detail--content{
+        margin-top: 10px;
+    }
+}

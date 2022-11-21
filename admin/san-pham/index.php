@@ -123,6 +123,9 @@
                 else {
                     if (!mysqli_num_rows($result)==0){
                         echo "<h1 class='admin-product--title'>THÔNG TIN CỦA SẢN PHẨM</h1>";
+                        echo "<div class='product-link' align='left' style='margin-bottom: 30px'>
+                        <a href='../../admin/san-pham/create.php' class='product-link--edit'>Thêm sản phẩm mới</a>
+                    </div>";
                         echo "<table align='center' class='admin-product--table'>";
                         echo "<tr >
                                 <th>STT</th>
@@ -142,7 +145,7 @@
                                 $id=$rows["ma_sp"];
                                 echo "<tr>";
                                 echo "<td>".$dem."</td>";
-                                echo "<td>{$rows['ma_sp']}</td>";
+                                echo "<td><span class='id_sp'>{$rows['ma_sp']}</span></td>";
                                 echo "<td>{$rows['ten_sp']}</td>";
                                 echo "<td>
                                 <img src='../../assets/images/{$rows['hinh_anh']}' class='admin-product--img'>
@@ -157,13 +160,14 @@
                                 <a href='../../admin/san-pham/detail.php?id=".$id."'>
                                 <i class='fa-sharp fa-solid fa-file-lines' title='Xem chi tiết'></i> 
                                 </a> | 
-                                <a href='../../admin/san-pham/delete.php?id=".$id."'>
-                                    <i class='fa fa-trash' style='color: red' title='Xóa'></i> 
-                                </a>
+                                
+                                    <i class='fa fa-trash admin-delete' style='color: red' title='Xóa' ></i> 
+                            
                                 </td>";
                                 echo "</tr>";
                             }
                             echo "</table>";
+                            
                             $re = mysqli_query($conn, 'select * from san_pham');
                             $numRows = mysqli_num_rows($re);
                             $maxPage = floor($numRows/$rowsPerPage) + 1;
@@ -199,6 +203,60 @@
                     }
                 }
                 ?>
+                <script>
+                    const btnDelete = document.querySelectorAll(".admin-delete");
+                    const container = document.querySelector(".container");
+                    function addModal(){
+                        const template =`<form action="" method="post" >
+                        <div class="modal modal-hidden" align='center'>
+                        <input type="hidden" class="id-product" name="id"> 
+                        <button type="button" name="reset">
+                        <i class="fa fa-close modal-content--close"></i></button>
+                            <div class="modal-content">
+                                <div class="modal-content--text">Bạn có muốn xóa sản phẩm này?</div>
+                                <div class="modal-content--link">
+                                    <button type="button" name="reset" class='modal-content--close'>Hủy</button>
+                                    <button type="submit" name="ok" class='modal-content--delete'>Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                        </form>`;
+                    container.insertAdjacentHTML("beforeend", template);
+                    }
+                    btnDelete.forEach((item, index) => item.addEventListener("click", function(e){
+                        const idProduct = document.querySelectorAll(".id_sp");
+                        e.preventDefault();
+                        var id = idProduct[index].textContent;
+                        console.log(id);
+                        addModal();
+                        const modal = document.querySelector(".modal");
+                        const idProductDel = document.querySelector(".id-product");
+                        idProductDel.value=id;
+                        console.log(idProductDel.value);
+                        modal.classList.remove("modal-hidden");
+                        modal.classList.add("modal-show");
+                        const btnClose = document.querySelectorAll(".modal-content--close");
+                        btnClose.forEach((item) => item.addEventListener("click", function(){
+                            modal.classList.remove("modal-show");
+                            modal.classList.add("modal-hidden");
+                        }))
+                    }));
+                </script>
+                    <?php
+                        if (isset($_POST["ok"])){
+                            $id= $_POST['id'];
+                            include("../../block/connection.php");
+                            $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
+                            $result=mysqli_query($conn,$sql);
+                            if ($result){
+                                
+                                
+                            }
+                        }
+                        else {
+                            $id="";
+                        }
+                        ?>
                 </div>
             </div>
         </div>
