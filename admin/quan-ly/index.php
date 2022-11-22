@@ -53,7 +53,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="../san-pham">
+                    <a href="../../admin/san-pham/index.php">
                         <img src="../../assets/images/coffee-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Sản phẩm</span>
                     </a>

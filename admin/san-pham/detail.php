@@ -13,6 +13,18 @@
     />
 </head>
 <body>
+<?php
+
+if (isset($_GET["ok"])){
+    $self=$_GET['page'];
+    include("../../block/connection.php");
+    $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
+    $result=mysqli_query($conn,$sql);
+    if ($result){
+        header("Location: ../../admin/san-pham/index.php");
+    }
+}
+?>
     <?php
         session_start();
             $hasAcc = $_SESSION["hasAcc"];
@@ -144,21 +156,50 @@
                         }
                     echo "<div class='product-link' align='center'>
                     <a href='../../admin/san-pham/edit.php?id={$id}' class='product-link--edit'>Chỉnh sửa</a>
-                    <a href='' class='product-link--delete admin-delete'>Xóa</a>
+                    <a href='#modal' class='product-link--delete admin-delete'>Xóa</a>
                 </div>";
                 }
                 else {
                     echo "Sản phẩm không tồn tại";
                 }
                     ?>
-                    <?php
-                        include("../../block/product_delete.php");
-                    ?>
+                    <script>
+                    const btnDelete = document.querySelectorAll(".admin-delete");
+                    const container = document.querySelector(".container");
+                    function addModal(){
+                        const template =`<form action="" method="get" id="modal">
+                        <div class="modal modal-hidden" align='center'>
+                        <input type="hidden" class="id-product" name="id"> 
+                        <button  name="reset">
+                        <i class="fa fa-close modal-content--close"></i></button>
+                            <div class="modal-content">
+                                <div class="modal-content--text">Bạn có muốn xóa sản phẩm này?</div>
+                                <div class="modal-content--link">
+                                    <input type="submit" name="reset" class='modal-content--close' value="Hủy"></input>
+                                    <input name="ok" type="submit" class='modal-content--delete' value="Xóa"></input>
+                                </div>
+                            </div>
+                        </div>
+                        </form>`;
+                    container.insertAdjacentHTML("beforeend", template);
+                    }
+                    btnDelete.forEach((item, index) => item.addEventListener("click", function(e){
+                        e.preventDefault();
+                        addModal();
+                        const modal = document.querySelector(".modal");
+                        modal.classList.remove("modal-hidden");
+                        modal.classList.add("modal-show");
+                        const btnClose = document.querySelectorAll(".modal-content--close");
+                        btnClose.forEach((item) => item.addEventListener("click", function(){
+                            modal.classList.remove("modal-show");
+                            modal.classList.add("modal-hidden");
+                        }))
+                    }));
+                </script>
                 </div>
             </div>
         </div>
     </div>
-    
     <script src="../../assets/js/admin.js"></script>
     <script src="../../assets/js/main.js"></script>
 </body>

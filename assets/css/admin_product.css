@@ -131,7 +131,7 @@ i.modal-content--close{
     justify-content: center;
     margin: 15px 0;
 }
-.modal-content--link button{
+.modal-content--link input{
     padding: 10px 20px;
     border: none;
     border-radius: 10px;

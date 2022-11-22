@@ -281,8 +281,8 @@ button.admin-logout-btn > i {
 }
 .isactive{
     transition: all .25s linear;
-    width: calc(100% - 250px);
-    margin-left: 250px;
+    width: calc(100% - 300px);
+    margin-left: 300px;
 }
 .admin-container{
     padding: 0 20px;
