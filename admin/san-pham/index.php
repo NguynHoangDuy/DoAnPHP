@@ -13,6 +13,17 @@
     />
 </head>
 <body>
+<?php
+
+                        if (isset($_GET["ok"])){
+                            $self=$_GET['page'];
+                            header("Location: ".$_SERVER ['PHP_SELF']."");
+                            $id= $_GET['id'];
+                            include("../../block/connection.php");
+                            $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
+                            $result=mysqli_query($conn,$sql);
+                        }
+?>
     <?php
         session_start();
             $hasAcc = $_SESSION["hasAcc"];
@@ -21,7 +32,6 @@
                 header("location: ../");
             }
         session_write_close();
-
         if(isset($_POST["logout"]))
         {
             session_start();
@@ -32,7 +42,6 @@
     ?>
     <div class="admin">
         <div class="admin-sidebar active">
-            
             <ul class="admin-sidebar-list">
                 <li class="admin-sidebar-item">
                     <a href="">
@@ -53,7 +62,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="../quan-ly/sanpham.php">
+                    <a href="../../admin/san-pham/index.php">
                         <img src="../../assets/images/coffee-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Sản phẩm</span>
                     </a>
@@ -132,8 +141,8 @@
                                 <th>Mã sản phẩm</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Hình ảnh</th>
-                                <th>Danh mục</th>
                                 <th>Đơn giá</th>
+                                <th>Danh mục</th>
                                 <th>Chức năng</th>
                             </tr>";
                             $temp=$_GET['page']*$rowsPerPage;
@@ -162,12 +171,10 @@
                                 </a> | 
                                 
                                     <i class='fa fa-trash admin-delete' style='color: red' title='Xóa' ></i> 
-                            
                                 </td>";
                                 echo "</tr>";
                             }
                             echo "</table>";
-                            
                             $re = mysqli_query($conn, 'select * from san_pham');
                             $numRows = mysqli_num_rows($re);
                             $maxPage = floor($numRows/$rowsPerPage) + 1;
@@ -207,16 +214,16 @@
                     const btnDelete = document.querySelectorAll(".admin-delete");
                     const container = document.querySelector(".container");
                     function addModal(){
-                        const template =`<form action="" method="post" >
+                        const template =`<form action="" method="get" >
                         <div class="modal modal-hidden" align='center'>
                         <input type="hidden" class="id-product" name="id"> 
-                        <button type="button" name="reset">
+                        <button  name="reset">
                         <i class="fa fa-close modal-content--close"></i></button>
                             <div class="modal-content">
                                 <div class="modal-content--text">Bạn có muốn xóa sản phẩm này?</div>
                                 <div class="modal-content--link">
-                                    <button type="button" name="reset" class='modal-content--close'>Hủy</button>
-                                    <button type="submit" name="ok" class='modal-content--delete'>Xóa</button>
+                                    <input type="submit" name="reset" class='modal-content--close' value="Hủy"></input>
+                                    <input name="ok" type="submit" class='modal-content--delete' value="Xóa"></input>
                                 </div>
                             </div>
                         </div>
@@ -242,21 +249,7 @@
                         }))
                     }));
                 </script>
-                    <?php
-                        if (isset($_POST["ok"])){
-                            $id= $_POST['id'];
-                            include("../../block/connection.php");
-                            $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
-                            $result=mysqli_query($conn,$sql);
-                            if ($result){
-                                
-                                
-                            }
-                        }
-                        else {
-                            $id="";
-                        }
-                        ?>
+                    
                 </div>
             </div>
         </div>
