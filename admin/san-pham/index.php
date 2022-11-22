@@ -41,7 +41,7 @@
         }
     ?>
     <div class="admin">
-        <div class="admin-sidebar">
+        <div class="admin-sidebar active">
             <ul class="admin-sidebar-list">
                 <li class="admin-sidebar-item">
                     <a href="">
@@ -115,7 +115,7 @@
                     </form>
                 </div>
             </div>
-            <div class="admin-content">
+            <div class="admin-content isactive">
                 <div class="container">
                 <?php
                 include("../../block/connection.php");

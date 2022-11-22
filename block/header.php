@@ -86,7 +86,7 @@
                         <a href="#" class="header-menu--link">Tin tức</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="#" class="header-menu--link">Đặt hàng</a>
+                        <a href="./gio-hang.php" class="header-menu--link">Đặt hàng</a>
                     </div>
                     <div class="header-menu--item">
                         <a href="#" class="header-menu--link">liên hệ</a>
