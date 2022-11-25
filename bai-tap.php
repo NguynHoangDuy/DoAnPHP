@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="info-item">
-                    <img src="" alt="" class="info-img">
+                    <img src="./assets/images/avatar-anh-phu.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Đặng Anh Phú
                     </h4>
@@ -132,26 +132,38 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">PHP & FORM</p>
                             <ul class="exercise-item ">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
-                                <li> <a href="">Exercise 3</a> </li>
-                                <li> <a href="">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
+                                <?php
+                                    $path = './bai-tap/DangAnhPhu_Lab/form/';
+                                
+                                echo '
+                                    <li> <a href="'.$path.'bai1/lab1.php">Exercise 1</a> </li>
+                                    <li> <a href="'.$path.'bai2/lab2.php">Exercise 2</a> </li>
+                                    <li> <a href="'.$path.'bai3/lab3.php">Exercise 3</a> </li>
+                                    <li> <a href="'.$path.'bai4/lab4.php">Exercise 4</a> </li>
+                                    <li> <a href="'.$path.'bai5/lab5.php">Exercise 5</a> </li>
+                                    <li> <a href="'.$path.'bai6/input_page.php">Exercise 6</a> </li>
+                                    <li> <a href="'.$path.'bai7/input_page.php">Exercise 7</a> </li>
+                                    <li> <a href="'.$path.'bai8/form.html">Exercise 8</a> </li>
+                                ';
+                                ?>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
                             <p class="exercise-title">MẢNG, CHUỖI & HÀM</p>
                             <ul class="exercise-item">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
-                                <li> <a href="">Exercise 3</a> </li>
-                                <li> <a href="">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
+                            <?php
+                                    $path = './bai-tap/DangAnhPhu_Lab/array_string_func/';
+                                
+                                echo '
+                                    <li> <a href="'.$path.'less1/less1.php">Exercise 1</a> </li>
+                                    <li> <a href="'.$path.'less2/less2.php">Exercise 2</a> </li>
+                                    <li> <a href="'.$path.'less3/less3.php">Exercise 3</a> </li>
+                                    <li> <a href="'.$path.'less4/less4.php">Exercise 4</a> </li>
+                                    <li> <a href="'.$path.'less5/less5.php">Exercise 5</a> </li>
+                                    <li> <a href="'.$path.'less6/less6.php">Exercise 6</a> </li>
+                                    <li> <a href="'.$path.'less7/less7.php">Exercise 7</a> </li>
+                                ';
+                                ?>
                             </ul>
                         </div>
                         <div class="exercise-group w100">

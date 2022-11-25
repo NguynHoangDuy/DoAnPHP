@@ -89,7 +89,7 @@
                         <a href="./gio-hang.php" class="header-menu--link">Đặt hàng</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="#" class="header-menu--link">liên hệ</a>
+                        <a href="./contact.php" class="header-menu--link">liên hệ</a>
                     </div>
                 </div>
                 <form action="./tim-kiem.php" method="get">
