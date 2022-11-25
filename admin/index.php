@@ -27,6 +27,16 @@
                 $err="Đăng nhập không thành công, vui lòng nhập lại tài khoản hoặc mật khẩu";
             }
         }
+        session_start();
+        if(isset($_SESSION["hasAcc"]))
+        {
+            if($_SESSION["hasAcc"] == true)
+            {
+                header("location: ./quan-ly");
+            }
+        }
+        
+        session_write_close();
     ?>
     <div class="login-body">
         <div class="login">

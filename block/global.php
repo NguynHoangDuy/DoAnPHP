@@ -173,4 +173,34 @@
             }
         }
     }
+    function getTinTuc($conn, $max){
+        if($max == true)
+        {
+            $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc`";
+        }
+        else $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` order by RAND() LIMIT 0, 3";
+        $result =  mysqli_query($conn, $query);
+        if($result)
+        {
+            if(mysqli_num_rows($result) != 0)
+            {
+                echo '<div class="blog">';
+                while($row = mysqli_fetch_array($result))
+                {
+                    echo "<a class='blog-item' href='./tin-tuc.php?id=$row[ma_tintuc]'>";
+                    $src = "$row[hinh_dd]";
+                        echo "<div class='blog-img'>
+                        <img src='".$src."'>
+                            </div>";
+                        echo "<div class='blog-content'>
+                            <p class='blog-title'>$row[tieu_de]</p>
+                            <p class='blog-date'>$row[tg_dang]</p>
+                        </div>";
+                    echo "</a>";
+                }
+                echo "</div>";  
+            }
+        }
+    }
 ?>
+

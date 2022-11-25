@@ -36,6 +36,12 @@
             }
         }
     ?>
+    <div class="container">
+        <h3 class="blog-header">Tin tức nổi bật</h3>
+        <?php
+            getTinTuc($conn, false);
+        ?>
+    </div>
     
         
     <?php

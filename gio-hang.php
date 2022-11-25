@@ -16,9 +16,24 @@
 <body>
 <?php
     $err ="";
+
     include("./block/connection.php");
     include("./block/global.php");
     session_start();
+    $gia = 0;
+    if(isset($_SESSION["gioHang"]))
+    {
+        $gioHang = $_SESSION["gioHang"];
+        for($i = 0; $i < count($gioHang); $i++)
+        {
+            $gia = $gia + $gioHang[$i]["gia"];
+        }
+    }
+    $phiGH = 30000;
+    if(isset($gia))
+    {
+        $tong = $gia + $phiGH;
+    }
     if(isset($_POST["btnIncr"]))
     {
         $ma_sp = $_POST["ma_sp"];
@@ -67,6 +82,7 @@
         }
             $_SESSION["gioHang"] = $gioHang;
     }
+    
     if(isset($_POST["dathang"]))
     {
         date_default_timezone_set("Asia/Ho_Chi_Minh");
@@ -81,7 +97,8 @@
             $err = "<p style='font-size: 16px; font-weight: bold; color: red; margin-top: 15px; padding: 0 11px;'> Vui lòng nhập đủ thông tin ... </p>";
         }
         else {$err = "";
-        $query = "INSERT INTO `don_hang`(`ma_donhang`, `ten_kh`, `gioi_tinh`, `dia_chi`, `so_dt`, `tg_dat`) VALUES ('$id','$ten_kh','$gt','$diachi','$sodt','$tgdat')";
+            
+        $query = "INSERT INTO `don_hang`(`ma_donhang`, `ten_kh`, `gioi_tinh`, `dia_chi`, `so_dt`, `tg_dat`, `tinh_trang_tt`, `tinh_trang_giaohang`, `tong_tien`) VALUES ('$id','$ten_kh','$gt','$diachi','$sodt','$tgdat','0','0', '$tong')";
 
         $resultDonHang = mysqli_query($conn, $query);
         $kiemTra = true;
