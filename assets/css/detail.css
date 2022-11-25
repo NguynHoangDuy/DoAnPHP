@@ -12,6 +12,8 @@ input[type=number] {
 
 .product-detail {
     display: flex;
+    margin-bottom: 40px;
+
 }
 
 .detail-img {
@@ -209,7 +211,6 @@ p.commit-desc {
 
 p.product-hot-title {
     font-size: 30px;
-    margin-top: 40px;
     font-weight: 700;
     color: #0d0d3c;
     margin-bottom: 20px;
@@ -228,6 +229,7 @@ p.product-hot-title {
     .product-detail{
         flex-direction: column;
         align-items: center;
+        margin-bottom: 20px;
     }
     .detail-info{
         margin: 0;

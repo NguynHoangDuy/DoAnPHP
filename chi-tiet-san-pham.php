@@ -52,8 +52,39 @@
             $_SESSION["gioHang"] = $gioHang;
         }        
         session_write_close();
-}
-            
+    }
+    if(isset($_POST["buyNow"]))
+    {
+        session_start();
+        $sl = $_POST["amount"];
+        $gia = $sl * $row["gia"];
+        $arr = ["ma_sp" => $row["ma_sp"], "sl" => $sl, "gia" => $gia];
+        if(isset($_SESSION["gioHang"]))
+        {
+            $gioHang = $_SESSION["gioHang"];
+            $checkCard = false;
+            for($i = 0; $i < count($gioHang); $i++)
+            {
+                if($gioHang[$i]["ma_sp"] == $arr["ma_sp"])
+                {
+                    $checkCard = true;
+                    $gioHang[$i]["sl"] = $gioHang[$i]["sl"] + $arr["sl"];
+                    $gioHang[$i]["gia"] = $gioHang[$i]["gia"] + $arr["gia"];
+                }
+            }
+            if($checkCard == false)
+            {
+                array_push($gioHang, $arr);
+            }
+            $_SESSION["gioHang"] = $gioHang;
+        }
+        else {
+            $gioHang = [$arr];
+            $_SESSION["gioHang"] = $gioHang;
+        }        
+        session_write_close();
+        header("location: ./gio-hang.php");
+    }        
     ?>
     <?php
       
@@ -76,7 +107,7 @@
                     <p style="font-size: 20px; font-weight: bold;">Chọn số lượng:</p>
                     <div class="detail-count-content">
                         <button class="detail-btn btn-decr" type="button">-</button>
-                        <input type="number" class="input-count" value="1" name="amount">
+                        <input type="number" class="input-count only" value="1" name="amount">
                         <button class="detail-btn btn-incr" type="button">+</button>
                     </div>
                 </div>
