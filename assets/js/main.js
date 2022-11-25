@@ -164,3 +164,16 @@ if(moneyType)
         item.textContent = Number(Number(item.textContent).toFixed(1)).toLocaleString()
     })
 }
+
+
+const checkAll = document.querySelector(".check-all")
+if(checkAll)
+{
+    checkAll.addEventListener("click", ()=>{
+        console.log("con mèo")
+        checkboxes = document.querySelectorAll('.check-hd');
+        checkboxes.forEach((item)=>{
+            item.checked = checkAll.checked;
+        })
+    })
+}

@@ -59,7 +59,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="../san-pham">
+                    <a href="../hoa-don">
                         <img src="../../assets/images/receipt-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Hóa đơn</span>
                     </a>
@@ -120,5 +120,6 @@
         </div>
     </div>
     <script src="../../assets/js/admin.js"></script>
+    <script src="../../assets/js/main.js"></script>
 </body>
 </html>
