@@ -65,7 +65,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="">
+                    <a href="../tin-tuc">
                         <img src="../../assets/images/newspaper-regular.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Tin tức</span>
                     </a>
