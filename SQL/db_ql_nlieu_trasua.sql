@@ -105,6 +105,20 @@ CREATE TABLE `san_pham` (
   `hinh_anh` varchar(200) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+
+--
+-- Table structure for table `lien_he`
+--
+
+CREATE TABLE `lien_he` (
+  `ma_lienhe` int(11) NOT NULL,
+  `ho_ten` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `so_dt` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_dung` varchar(500) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
 --
 -- Dumping data for table `san_pham`
 --
@@ -221,7 +235,25 @@ ALTER TABLE `san_pham`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+--
+-- Indexes for dumped tables
+--
 
+--
+-- Indexes for table `lien_he`
+--
+ALTER TABLE `lien_he`
+  ADD PRIMARY KEY (`ma_lienhe`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `lien_he`
+--
+ALTER TABLE `lien_he`
+  MODIFY `ma_lienhe` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `chi_tiet_don_hang`
 --

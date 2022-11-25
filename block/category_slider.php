@@ -2,7 +2,7 @@
     <div class="categorySlider">
     <div class="category">
         <h1>Danh mục sản phẩm</h1>
-
+        
             <div class="select-box" >
                 <div class="options-container active" style="background-color: #1d48ba">
     <?php
