@@ -3,8 +3,10 @@ session_start();
 if (isset($_SESSION["noti"]))
 {
 
-    echo "<div><p class='update-noti--text'>".$_SESSION["noti"]."</p>
-    <i class='fa fa-close update-noti--close'></i>
+    echo "<div class='noti-show'>
+    <p class='update-noti--text'><span>".$_SESSION["noti"]."</span>
+    <i class='fa fa-close update--noti noti--close'></i>
+    </p>
     </div>";
     unset($_SESSION["noti"]);
 
@@ -13,18 +15,16 @@ session_write_close();
 include("../../block/connection.php");
 include("../../block/global.php");
 if (isset($_GET["ok"])){
-                            $self=$_GET['page'];
-                            header("Location: ".$_SERVER ['PHP_SELF']."");
-                            $id= $_GET['id'];
-                            include("../../block/connection.php");
-                            $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
-                            $result=mysqli_query($conn,$sql);
+    $id= $_GET['id'];
+    include("../../block/connection.php");
+    $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
+    $result=mysqli_query($conn,$sql);
                         }
 function adminContent()
 {
     echo '<div class="container">';
     include("../../block/connection.php");
-    $rowsPerPage=6;
+    $rowsPerPage=5;
     if ( ! isset($_GET['page']))
         $_GET['page'] = 1;
     $offset =($_GET['page']-1)*$rowsPerPage;
@@ -115,12 +115,7 @@ function adminContent()
         }
     }
 }
-
-
-
 include("../../block/admin-block.php");
-
-
 ?>
 <script>
         const btnDelete = document.querySelectorAll(".admin-delete");
@@ -160,4 +155,9 @@ include("../../block/admin-block.php");
                 modal.classList.add("modal-hidden");
             }))
         }));
+        window.addEventListener("click",function(e){
+    if (e.target.matches(".noti--close")){
+        document.querySelector(".noti-show").style="z-index: 0";
+    }
+})
     </script>

@@ -234,7 +234,7 @@
                     </div>
                 </div>
                 <div class="info-item">
-                    <img src="" alt="" class="info-img">
+                    <img src="./assets/images/lan_avatar.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Tôn Huỳnh Phương Lan
                     </h4>

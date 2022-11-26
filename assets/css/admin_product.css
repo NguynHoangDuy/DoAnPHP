@@ -256,6 +256,29 @@ select.product-update-input {
     color: #1d48ba;
     font-weight: bold;
 }
+.noti-show{
+    position: fixed;
+    width: 100%;
+    z-index: 1000000;
+    background-color: lightgreen;
+    transition: all .25s linear;
+}
+.update-noti--text{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+.update--noti{
+    color: lightgreen;
+    background: white;
+    padding: 8px 10px;
+    font-weight: bolder;
+    border-radius: 100%;
+    cursor: pointer;
+}
 @media screen and (max-width: 767px){
     .admin-product--detail{
         flex-direction: column;
