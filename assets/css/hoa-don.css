@@ -3,7 +3,7 @@
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 20px;
+    margin: 0 20px 20px;
 }
 
 .receipt-table{
@@ -102,8 +102,11 @@
     align-items: center;
     padding: 10px;
 }
-
-.receipt-comand--btn > button{
+.comand--btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.comand--btn > button{
     padding: 10px;
     border: 1px solid gray;
     border-radius: 8px;
@@ -113,7 +116,7 @@
     margin-right: 10px;
 }
 
-.receipt-comand--btn > button:hover{
+.comand--btn > button:hover{
     background-color: #E1E3E7;
 }
 
@@ -163,15 +166,14 @@
 }
 
 .info-customer {
-    box-shadow: 2px -2px 7px #d5d5d5, -2px 2px 7px #ebebeb;
-    background: #f5f6fa;
+
     padding: 20px;
     width: 50%;
     border-radius: 10px;
+    border: 1px solid #007AE1;
 }
 .info-receipt{
-    box-shadow: 2px -2px 7px #d5d5d5, -2px 2px 7px #ebebeb;
-    background: #f5f6fa;
+    border: 1px solid #007AE1;
     padding: 20px;
     width: 45%;
     border-radius: 10px;

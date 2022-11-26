@@ -41,7 +41,7 @@
         else {
             echo '<div class="container">';
                 echo "<p class='blog-detail-header'> Tin tức trà sữa</p>";
-                getTinTuc($conn, true);
+                getAllTinTuc($conn);
             echo '</div>';
         }
 

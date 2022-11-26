@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <script src="../../assets/js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <?php
@@ -120,6 +121,6 @@
         </div>
     </div>
     <script src="../../assets/js/admin.js"></script>
-    <script src="../../assets/js/main.js"></script>
+
 </body>
 </html>
