@@ -34,7 +34,7 @@ function adminContent()
             <h3 class="admin-product--title size-title">Đơn hàng</h3>
             <div class="receipt-comand">
                 <div class="receipt-comand--title">Tất cả đơn hàng</div>
-                <div class="receipt-comand--btn">
+                <div class="comand--btn">
                     <button type="submit" name="tt">Xác nhận thanh toán</button>
                     <button type="submit" name="gh">Xác nhận giao hàng</button>
                 </div>
