@@ -19,7 +19,7 @@
         include("../../block/header-2.php");
     ?>
     <div class="container">
-    <form action="" method="get" style="width: 500px; margin: 0 auto; back">
+    <form action="" method="get" style="width: 500px; margin: 0 auto;">
             <h3 style="text-align: center;">DIỆN TÍCH HÌNH CHỮ NHẬT</h3>
             <table>
                 <tr>
