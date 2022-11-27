@@ -88,9 +88,6 @@
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-form/BT3_FAF.php">Exercise 3</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-form/BT4_FAF.php">Exercise 4</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-form/BT5_FAF.php">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
@@ -100,9 +97,7 @@
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-func/Bai2.php">Exercise 2</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-func/Bai3.php">Exercise 3</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-func/Bai4.php">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-func/Bai6.php">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
@@ -114,10 +109,6 @@
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-mysql/cau2_4.php">Exercise 4</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-mysql/cau2_5.php">Exercise 5</a> </li>
                                 <li> <a href="./bai-tap/le-thi-thu-phuong-mysql/cau2_6.php">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
-                                <li> <a href="">Exercise 9</a> </li>
-                                <li> <a href="">Exercise 10</a> </li>
                             </ul>
                             </ul>
                         </div>
@@ -199,8 +190,6 @@
                                 <li> <a href="bai-tap/nguyen-mai-thi-form/ketquaThiDaiHoc.php">Exercise 4</a> </li>
                                 <li> <a href="bai-tap/nguyen-mai-thi-form/Bai5_tinhTienDien.php">Exercise 5</a> </li>
                                 <li> <a href="bai-tap/nguyen-mai-thi-form/Bai6.php">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
@@ -212,7 +201,6 @@
                                 <li> <a href="bai-tap/nguyen-mai-thi-func/baitap4.php">Exercise 4</a> </li>
                                 <li> <a href="bai-tap/nguyen-mai-thi-func/baitap5.php">Exercise 5</a> </li>
                                 <li> <a href="bai-tap/nguyen-mai-thi-func/baitap6.php">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
