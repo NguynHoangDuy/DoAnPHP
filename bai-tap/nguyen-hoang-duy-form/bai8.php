@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nguyên Liệu Trà Sữa</title>
+	<link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="./config.php" method="post">
+    <?php
+        include("../../block/connection.php");
+        // include("../block/global.php");
+        include("../../block/header-2.php");
+    ?>
+<div class="container">
+<form action="./config.php" method="post">
         <table align="center" bgcolor="#faebd7">
             <tr>
                 <td colspan="9" style="text-align:center; background-color: coral;">Enter Your Information</td>
@@ -65,9 +76,10 @@
             </tr>
         </table>
     </form>
-    <?php
-        
-        
+</div>
+    
+<?php
+        include("../../block/footer.php");
     ?>
     
 </body>

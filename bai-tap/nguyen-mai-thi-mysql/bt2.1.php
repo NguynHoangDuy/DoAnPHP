@@ -46,6 +46,8 @@
         echo "</table>";
     }
 ?>
+<?php
+
  </div>
     <?php
         include("../../block/footer.php");

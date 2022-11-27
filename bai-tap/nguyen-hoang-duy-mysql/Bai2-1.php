@@ -1,4 +1,5 @@
-DOCTYPE html>
+<!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -15,7 +16,7 @@ DOCTYPE html>
 <body>
     <?php
         include("../../block/connection.php");
-        // include("../block/global.php");
+        //include("../block/global.php");
         include("../../block/header-2.php");
     ?>
     <div class="container">
@@ -56,6 +57,7 @@ DOCTYPE html>
         }
     ?>
     </div>
+
     <?php
         include("../../block/footer.php");
     ?>

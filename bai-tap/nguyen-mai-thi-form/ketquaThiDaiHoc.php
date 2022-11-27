@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KẾT QUẢ THI ĐẠI HỌC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nguyên Liệu Trà Sữa</title>
+	<link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <?php
+        include("../../block/connection.php");
+        // include("../block/global.php");
+        include("../../block/header-2.php");
+    ?>
 <?php
            if(isset($_POST['submit'])){
             $toan = $_POST['toan'];
@@ -28,7 +39,8 @@
                 $diemChuan = "Nhập sai";}}
 
     ?>
-<form action="" method="post">
+    <div class="container">
+    <form action="" method="post">
     <table align="center" bgcolor="yellow">
         <tr>
             <td colspan="2" bgcolor="violet"><h1>KẾT QUẢ THI ĐẠI HỌC </h1></td>
@@ -69,5 +81,12 @@
                 <input type="submit" name="reset" value="Clear">
             </td>
         </tr>
+        </table>
+    </form>
+    </div>
+
+        <?php
+        include("../../block/footer.php");
+    ?>
 </body>
 </html>
