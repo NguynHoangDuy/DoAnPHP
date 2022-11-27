@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <script src="../../assets/js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <?php
@@ -59,13 +60,13 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="../san-pham">
+                    <a href="../hoa-don">
                         <img src="../../assets/images/receipt-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Hóa đơn</span>
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="">
+                    <a href="../tin-tuc">
                         <img src="../../assets/images/newspaper-regular.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Tin tức</span>
                     </a>
@@ -120,5 +121,6 @@
         </div>
     </div>
     <script src="../../assets/js/admin.js"></script>
+
 </body>
 </html>

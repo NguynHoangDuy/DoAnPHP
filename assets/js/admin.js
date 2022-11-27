@@ -13,4 +13,7 @@ btnBarMenu.addEventListener("click", function(){
         adminContent.classList.toggle("isactive");
     }
 });
-
+// const btnUpdate = document.querySelector(".btn-update");
+// btnUpdate.addEventListener("click", function(){
+//     document.querySelector("input[type='file']").style="color:black";
+// })

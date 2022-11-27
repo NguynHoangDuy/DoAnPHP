@@ -53,8 +53,8 @@
                     </h4>
                     <span>MSSV: 61131116</span>
                 </a>
-                <a href="" class="info-item">
-                    <img src="" alt="" class="info-img">
+                <a href="./gioi-thieu/phuong-lan.php" class="info-item">
+                    <img src="./assets/images/lan_avatar.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Tôn Huỳnh Phương Lan
                     </h4>

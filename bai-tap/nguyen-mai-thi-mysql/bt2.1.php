@@ -18,6 +18,7 @@
         // include("../block/global.php");
         include("../../block/header-2.php");
     ?>
+    <div class="container">
 <?php
     $conn= mysqli_connect("localhost", "root", "", "quanly_ban_sua") or die('Không thể kết nối' . mysqli_connect_error());
     mysqli_set_charset($conn, charset:'utf8');
@@ -46,6 +47,9 @@
     }
 ?>
 <?php
+
+ </div>
+    <?php
         include("../../block/footer.php");
     ?>
 </body>

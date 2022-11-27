@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -18,6 +19,7 @@
         //include("../block/global.php");
         include("../../block/header-2.php");
     ?>
+    <div class="container">
     <?php
         include("./connection.php");
         if(!$conn){
@@ -54,6 +56,8 @@
             }
         }
     ?>
+    </div>
+
     <?php
         include("../../block/footer.php");
     ?>
