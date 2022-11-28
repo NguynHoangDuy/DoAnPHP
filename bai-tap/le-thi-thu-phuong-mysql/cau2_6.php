@@ -24,8 +24,7 @@
     if (!isset($_GET['page']))
         $_GET['page'] = 1;
     $offset = ($_GET['page'] - 1) * $rowsPerPage;
-    $conn = mysqli_connect("localhost", "root", "", "ql_bansua") or die('Không thể kết nối' . mysqli_connect_error());
-    mysqli_set_charset($conn, charset: 'utf8');
+    $conn = mysqli_connect("localhost", "root", "", "quanly_ban_sua") or die('Không thể kết nối' . mysqli_connect_error());
     $query = "SELECT Ma_sua, Ten_sua, Trong_luong, Don_gia, Hinh
      FROM sua LIMIT $offset, $rowsPerPage;";
     $result = mysqli_query($conn, $query);

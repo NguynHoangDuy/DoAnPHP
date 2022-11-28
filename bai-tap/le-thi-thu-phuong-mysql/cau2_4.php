@@ -23,9 +23,8 @@
         $servername="localhost";
         $username="root";
         $password="";
-        $dbname ="ql_bansua";
+        $dbname ="quanly_ban_sua";
         $conn= mysqli_connect($servername, $username, $password, $dbname) or die('Không thể kết nối' . mysqli_connect_error());
-        mysqli_set_charset($conn,charset:'utf8');
         //phan trang
 $rowsPerPage=5;
 if ( ! isset($_GET['page']))

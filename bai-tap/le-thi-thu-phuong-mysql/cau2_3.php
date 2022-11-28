@@ -23,9 +23,8 @@
         $servername="localhost";
         $username="root";
         $password="";
-        $dbname ="ql_bansua";
+        $dbname ="quanly_ban_sua";
         $conn= mysqli_connect($servername, $username, $password, $dbname) or die('Không thể kết nối' . mysqli_connect_error());
-        mysqli_set_charset($conn,charset:'utf8');
         $query="SELECT * FROM khach_hang";
         $result = mysqli_query($conn,$query);
         if(mysqli_num_rows($result)<>0){
