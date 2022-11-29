@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        form{
-            display: block;
-            margin: 0 auto;
-            width: 20%;
-            border: 1px solid pink;
-        }
     </style>
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form action="" method="post" >
-        <table>
+<?php
+include("../../block/header-2.php");
+echo "<div class='container'>";
+?>
+    <form action="" method="post" style=" display: block; margin: 0 auto;width: 50%">
+        <table >
             <tr>
-                <td colspan="2" style="text-align: center; background-color: pink;"><STROng>TÍNH DIỆN TÍCH HÌNH CHỮ NHẬT</STROng></td>
+                <td colspan="2" style="text-align: center; background-color: pink;"><h1><STROng>TÍNH DIỆN TÍCH HÌNH CHỮ NHẬT</STROng></h1></td>
             </tr>
             <tr>
                 <td>Chiều dài</td>
@@ -52,5 +57,9 @@
                 </tr>
             </table>
     </form>
+    <?php
+echo "</div>";
+include("../../block/footer.php")
+?>
 </body>
 </html>

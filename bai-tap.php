@@ -18,7 +18,6 @@
         include("./block/global.php");
         include("./block/header.php");
     ?>
-
     <div class="container">
         <div class="info">
             <h3 class="info-header">
@@ -227,41 +226,41 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">PHP & FORM</p>
                             <ul class="exercise-item ">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
-                                <li> <a href="">Exercise 3</a> </li>
-                                <li> <a href="">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_1.php">Exercise 1</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_2.php">Exercise 2</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_3.php">Exercise 3</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_4.php">Exercise 4</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_5.php">Exercise 5</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_6_nhaplieu.php">Exercise 6</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_7_nhaplieu.php">Exercise 7</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai8_form.php">Exercise 8</a> </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
                             <p class="exercise-title">MẢNG, CHUỖI & HÀM</p>
                             <ul class="exercise-item">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
-                                <li> <a href="">Exercise 3</a> </li>
-                                <li> <a href="">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_1.php">Exercise 1</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_2.php">Exercise 2</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_3.php">Exercise 3</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_4.php">Exercise 4</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_5.php">Exercise 5</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_6.php">Exercise 6</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_array/bai_7.php">Exercise 7</a> </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
                             <p class="exercise-title">KẾT HỢP PHP & MYSQL</p>
                             <ul class="exercise-item">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
-                                <li> <a href="">Exercise 3</a> </li>
-                                <li> <a href="">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
-                                <li> <a href="">Exercise 9</a> </li>
-                                <li> <a href="">Exercise 10</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.1.php">Exercise 1</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.2.php">Exercise 2</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.3.php">Exercise 3</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.4.php">Exercise 4</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.5.php">Exercise 5</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.6.php">Exercise 6</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_7_list.php">Exercise 7</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.8.php">Exercise 8</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.9.php">Exercise 9</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_mysql/bai_2.10.php">Exercise 10</a> </li>
                             </ul>
                             </ul>
                         </div>
