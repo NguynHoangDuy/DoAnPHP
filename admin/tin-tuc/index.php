@@ -5,8 +5,8 @@ function adminContent()
     include("../../block/connection.php");
     echo "<div class='container'>
     <h3 class='admin-product--title size-title'>Tin Tức</h3>
-    <div class='comand--btn'>
-    <button name='add'>Thêm tin tức mới</button>
+    <div class='comand--btn add-new--btn'>
+    <a href='./create.php' name='add'>Thêm tin tức mới</a>
     </div>";
     
     $none = false;

@@ -20,7 +20,7 @@
                     <i class="fa fa-bars"></i>
                 </div>
                 <div class="header-content--logo">
-                    <img src="./assets/images/blue_tea_logo.webp" alt="" width="100" height="100">
+                    <img src="http://localhost/doanphp/assets/images/blue_tea_logo.webp" alt="" width="100" height="100">
                 </div>
                 <div class="header-content--method">
                     <div class="header-method--hotline">
@@ -71,28 +71,28 @@
             <div class="header-menu">
                 <div class="header-menu--list">
                     <div class="header-menu--item">
-                        <a href="./index.php" class="header-menu--link">Trang chủ</a>
+                        <a href="http://localhost/doanphp/index.php" class="header-menu--link">Trang chủ</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="./gioi-thieu.php" class="header-menu--link">Giới thiệu</a>
+                        <a href="http://localhost/doanphp/gioi-thieu.php" class="header-menu--link">Giới thiệu</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="./bai-tap.php" class="header-menu--link">Bài tập</a>
+                        <a href="http://localhost/doanphp/bai-tap.php" class="header-menu--link">Bài tập</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="./san-pham.php" class="header-menu--link">Sản phẩm</a>
+                        <a href="http://localhost/doanphp/san-pham.php" class="header-menu--link">Sản phẩm</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="./tin-tuc.php" class="header-menu--link">Tin tức</a>
+                        <a href="http://localhost/doanphp/tin-tuc.php" class="header-menu--link">Tin tức</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="./gio-hang.php" class="header-menu--link">Đặt hàng</a>
+                        <a href="http://localhost/doanphp/gio-hang.php" class="header-menu--link">Đặt hàng</a>
                     </div>
                     <div class="header-menu--item">
-                        <a href="./lien-he.php" class="header-menu--link">liên hệ</a>
+                        <a href="http://localhost/doanphp/lien-he.php" class="header-menu--link">liên hệ</a>
                     </div>
                 </div>
-                <form action="./tim-kiem.php" method="get">
+                <form action="http://localhost/doanphp/tim-kiem.php" method="get">
                 <div class="header-menu--search">
                     <input type="text" name="search" id="" placeholder="Bạn cần tìm gì?..."
                     value="<?php if (isset(($_GET["search"]))) echo $_GET["search"]; else echo "" ?>">
