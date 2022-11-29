@@ -1,13 +1,12 @@
 
 <?php
-if(isset($_POST["edit"]))
+if(isset($_POST["add"]))
 {
     include("../../block/connection.php");
-    $id = $_GET["id"];
+    date_default_timezone_set("Asia/Ho_Chi_Minh");  
     $tieude = $_POST["title"];
     $noidung =$_POST['noidung'];
-
-
+    $tgdang = date('Y-m-d H:i:s');
     $target_dir = "../../assets/Images/";
     $target_file = $target_dir.basename($_FILES["hinh_dd"]["name"]);
     if($_FILES['hinh_dd']['tmp_name'] != "")
@@ -17,46 +16,29 @@ if(isset($_POST["edit"]))
     }
     if($_FILES['hinh_dd']['name'] != "")
     {
-        $query = "UPDATE `tin_tuc` SET `tieu_de`='$tieude',`hinh_dd`='".$_FILES['hinh_dd']['name']."',`noi_dung`='$noidung' WHERE `ma_tintuc` = '$id'";
-    }
-    else {
-        $query = "UPDATE `tin_tuc` SET `tieu_de`='$tieude',`noi_dung`='$noidung' WHERE `ma_tintuc` = '$id'";
+        $query = "INSERT INTO `tin_tuc`(`tieu_de`, `hinh_dd`, `noi_dung`, `tg_dang`) VALUES ('$tieude','".$_FILES['hinh_dd']['name']."','$noidung','$tgdang')";
     }
     
-    $result=mysqli_query($conn,$query);
-}
-
-if(isset($_POST["remove"]))
-{
-    include("../../block/connection.php");
-    $id = $_GET["id"];
-    $query = "DELETE FROM `tin_tuc` WHERE `ma_tintuc` = '$id'";
     $result=mysqli_query($conn,$query);
     header("location: ./index.php");
 }
 function adminContent(){
     include("../../block/connection.php");
-    if(isset($_GET["id"]))
-    {
-        $id = $_GET["id"];
-        $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `noi_dung`, `tg_dang` FROM `tin_tuc` WHERE `ma_tintuc` = '$id'";
-        $result = mysqli_query($conn, $query);
-        $row = mysqli_fetch_array($result);
-        $src = "../../assets/images/$row[hinh_dd]";
+
+        $src = "../../assets/images/image-choice.png";
         echo "<div class='container'>
         <form action='' method='post' enctype='multipart/form-data'>
-            <h3 class='admin-product--title size-title'>Chỉnh sửa bài viết</h3>
+            <h3 class='admin-product--title size-title'>Thêm bài viết</h3>
             <div class='comand--btn'>
-                <button name='edit'>Cập nhật</button>
-                <button name='remove'>Xóa</button>
+                <button name='add'>Thêm mới</button>
             </div>
-            <input type='text' name='title' value='".$row['tieu_de']."' class='new-edit-title'>
+            <input type='text' name='title' value='' class='new-edit-title' placeholder='Tiêu đề bài viết'>
 
-            <textarea name='noidung' id='editor1'>".$row['noi_dung']."</textarea>
+            <textarea name='noidung' id='editor1'></textarea>
             <h4 class='edit-title'>Ảnh đại diện</h4>
             <div class='new-edit-img'>
-                <img src='$src' alt='' class='img-news'>
-                <input type='file' name='hinh_dd' title='' value='$src' id='input-file-img' class='hinh_dd'>
+                <img src='".$src."' alt='' class='img-news'>
+                <input type='file' name='hinh_dd' title='' value='' id='input-file-img' class='hinh_dd'>
                 <label for='input-file-img' class='product-update--label not-hover'>Chọn ảnh</label>
             </div>
         </form>";
@@ -72,7 +54,7 @@ function adminContent(){
             })
 
         </script>";
-    }
+    
 }
 ?>
 <?php

@@ -24,7 +24,6 @@
     $password = "";
     $dbname = "quanly_ban_sua";
     $conn = mysqli_connect($severname, $username, $password, $dbname) or die('Không thể kết nối' . mysqli_connect_error());
-    mysqli_set_charset($conn, charset:'utf8');
         //phan trang
 $rowsPerPage=5;
 if ( ! isset($_GET['page']))

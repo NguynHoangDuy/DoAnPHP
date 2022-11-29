@@ -129,3 +129,21 @@
     background: #1d48ba;
     color: white;
 }
+
+.add-new--btn > a{
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 10px;
+    background: #1d48ba;
+    padding: 10px;
+    opacity: 1;
+    color: white;
+}
+.add-new--btn > a:hover{
+    background: #1d48ba;
+    opacity: 0.9;
+    color: white;
+}

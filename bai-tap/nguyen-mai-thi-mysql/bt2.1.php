@@ -21,10 +21,9 @@
     <div class="container">
 <?php
     $conn= mysqli_connect("localhost", "root", "", "quanly_ban_sua") or die('Không thể kết nối' . mysqli_connect_error());
-    mysqli_set_charset($conn, charset:'utf8');
     $query="SELECT * FROM hang_sua";
     $result=mysqli_query($conn, $query);
-    if (mysqli_num_rows($result) <>0)
+    if (mysqli_num_rows($result) != 0)
     {
         echo "<h2 align='center' style='color: blue;'>THÔNG TIN HÃNG SỮA</h2>";
         echo "<table align='center' border='1' cellpadding='2' width='100%' style='border-collapse: collpase'>";
@@ -45,10 +44,8 @@
         }
         echo "</table>";
     }
-?>
-<?php
-
- </div>
+    ?>
+</div>
     <?php
         include("../../block/footer.php");
     ?>

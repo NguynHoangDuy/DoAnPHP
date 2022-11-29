@@ -14,7 +14,7 @@
 </head>
 <body>
 <?php
-    include("../block/header_child.php");
+    include("../block/header.php");
 ?>
 <div class="container">
 <div class="personal">
