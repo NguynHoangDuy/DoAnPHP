@@ -5,9 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài 3</title>
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <?php
+include("../../block/header-2.php");
+echo "<div class='container'>";
         $n="";
         $arr=[];
         $ketqua="";
@@ -23,7 +32,7 @@
                 echo $arr[$i] ." ";
             }
         }
-        function max($arr, $n){
+        function Max_Arr($arr, $n){
             $max=$arr[0];
             for ($i=0; $i< $n;$i++){
                 if ($max < $arr[$i]){
@@ -32,7 +41,7 @@
             }
             return $max;
         }
-        function min($arr, $n){
+        function Min_Arr($arr, $n){
             $min=$arr[0];
             for ($i=0; $i< $n;$i++){
                 if ($min > $arr[$i]){
@@ -51,8 +60,8 @@
         if (isset($_POST["submit"])){
             $n=$_POST["n"];
             $arr=tao_mang($n);
-            $max=max($arr, $n);
-            $min=min($arr, $n);
+            $max=Max_Arr($arr, $n);
+            $min=Min_Arr($arr, $n);
             $ketqua=tong_mang($arr, $n);
         }
     ?>
@@ -123,6 +132,10 @@
                 </td>
             </tr>
         </table>
-    </form>   
+    </form>  
+<?php
+echo "</div>";
+include("../../block/footer.php")
+?> 
 </body>
 </html>

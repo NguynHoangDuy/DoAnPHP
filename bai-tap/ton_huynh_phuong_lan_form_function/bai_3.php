@@ -5,26 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tính tiền điện</title>
-    <style>
-        form{
-            background-color: wheat;
-            display: block;
-            margin: 0 auto;
-            width: 400px;
-        }
-        .form-title{
-            font-style: italic;
-            font-weight: bold;
-            color: red;
-            background-color: orange;
-            text-align: center;
-            padding: 10px 35px;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php
+    include("../../block/header-2.php");
+    echo "<div class='container'>";
     $chisocu="";
     $chisomoi="";
     $tien="";
@@ -50,10 +42,19 @@
     }
 
     ?>
-    <form action="" method="post">
+    <form action="" method="post" style="background-color: wheat;
+            display: block;
+            margin: 0 auto;
+            width: 400px;">
         <table>
             <tr>
-                <td colspan="3" align="center" class="form-title">THANH TOÁN TIỀN ĐIỆN CHO HỘ GIA ĐÌNH</td>
+                <td colspan="3" align="center" style="font-style: italic;
+            font-weight: bold;
+            color: red;
+            background-color: orange;
+            text-align: center;
+            padding: 10px 35px;
+            font-size: 16px;">THANH TOÁN TIỀN ĐIỆN CHO HỘ GIA ĐÌNH</td>
             </tr>
             <tr>
                 <td>Tên chủ hộ:</td>
@@ -117,5 +118,9 @@
             </tr>
         </table>
     </form>
+    <?php
+echo "</div>";
+include("../../block/footer.php")
+?>
 </body>
 </html>

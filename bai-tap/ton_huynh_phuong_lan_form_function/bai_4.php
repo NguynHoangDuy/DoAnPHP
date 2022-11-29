@@ -5,24 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tính điểm thi đại học</title>
-    <style>
-        form{
-            display: block;
-            margin: 0 auto;
-            width: 300px;
-            background-color: pink;
-        }
-        .form-title{
-            font-style: italic;
-            color: white;
-            background-color: palevioletred;
-            padding: 10px 45.3px;
-            font-size: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <?php
+    include("../../block/header-2.php");
+    echo "<div class='container'>";
         $toan="";
         $ly="";
         $hoa="";
@@ -44,10 +39,17 @@
                 }
         }
     ?>
-    <form action="" method="post">
+    <form action="" method="post" style="display: block;
+            margin: 0 auto;
+            width: 300px;
+            background-color: pink;">
         <table>
             <tr>
-                <td colspan="2" align="center" class="form-title">KẾT QUẢ THI ĐẠI HỌC</td>
+                <td colspan="2" align="center" style="font-style: italic;
+            color: white;
+            background-color: palevioletred;
+            padding: 10px 45.3px;
+            font-size: 20px;">KẾT QUẢ THI ĐẠI HỌC</td>
             </tr>
             <tr>
                 <td>Toán</td>
@@ -104,5 +106,9 @@
             </tr>
         </table>
     </form>
+    <?php
+echo "</div>";
+include("../../block/footer.php")
+?>
 </body>
 </html>

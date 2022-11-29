@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tính chu vi và diện tích hình tròn</title>
-    <style>
-        form{
-            background-color: pink;
-            display: block;
-            margin: 0 auto;
-            width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php
+    include("../../block/header-2.php");
+    echo "<div class='container'>";
     $s="";
     define("PI", 3.14);
     $p="";
@@ -29,7 +30,10 @@
             }
         }
     ?>
-    <form action="" method="post" >
+    <form action="" method="post" style="background-color: pink;
+            display: block;
+            margin: 0 auto;
+            width: 300px;">
         <table>
             <tr style="background-color: orange">
                 <td colspan="2" align="center" >
@@ -71,5 +75,9 @@
             </tr>
         </table>
     </form>
+    <?php
+echo "</div>";
+include("../../block/footer.php")
+?>
 </body>
 </html>

@@ -144,8 +144,9 @@ function adminContent(){
 ?>
 <script>
     const btnUpdateImg = document.querySelector("#updateImg");
-    btnUpdateImg.addEventListener("change", function(e){
+    btnUpdateImg.addEventListener("change", function(){
         const img= document.querySelector("#img");
-        img.setAttribute("src","../../assets/images/"+e.target.value.slice(12));
+        console.log(window.URL.createObjectURL(btnUpdateImg.files[0]));
+        img.src=window.URL.createObjectURL(btnUpdateImg.files[0]);
     });
 </script>

@@ -5,26 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tính tiền karaoke</title>
-    <style>
-        form{
-            background-color: #03b0b6;
-            display: block;
-            margin: 0 auto;
-            width: 350px;
-        }
-        .form-title{
-            font-style: italic;
-            font-weight: bold;
-            color: white;
-            background-color: #018b8e;
-            text-align: center;
-            padding: 10px 90px;
-            font-size: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
+	<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php
+    include("../../block/header-2.php");
+    echo "<div class='container'>";
     $gioketthuc="";
     $tien="";
     $giobatdau="";
@@ -59,10 +51,19 @@
     }
 
     ?>
-    <form action="" method="post">
+    <form action="" method="post" style=" background-color: #03b0b6;
+            display: block;
+            margin: 0 auto;
+            width: 350px;">
         <table>
             <tr>
-                <td colspan="3" align="center" class="form-title">TÍNH TIỀN KARAOKE</td>
+                <td colspan="3" align="center" style="font-style: italic;
+            font-weight: bold;
+            color: white;
+            background-color: #018b8e;
+            text-align: center;
+            padding: 10px 90px;
+            font-size: 16px;">TÍNH TIỀN KARAOKE</td>
             </tr>
             <tr>
                 <td>Giờ bắt đầu:</td>
@@ -107,5 +108,9 @@
             </tr>
         </table>
     </form>
+    <?php
+echo "</div>";
+include("../../block/footer.php")
+?>
 </body>
 </html>
