@@ -16,7 +16,7 @@
 </head>
 <body>
     <?php
-    include("../../block/header-2.php");
+    include("../../block/heade.php");
     echo "<div class='container'>";
         if(isset($_POST["pheptinh"]))
         {

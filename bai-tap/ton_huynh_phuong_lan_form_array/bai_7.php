@@ -15,7 +15,7 @@
 </head>
 <body>
 <?php
-include("../../block/header-2.php");
+include("../../block/header.php");
 echo "<div class='container'>";
     if (isset($_POST["submit"])){
     $duonglich=$_POST["duonglich"];

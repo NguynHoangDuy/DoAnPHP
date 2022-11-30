@@ -17,7 +17,7 @@
     <form action="./bai8_form.php" method="post">
     <p>Bạn đã đăng nhập thành công, dưới đây là những thông tin bạn đã nhập: </p>
     <?php
-    include("../../block/header-2.php");
+    include("../../block/header.php");
     echo "<div class='container'>";
         session_start();
         $fullname=$_SESSION["fullname"];

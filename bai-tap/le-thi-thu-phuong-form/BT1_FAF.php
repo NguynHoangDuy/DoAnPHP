@@ -16,7 +16,7 @@
     <?php
         include("../../block/connection.php");
         // include("../block/global.php");
-        include("../../block/header-2.php");
+        include("../../block/header.php");
     ?>
     <div class="container">
     <form action="" method="get" style="width: 300px; margin: 0 auto;">
