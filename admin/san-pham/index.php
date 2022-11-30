@@ -9,7 +9,6 @@ if (isset($_SESSION["noti"]))
     </p>
     </div>";
     unset($_SESSION["noti"]);
-
 }
 session_write_close();
 include("../../block/connection.php");
@@ -24,7 +23,7 @@ function adminContent()
 {
     echo '<div class="container">';
     include("../../block/connection.php");
-    $rowsPerPage=5;
+    $rowsPerPage=6;
     if ( ! isset($_GET['page']))
         $_GET['page'] = 1;
     $offset =($_GET['page']-1)*$rowsPerPage;
@@ -157,7 +156,7 @@ include("../../block/admin-block.php");
         }));
         window.addEventListener("click",function(e){
     if (e.target.matches(".noti--close")){
-        document.querySelector(".noti-show").style="z-index: 0";
+        document.querySelector(".noti-show").style="z-index: 0; transition: all .25s linear";
     }
 })
     </script>

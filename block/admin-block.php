@@ -42,7 +42,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="">
+                    <a href="../nhan-vien">
                         <img src="../../assets/images/user-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Nhân Viên</span>
                     </a>
