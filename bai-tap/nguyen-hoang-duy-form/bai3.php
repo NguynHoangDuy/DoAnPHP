@@ -16,7 +16,7 @@
     <?php
         include("../../block/connection.php");
         // include("../block/global.php");
-        include("../../block/header-2.php");
+        include("../../block/header.php");
     ?>
 <?php
 
