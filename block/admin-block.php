@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyên Liệu Trà Sữa</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    <link rel="icon" type="image/x-icon" href="/doAnphp/assets/images/blue_tea_logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <script src="../../assets/js/ckeditor/ckeditor.js"></script>
 </head>
+
 <body>
     <?php
         session_start();
@@ -33,7 +32,7 @@
     ?>
     <div class="admin">
         <div class="admin-sidebar active">
-            
+
             <ul class="admin-sidebar-list">
                 <li class="admin-sidebar-item">
                     <a href="../quan-ly">
@@ -84,31 +83,23 @@
             <div class="admin-header">
                 <div class="flex">
                     <form action="" method="post">
-                            <button name="logout" type ="submit" class="admin-logout-btn" title="Đăng xuất tài khoản">
+                        <button name="logout" type="submit" class="admin-logout-btn" title="Đăng xuất tài khoản">
                             <i class="fa-solid fa-right-from-bracket"></i>
-                            </button>
-                        </form>
-                <a href="" class="admin-sidebar-logo">
-                    <img src="../../assets/images/blue_tea_logo.webp" alt="" class="admin-sidebar-img">
-                    <span>BLUE TEA</span>
-                </a>
-                <div class="admin-sidebar--toggle">
-                    <i class="fa fa-bars"></i>
-                </div>  
-            </div>
-                <div class="admin-search">
-                    <form action="" method="post">
-                        <input type="text" placeholder="Tìm kiếm ..." class="admin-search-input">
-                        <button type="submit" class="admin-search-icon">
-                            <div class="fas fa-magnifying-glass"></div>
                         </button>
                     </form>
+                    <a href="" class="admin-sidebar-logo">
+                        <img src="../../assets/images/blue_tea_logo.webp" alt="" class="admin-sidebar-img">
+                        <span>BLUE TEA</span>
+                    </a>
+                    <div class="admin-sidebar--toggle">
+                        <i class="fa fa-bars"></i>
+                    </div>
                 </div>
                 <div class="admin-avatar">
                     <img src="../../assets/images/avatar-admin.jpg" alt="" class="admin-avatar-img">
                     <form action="" method="post">
-                        <button name="logout" type ="submit" class="admin-logout-btn" title="Đăng xuất tài khoản">
-                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <button name="logout" type="submit" class="admin-logout-btn" title="Đăng xuất tài khoản">
+                            <i class="fa-solid fa-right-from-bracket"></i>
                         </button>
                     </form>
                 </div>
@@ -124,4 +115,5 @@
     <script src="../../assets/js/main.js"></script>
 
 </body>
+
 </html>
