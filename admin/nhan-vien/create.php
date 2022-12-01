@@ -41,14 +41,14 @@ if(isset($_POST['submit']))
             if ($result) 
             {
                 header("Location:../../admin/nhan-vien/index.php");
-                $notiPeople="Cập nhật thành công";
+                $notiPeople="Thêm nhân viên mới thành công";
                 session_start();
                 $_SESSION["noti-people"]=$notiPeople;
                 session_write_close();
             }
             else 
             {
-                echo 'not updated';
+                echo 'không thể thêm';
             }
     }
 include("../../block/admin-block.php");

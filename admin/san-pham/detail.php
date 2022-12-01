@@ -26,6 +26,12 @@ if (isset($_GET["ok"])){
 function adminContent()
 {
     echo '<div class="container">';
+    echo "<div class='product-content--link' align='left' style='margin-bottom: 30px'>";
+    echo "<h1 class='admin-product--title'>THÔNG TIN SẢN PHẨM</h1>
+    <a href='../../admin/san-pham/index.php' class='product-link--edit'>
+    <i class='fa-solid fa-arrow-left'></i><span> Quay lại</span>
+    </a>
+</div>";
     include("../../block/connection.php");
                     $id=$_GET["id"];
                     if (isset($id)){
@@ -37,7 +43,6 @@ function adminContent()
                         }
                         else {
                             while ($row=mysqli_fetch_array($result)){
-                                echo "<h1 class='admin-product--title' style='margin-bottom: 30px'>THÔNG TIN CỦA SẢN PHẨM</h1>";
                                 echo "<div class='admin-product--detail'>
                                 <div class='product-detail--img'>
                                     <img src='../../assets/images/{$row['hinh_anh']}' alt='' title='Ảnh sản phẩm {$row['ten_sp']}'>

@@ -56,9 +56,13 @@ function adminContent(){
             $gia=$row['gia'];
         }
     }
-    
+    echo "<div class='product-content--link' align='left' style='margin-bottom: 30px'>";
+            echo "<h1 class='admin-product--title'>CẬP NHẬT THÔNG TIN SẢN PHẨM</h1>
+            <a href='../../admin/san-pham/index.php' class='product-link--edit'>
+            <i class='fa-solid fa-arrow-left'></i><span> Quay lại</span>
+            </a>
+        </div>";
 ?>
-<h1 class='admin-product--title' style='margin-bottom: 30px'>CẬP NHẬT THÔNG TIN SẢN PHẨM</h1>
 <form method='post' action="" enctype="multipart/form-data" class="product-update--form"> 
 <div class="product-form--content">
 <div class="product-update--img">
