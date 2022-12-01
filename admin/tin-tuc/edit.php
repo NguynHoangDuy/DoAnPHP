@@ -1,43 +1,46 @@
-
 <?php
-if(isset($_POST["edit"]))
-{
+if (isset($_POST["edit"])) {
     include("../../block/connection.php");
     $id = $_GET["id"];
     $tieude = $_POST["title"];
-    $noidung =$_POST['noidung'];
+    $noidung = $_POST['noidung'];
 
-
+    $none = "";
     $target_dir = "../../assets/Images/";
-    $target_file = $target_dir.basename($_FILES["hinh_dd"]["name"]);
-    if($_FILES['hinh_dd']['tmp_name'] != "")
-    {
+    $target_file = $target_dir . basename($_FILES["hinh_dd"]["name"]);
+    if ($_FILES['hinh_dd']['tmp_name'] != "") {
         $fileImage = $_FILES['hinh_dd']['tmp_name'];
         move_uploaded_file($fileImage, $target_file);
     }
-    if($_FILES['hinh_dd']['name'] != "")
-    {
-        $query = "UPDATE `tin_tuc` SET `tieu_de`='$tieude',`hinh_dd`='".$_FILES['hinh_dd']['name']."',`noi_dung`='$noidung' WHERE `ma_tintuc` = '$id'";
-    }
-    else {
+    if ($_FILES['hinh_dd']['name'] != "") {
+        $query = "UPDATE `tin_tuc` SET `tieu_de`='$tieude',`hinh_dd`='" . $_FILES['hinh_dd']['name'] . "',`noi_dung`='$noidung' WHERE `ma_tintuc` = '$id'";
+    } else {
         $query = "UPDATE `tin_tuc` SET `tieu_de`='$tieude',`noi_dung`='$noidung' WHERE `ma_tintuc` = '$id'";
     }
-    
-    $result=mysqli_query($conn,$query);
+
+
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        $none = "active";
+    }
 }
 
-if(isset($_POST["remove"]))
-{
+if (isset($_POST["ok"])) {
     include("../../block/connection.php");
     $id = $_GET["id"];
     $query = "DELETE FROM `tin_tuc` WHERE `ma_tintuc` = '$id'";
-    $result=mysqli_query($conn,$query);
-    header("location: ./index.php");
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        header("location: ./index.php");
+        session_start();
+        $_SESSION["tb"] = "xóa";
+        session_write_close();
+    }
 }
-function adminContent(){
+function adminContent()
+{
     include("../../block/connection.php");
-    if(isset($_GET["id"]))
-    {
+    if (isset($_GET["id"])) {
         $id = $_GET["id"];
         $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `noi_dung`, `tg_dang` FROM `tin_tuc` WHERE `ma_tintuc` = '$id'";
         $result = mysqli_query($conn, $query);
@@ -48,11 +51,11 @@ function adminContent(){
             <h3 class='admin-product--title size-title'>Chỉnh sửa bài viết</h3>
             <div class='comand--btn'>
                 <button name='edit'>Cập nhật</button>
-                <button name='remove'>Xóa</button>
+                <button name='remove' class='button-defaut'>Xóa</button>
             </div>
-            <input type='text' name='title' value='".$row['tieu_de']."' class='new-edit-title'>
+            <input type='text' name='title' value='" . $row['tieu_de'] . "' class='new-edit-title'>
 
-            <textarea name='noidung' id='editor1'>".$row['noi_dung']."</textarea>
+            <textarea name='noidung' id='editor1'>" . $row['noi_dung'] . "</textarea>
             <h4 class='edit-title'>Ảnh đại diện</h4>
             <div class='new-edit-img'>
                 <img src='$src' alt='' class='img-news'>
@@ -70,13 +73,35 @@ function adminContent(){
                 imgNews.src =  window.URL.createObjectURL(hinh_dd.files[0]);
                 console.log(hinh_dd.files[0])
             })
-
         </script>";
     }
 }
 ?>
+
 <?php
 include("../../block/connection.php");
 include("../../block/global.php");
 include("../../block/admin-block.php");
 ?>
+
+<div class="noti-suscess <?php echo $none; ?>">
+    <i class="fa-sharp fa-solid fa-check icon-checked"></i>
+    <p class="noti-suscess-text">Cập nhật thành công</p>
+    <i class="fa-solid fa-x icon-close"></i>
+</div>
+
+<script>
+    const notiSucsess = document.querySelector(".noti-suscess.active")
+    if (notiSucsess) {
+        setTimeout(() => {
+            notiSucsess.classList.remove("active");
+        }, 3000)
+
+        const iconClose = document.querySelector(".icon-close")
+        iconClose.addEventListener("click", () => {
+            notiSucsess.classList.remove("active");
+        })
+    }
+
+
+</script>

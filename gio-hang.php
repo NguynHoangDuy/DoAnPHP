@@ -16,7 +16,7 @@
 <body>
 <?php
     $err ="";
-
+    $none = "";
     include("./block/connection.php");
     include("./block/global.php");
     session_start();
@@ -117,7 +117,10 @@
         if($resultDonHang && $kiemTra!= false)
         {
             $_SESSION["gioHang"] = [];
-        }}
+            $none ="active";
+        }
+        
+    }
     }
     session_write_close();
     
@@ -268,12 +271,32 @@
     
 ?>
 <div class="container">
-<?php include("./block/product-hot.php")?>
+<?php 
+    product_hot($conn);
+?>
 </div>
 <?php
     include("./block/footer.php");
 ?>
-</body>
 
+<div class="noti-suscess <?php echo $none; ?>">
+    <i class="fa-sharp fa-solid fa-check icon-checked"></i>
+    <p class="noti-suscess-text">Đặt hàng thành công</p>
+    <i class="fa-solid fa-x icon-close"></i>
+</div>
+</body>
+<script>
+    const notiSucsess = document.querySelector(".noti-suscess.active")
+    if(notiSucsess){
+        setTimeout(()=>{
+            notiSucsess.classList.remove("active");
+        }, 3000)
+        
+        const iconClose = document.querySelector(".icon-close")
+        iconClose.addEventListener("click", ()=>{
+            notiSucsess.classList.remove("active");
+        })
+    }
+</script>
 </html>
 

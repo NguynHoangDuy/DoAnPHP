@@ -155,7 +155,9 @@
                 </div>
             </div>
         </div>
-        <?php include("./block/product-hot.php")?>
+        <?php include("./block/product-same.php");
+            product_same($row['ten_dm'], $conn)
+        ?>
         </form>
     </div>
     <?php

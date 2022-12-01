@@ -1,7 +1,9 @@
-<div class="product-hot">
-            <p class="product-hot-title">Sản phẩm nổi bật</p>
-            <?php
-                $query = "SELECT `ma_sp`,`ten_sp`,`gia`,`ten_dm`,`hinh_anh` FROM `san_pham` inner join danh_muc on san_pham.danh_muc = danh_muc.ma_dm ORDER BY RAND () LIMIT 1, 4";
+<?php
+
+function product_same($dm, $conn){
+    echo '<div class="product-hot">
+            <p class="product-hot-title">Sản phẩm liên quan</p>';
+                $query = "SELECT `ma_sp`,`ten_sp`,`gia`,`ten_dm`,`hinh_anh` FROM `san_pham` inner join danh_muc on san_pham.danh_muc = danh_muc.ma_dm WHERE danh_muc.ten_dm = '$dm'  ORDER BY RAND () LIMIT 1, 4";
                 $result =  mysqli_query($conn, $query);
                 if(!$result)
                 echo "Không xem được";
@@ -26,5 +28,8 @@
                         echo "</div>";  
                     }
                 }
-            ?>
-        </div>
+        echo '</div>';
+}
+
+?>
+

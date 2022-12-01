@@ -225,3 +225,7 @@ ul.exercise-item > li > a:hover {
 .w100:first-child{
     margin-top: 40px;
 }
+
+.exercise-title{
+    cursor: pointer;
+}
