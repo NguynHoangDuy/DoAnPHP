@@ -45,10 +45,15 @@
             }
         }
     ?>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
     <div class="container">
-    <form action="" method="post">
-        <table align="center">
-            <tr>
+    <form action="" method="post" style="max-width: 400px; margin: 0 auto;">
+        <table align="center" style="background-color: DarkSalmon;">
+            <tr style="background-color: pink;">
                 <td colspan="2">Thay thế</td>
             </tr>
             <tr>
@@ -75,7 +80,7 @@
             <tr>
                 <td>Mảng mới:</td>
                 <td><input type="text" disabled value="<?php if(isset($newArr)) for($i = 0; $i < count($newArr); $i++)
-                echo "$newArr[$i] "; else echo "hihi"; ?>"></td>
+                echo "$newArr[$i] "; else echo ""; ?>"></td>
             </tr>
         </table>
     </form>

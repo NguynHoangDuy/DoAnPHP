@@ -35,8 +35,13 @@
                 }
             }
     ?>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
     <div class="container">
-    <form action="<?php if(isset($action)) echo $action; else echo "";?>" method="post">
+    <form action="<?php if(isset($action)) echo $action; else echo "";?>" style="max-width: 400px; margin: 0 auto;" method="post">
         <table align="center" bgcolor="#faebd7">
             <tr>
                 <td colspan="9" style="text-align:center; background-color: coral;">PHÉP TÍNH TRÊN HAI SỐ</td>

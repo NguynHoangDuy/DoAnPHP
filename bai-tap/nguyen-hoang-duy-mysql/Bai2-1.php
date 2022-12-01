@@ -19,6 +19,17 @@
         //include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 800px; margin: 0 auto;
+        }
+
+
+    </style>
     <div class="container">
     <?php
         include("./connection.php");
@@ -34,8 +45,8 @@
                 if(mysqli_num_rows($result) != 0)
                 {
                     echo "
-                    <table border='1' align='center' style='border-collapse: collapse;'>
-                    <tr>
+                    <table border='1' align='center' style='border-collapse: collapse; max-width: 800px; margin: 0 auto;'>
+                    <tr style='background-color: pink;'>
                         <th>Mã HS</th>
                         <th>Tên hãng sữa</th>
                         <th>Địa chỉ</th>

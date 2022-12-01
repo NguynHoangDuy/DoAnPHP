@@ -1,4 +1,44 @@
 <?php
+$none = "";
+$tb = "";
+session_start() ;
+if ($_SESSION["tb"]) {
+    if($_SESSION["tb"] == "remove")
+    {
+        $tb = "Xóa";
+        $none = "active";
+        $_SESSION["tb"] = "";
+    }
+    elseif ($_SESSION["tb"] == "add") {
+        $tb = "Thêm";
+        $none = "active";
+        $_SESSION["tb"] = "";
+    }
+}
+session_write_close();
+?>
+
+
+<div class="noti-suscess <?php echo $none; ?>">
+    <i class="fa-sharp fa-solid fa-check icon-checked"></i>
+    <p class="noti-suscess-text"><?php echo $tb?> thành công</p>
+    <i class="fa-solid fa-x icon-close"></i>
+</div>
+
+<script>
+    const notiSucsess = document.querySelector(".noti-suscess.active")
+    if (notiSucsess) {
+        setTimeout(() => {
+            notiSucsess.classList.remove("active");
+        }, 3000)
+
+        const iconClose = document.querySelector(".icon-close")
+        iconClose.addEventListener("click", () => {
+            notiSucsess.classList.remove("active");
+        })
+    }
+</script>
+<?php
 function adminContent()
 {
     include("../../block/connection.php");
@@ -70,8 +110,4 @@ function adminContent()
 include("../../block/connection.php");
 include("../../block/global.php");
 include("../../block/admin-block.php");
-
-if ($_SESSION["tb"]) {
-    echo $_SESSION["tb"];
-}
 ?>

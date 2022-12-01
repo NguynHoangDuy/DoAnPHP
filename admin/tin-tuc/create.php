@@ -20,7 +20,13 @@ if(isset($_POST["add"]))
     }
     
     $result=mysqli_query($conn,$query);
-    header("location: ./index.php");
+    if($result)
+    {
+        header("location: ./index.php");
+        session_start();
+        $_SESSION["tb"] = "add";
+        session_write_close();
+    }
 }
 function adminContent(){
     include("../../block/connection.php");
