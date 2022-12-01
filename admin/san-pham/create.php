@@ -5,8 +5,15 @@ if (isset($_POST["submit"])){
     $tenSP=$_POST['tenSP'];
     $giaSP=$_POST['giaSP'];
     $motaSP= $_POST['motaSP'];
-    $dm_SP=substr($dm,0,2);
-    $idSP="";
+    if (($dm=="MUT") || ($dm=="THA") || ($dm=="TRA")) {
+        $dm_SP=substr($dm,0,2);
+    }
+    else {
+        if ($dm=="SUB") $dm_SP="SB";
+        else if ($dm=="SID") $dm_SP="SD";
+        else if ($dm=="TRC") $dm_SP="TC";
+    }
+    $idSP="";//tạo mã rỗng
     $sql = "SELECT MAX(ma_sp) FROM `san_pham` WHERE danh_muc='$dm'";
     $result=mysqli_query($conn, $sql);
     if ($result){

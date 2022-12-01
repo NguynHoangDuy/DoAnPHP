@@ -1,5 +1,17 @@
 <?php
 session_start();
+if (isset($_SESSION["noti-product"]))
+{
+
+    echo "<div class='noti-show'>
+    <p class='update-noti--text'><span>".$_SESSION["noti-product"]."</span>
+    <i class='fa fa-close update--noti noti--close'></i>
+    </p>
+    </div>";
+    unset($_SESSION["noti-product"]);
+}
+session_write_close();
+session_start();
 if (isset($_SESSION["noti"]))
 {
 
