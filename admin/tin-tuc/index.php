@@ -26,17 +26,17 @@ session_write_close();
 </div>
 
 <script>
-    const notiSucsess = document.querySelector(".noti-suscess.active")
-    if (notiSucsess) {
-        setTimeout(() => {
-            notiSucsess.classList.remove("active");
-        }, 3000)
+const notiSucsess = document.querySelector(".noti-suscess.active")
+if (notiSucsess) {
+    setTimeout(() => {
+        notiSucsess.classList.remove("active");
+    }, 3000)
 
-        const iconClose = document.querySelector(".icon-close")
-        iconClose.addEventListener("click", () => {
-            notiSucsess.classList.remove("active");
-        })
-    }
+    const iconClose = document.querySelector(".icon-close")
+    iconClose.addEventListener("click", () => {
+        notiSucsess.classList.remove("active");
+    })
+}
 </script>
 <?php
 function adminContent()
@@ -63,7 +63,7 @@ function adminContent()
 
     $maxPage = ceil($numRow / $rowPerPage);
 
-    $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` LIMIT $offset, $rowPerPage";
+    $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` ORDER BY tg_dang DESC LIMIT $offset, $rowPerPage";
     $result = mysqli_query($conn, $query);
     if ($result) {
         if (mysqli_num_rows($result) != 0) {

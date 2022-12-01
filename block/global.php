@@ -275,7 +275,7 @@
         }
     }
     function getTinTuc($conn){
-        $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` order by RAND() LIMIT 0, 3";
+        $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` ORDER BY tg_dang DESC LIMIT 0, 3";
         $result =  mysqli_query($conn, $query);
         if($result)
         {
@@ -309,7 +309,7 @@
             $_GET['page'] = 1;
         }
         $offset = ($_GET['page']-1)* $rowPerPage;
-        $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc`";
+        $query = "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` ";
         $result = mysqli_query($conn, $query);
         $numRow = mysqli_num_rows($result);
         if($numRow == $rowPerPage)
@@ -319,7 +319,7 @@
 
         $maxPage = ceil($numRow / $rowPerPage); 
 
-        $query= "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` LIMIT $offset, $rowPerPage";
+        $query= "SELECT `ma_tintuc`, `tieu_de`, `hinh_dd`, `tg_dang` FROM `tin_tuc` ORDER BY tg_dang DESC LIMIT $offset, $rowPerPage";
         $result =  mysqli_query($conn, $query);
         if($result)
         {
