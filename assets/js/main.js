@@ -170,10 +170,45 @@ const checkAll = document.querySelector(".check-all")
 if(checkAll)
 {
     checkAll.addEventListener("click", ()=>{
-        console.log("con mèo")
         checkboxes = document.querySelectorAll('.check-hd');
         checkboxes.forEach((item)=>{
             item.checked = checkAll.checked;
         })
     })
 }
+
+const conformRemove = document.querySelector(".button-defaut")
+if(conformRemove)
+{
+    conformRemove.addEventListener("click", (e)=>{
+        e.preventDefault()
+        document.querySelector("body").insertAdjacentHTML("beforeend", `<form action="" method="post" class="remove-confirm">
+        <h3>Bạn có muốn xóa không</h3>
+        <button type="submit" name="cancel" class="btn-cancel">Hủy</button>
+        <button type="submit" name="ok" class="btn-ok">OK</button>
+        <i class="fa-solid fa-x icon-close"></i>
+    </form>`)
+    
+    
+        const btnClose = document.querySelector(".remove-confirm > .icon-close")
+        if(btnClose)
+        {
+            btnClose.addEventListener("click", ()=>{
+                document.querySelector("body").removeChild(document.querySelector(".remove-confirm"))
+            })
+        }
+
+        const btnCancel = document.querySelector(".remove-confirm > .btn-cancel")
+        if(btnCancel)
+        {
+            btnCancel.addEventListener("click", (e)=>{
+                e.preventDefault()
+                document.querySelector("body").removeChild(document.querySelector(".remove-confirm"))
+            })
+        }
+
+    
+    })
+    
+}
+

@@ -23,6 +23,7 @@
 <body>
     <?php
         include("./block/connection.php");
+        include("./block/global.php");
         include("./block/header.php");
         echo "<div class='container'>";
         if (isset($_GET["timKiem"])){
@@ -71,37 +72,37 @@
                     }
                     echo "</div>";
                     echo "<div class='phanTrang'>";
-                $firstPage = 1;
-                echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."?page=".$firstPage.">";
-                echo "<img src='./assets/images/angle-double-left-solid.png' alt=''>";
-                echo "</a>"; 
-                $prePage = $_GET['page'] - 1;
-                if($prePage === 0)
-                {
-                    $prePage = $maxPage;
-                }
-                echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."?page=".$prePage.">";
-                echo "<img src='./assets/images/angle-left-solid.png' alt=''>";
-                echo "</a>";
-                for($i = 1; $i <= $maxPage; $i++ ){
-                    if($i == $_GET['page'])
-                    echo '<b> '.$i.' </b>';
-                    else echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."&page=".$i."> ".$i." </a>";
-                }
-                $nextPage = $_GET['page'] + 1;
-                if($nextPage == $maxPage+1)
-                {
+                            $firstPage = 1;
+                            echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."?page=".$firstPage.">";
+                            echo "<img src='./assets/images/angle-double-left-solid.png' alt=''>";
+                            echo "</a>"; 
+                            $prePage = $_GET['page'] - 1;
+                            if($prePage === 0)
+                            {
+                                $prePage = $maxPage;
+                            }
+                            echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."?page=".$prePage.">";
+                            echo "<img src='./assets/images/angle-left-solid.png' alt=''>";
+                            echo "</a>";
+                            for($i = 1; $i <= $maxPage; $i++ ){
+                                if($i == $_GET['page'])
+                                echo '<b> '.$i.' </b>';
+                                else echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."&page=".$i."> ".$i." </a>";
+                            }
+                            $nextPage = $_GET['page'] + 1;
+                            if($nextPage == $maxPage+1)
+                            {
 
-                    $nextPage = 1;
-                }
-                echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."&page=".$nextPage.">";
-                echo "<img src='./assets/images/angle-right-solid.png' alt=''>";
-                echo "</a>"; 
-                $lastPage = $maxPage;
-                echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."&page=".$lastPage.">";
-                echo "<img src='./assets/images/angle-double-right-solid.png' alt=''>";
-                echo "</a>";  
-                echo "</div>";
+                                $nextPage = 1;
+                            }
+                            echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."&page=".$nextPage.">";
+                            echo "<img src='./assets/images/angle-right-solid.png' alt=''>";
+                            echo "</a>"; 
+                            $lastPage = $maxPage;
+                            echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?search=".$search."&timKiem="."&page=".$lastPage.">";
+                            echo "<img src='./assets/images/angle-double-right-solid.png' alt=''>";
+                            echo "</a>";  
+                            echo "</div>";
                         }
                     }
                     else {
@@ -121,7 +122,7 @@
                 }
             }
         }
-        include("./block/product-hot.php");
+        product_hot($conn);
     echo "</div>";
     ?>
     <?php
