@@ -31,16 +31,16 @@
         <div class="content-slider">
             <div class="img-slider">
                 <div class="slide active-slider">
-                    <img src="./assets/images/Br1a.jpg" style="height: 335px;" alt="">
+                    <img src="./assets/images/Br1a.jpg" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/images/Br2.jpg" style="height: 335px;" alt="">
+                    <img src="./assets/images/Br2.jpg" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/images/Br1.jpg" style="height: 335px;" alt="">
+                    <img src="./assets/images/Br1.jpg" alt="">
                 </div>
                 <div class="slide">
-                    <img src="./assets/images/Br3.jpg" style="height: 335px;" alt="">
+                    <img src="./assets/images/Br3.jpg" alt="">
                 </div>
                 <div class="navigation">
                     <div class="btn active-slider"></div>
