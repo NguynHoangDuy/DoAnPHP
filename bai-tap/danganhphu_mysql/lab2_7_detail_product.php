@@ -16,7 +16,7 @@
             margin: 20px auto 30px;
             font-size: 18px;
         }
-        .content {
+        .contentTB {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -60,7 +60,7 @@
         include("../../block/header.php");
     ?>
 <div class="app">
-    <div class="content">
+    <div class="contentTB">
         <table class="content-table">
             <thead>
     <?php

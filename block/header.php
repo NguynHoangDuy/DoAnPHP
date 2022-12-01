@@ -49,7 +49,7 @@
                 <a href="/doanphp/gio-hang.php" class="header-product--text">
                     GIỎ HÀNG /
                     <?php
-                    session_start();
+                    @session_start();
                     if (isset($_SESSION["gioHang"])) {
                         $gia = 0;
                         $gioHang = $_SESSION["gioHang"];
