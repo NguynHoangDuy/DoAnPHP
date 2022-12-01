@@ -18,7 +18,6 @@
     include("../../block/header.php");
     echo "<div class='container'>";
     $conn= mysqli_connect("localhost", "root", "", "quanly_ban_sua") or die('Không thể kết nối' . mysqli_connect_error());
-    mysqli_set_charset($conn, charset:'utf8');
     $sqlLoaiSua = "SELECT Ma_loai_sua, Ten_loai FROM loai_sua";
     $LoaiSua=mysqli_query($conn, $sqlLoaiSua);
     $sqlHangSua = "SELECT Ma_hang_sua, Ten_hang_sua FROM hang_sua";
