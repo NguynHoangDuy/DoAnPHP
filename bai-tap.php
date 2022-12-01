@@ -122,17 +122,17 @@
                             <p class="exercise-title">PHP & FORM</p>
                             <ul class="exercise-item ">
                                 <?php
-                                    $path = './bai-tap/DangAnhPhu_Lab/form/';
+                                    $path_form = './bai-tap/danganhphu_form/';
                                 
                                 echo '
-                                    <li> <a href="'.$path.'bai1/lab1.php">Exercise 1</a> </li>
-                                    <li> <a href="'.$path.'bai2/lab2.php">Exercise 2</a> </li>
-                                    <li> <a href="'.$path.'bai3/lab3.php">Exercise 3</a> </li>
-                                    <li> <a href="'.$path.'bai4/lab4.php">Exercise 4</a> </li>
-                                    <li> <a href="'.$path.'bai5/lab5.php">Exercise 5</a> </li>
-                                    <li> <a href="'.$path.'bai6/input_page.php">Exercise 6</a> </li>
-                                    <li> <a href="'.$path.'bai7/input_page.php">Exercise 7</a> </li>
-                                    <li> <a href="'.$path.'bai8/form.html">Exercise 8</a> </li>
+                                    <li> <a href="'.$path_form.'lab1.php">Exercise 1</a> </li>
+                                    <li> <a href="'.$path_form.'lab2.php">Exercise 2</a> </li>
+                                    <li> <a href="'.$path_form.'lab3.php">Exercise 3</a> </li>
+                                    <li> <a href="'.$path_form.'lab4.php">Exercise 4</a> </li>
+                                    <li> <a href="'.$path_form.'lab5.php">Exercise 5</a> </li>
+                                    <li> <a href="'.$path_form.'input_page_bai6.php">Exercise 6</a> </li>
+                                    <li> <a href="'.$path_form.'input_page_bai7.php">Exercise 7</a> </li>
+                                    <li> <a href="'.$path_form.'form.php">Exercise 8</a> </li>
                                 ';
                                 ?>
                             </ul>
@@ -140,17 +140,17 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">MẢNG, CHUỖI & HÀM</p>
                             <ul class="exercise-item">
-                                <?php
-                                    $path = './bai-tap/DangAnhPhu_Lab/array_string_func/';
+                            <?php
+                                    $path_arr_str_func = './bai-tap/danganhphu_array_string_func/';
                                 
                                 echo '
-                                    <li> <a href="'.$path.'less1/less1.php">Exercise 1</a> </li>
-                                    <li> <a href="'.$path.'less2/less2.php">Exercise 2</a> </li>
-                                    <li> <a href="'.$path.'less3/less3.php">Exercise 3</a> </li>
-                                    <li> <a href="'.$path.'less4/less4.php">Exercise 4</a> </li>
-                                    <li> <a href="'.$path.'less5/less5.php">Exercise 5</a> </li>
-                                    <li> <a href="'.$path.'less6/less6.php">Exercise 6</a> </li>
-                                    <li> <a href="'.$path.'less7/less7.php">Exercise 7</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less1.php">Exercise 1</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less2.php">Exercise 2</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less3.php">Exercise 3</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less4.php">Exercise 4</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less5.php">Exercise 5</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less6.php">Exercise 6</a> </li>
+                                    <li> <a href="'.$path_arr_str_func.'less7.php">Exercise 7</a> </li>
                                 ';
                                 ?>
                             </ul>
@@ -158,16 +158,22 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">KẾT HỢP PHP & MYSQL</p>
                             <ul class="exercise-item">
-                                <li> <a href="">Exercise 1</a> </li>
-                                <li> <a href="">Exercise 2</a> </li>
-                                <li> <a href="">Exercise 3</a> </li>
-                                <li> <a href="">Exercise 4</a> </li>
-                                <li> <a href="">Exercise 5</a> </li>
-                                <li> <a href="">Exercise 6</a> </li>
-                                <li> <a href="">Exercise 7</a> </li>
-                                <li> <a href="">Exercise 8</a> </li>
-                                <li> <a href="">Exercise 9</a> </li>
-                                <li> <a href="">Exercise 10</a> </li>
+                            <?php
+                                    $path_mysql = './bai-tap/danganhphu_mysql/';
+                                
+                                echo '
+                                    <li> <a href="'.$path_mysql.'lab2_1.php">Exercise 1</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_2.php">Exercise 2</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_3.php">Exercise 3</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_4.php">Exercise 4</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_5.php">Exercise 5</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_6.php">Exercise 6</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_7.php">Exercise 7</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_8.php">Exercise 8</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_9.php">Exercise 9</a> </li>
+                                    <li> <a href="'.$path_mysql.'lab2_10.php">Exercise 10</a> </li>
+                                ';
+                                ?>
                             </ul>
                             </ul>
                         </div>
