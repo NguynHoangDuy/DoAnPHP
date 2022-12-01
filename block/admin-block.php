@@ -36,7 +36,7 @@
             
             <ul class="admin-sidebar-list">
                 <li class="admin-sidebar-item">
-                    <a href="">
+                    <a href="../quan-ly">
                         <img src="../../assets/images/tachometer-alt-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Trang chủ</span>
                     </a>
