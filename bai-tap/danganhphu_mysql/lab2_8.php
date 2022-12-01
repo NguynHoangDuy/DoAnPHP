@@ -16,7 +16,7 @@
             margin: 20px 20px 30px;
             font-size: 18px;
         }
-        .content {
+        .contentTB {
             display: flex;
             align-items: center;
             justify-content: center;

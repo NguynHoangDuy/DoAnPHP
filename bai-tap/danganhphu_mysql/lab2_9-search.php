@@ -41,7 +41,7 @@
             font-size: 16px;
             font-weight: 500;
         }
-        .content {
+        .contentTB {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -106,7 +106,7 @@
         <div class="back">
             <button><a href="./lab2_9.php">Trở về trang tìm kiếm</a></button>
         </div>
-        <div class="content">
+        <div class="contentTB">
             
             
     <?php
