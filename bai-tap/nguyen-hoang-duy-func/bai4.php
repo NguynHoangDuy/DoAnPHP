@@ -46,10 +46,15 @@
             }
         }
     ?>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
     <div class="container">
-    <form action="" method="post">
-        <table align="center">
-            <tr>
+    <form action="" method="post" style="max-width: 500px; margin: 0 auto;">
+        <table align="center" style="background-color: DarkSalmon;">
+            <tr style="background-color: pink;">
                 <td colspan="2">Tìm kiếm</td>
             </tr>
             <tr>

@@ -18,8 +18,13 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
 <div class="container">
-<form action="./config.php" method="post">
+<form action="./config.php" method="post" style="max-width: 600px; margin: 0 auto;">
         <table align="center" bgcolor="#faebd7">
             <tr>
                 <td colspan="9" style="text-align:center; background-color: coral;">Enter Your Information</td>

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nguyên Liệu Trà Sữa</title>
-    <link rel="stylesheet" href="./assets/css/main.css"/>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="icon" type="image/x-icon" href="./assets/images/blue_tea_logo.webp">
 </head>
+
 <body>
     <?php
         include("./block/connection.php");
@@ -21,7 +20,7 @@
     <div class="container">
         <div class="info">
             <h3 class="info-header">
-                Thông tin cá nhân
+                Bài tập
             </h3>
             <div class="info-main">
                 <div class="info-item">
@@ -141,7 +140,7 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">MẢNG, CHUỖI & HÀM</p>
                             <ul class="exercise-item">
-                            <?php
+                                <?php
                                     $path = './bai-tap/DangAnhPhu_Lab/array_string_func/';
                                 
                                 echo '
@@ -226,14 +225,22 @@
                         <div class="exercise-group w100">
                             <p class="exercise-title">PHP & FORM</p>
                             <ul class="exercise-item ">
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_1.php">Exercise 1</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_2.php">Exercise 2</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_3.php">Exercise 3</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_4.php">Exercise 4</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_5.php">Exercise 5</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_6_nhaplieu.php">Exercise 6</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_7_nhaplieu.php">Exercise 7</a> </li>
-                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai8_form.php">Exercise 8</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_1.php">Exercise 1</a>
+                                </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_2.php">Exercise 2</a>
+                                </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_3.php">Exercise 3</a>
+                                </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_4.php">Exercise 4</a>
+                                </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_5.php">Exercise 5</a>
+                                </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_6_nhaplieu.php">Exercise
+                                        6</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai_7_nhaplieu.php">Exercise
+                                        7</a> </li>
+                                <li> <a href="./bai-tap/ton_huynh_phuong_lan_form_function/bai8_form.php">Exercise 8</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="exercise-group w100">
@@ -274,4 +281,5 @@
     ?>
 </body>
 <script src="./assets/js/main.js"></script>
+
 </html>

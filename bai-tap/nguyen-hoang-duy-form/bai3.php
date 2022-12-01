@@ -42,8 +42,13 @@
         $chiSoMoi = "";
     }
 ?>
+<style>
+        td{
+            padding: 10px;
+        }
+    </style>
 <div class="container">
-<form action="" method="post">
+<form action="" method="post" style="max-width: 500px; margin: 0 auto;">
         <table align="center" bgcolor="#faebd7">
             <tr>
                 <td colspan="3" style="text-align:center; background-color: coral;">THANH TOÁN TIỀN ĐIỆN</td>

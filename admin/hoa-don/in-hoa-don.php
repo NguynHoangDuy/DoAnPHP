@@ -80,7 +80,7 @@
                         <td><span class='money'>30000</span> VNĐ</td>
                     </tr>";
                     $canTT = $tongTien+30000;
-                    echo "<tr>
+                    echo "<tr style='font-weight: bold;'>
                         <td>Cần thanh toán</td>
                         <td><span class='money'>".$canTT."</span> VNĐ</td>
                     </tr>";

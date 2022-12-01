@@ -101,13 +101,10 @@ function adminContent(){
                         while ($rowSelect=mysqli_fetch_assoc($resultSelect)){
                             $idDM=$rowSelect["ma_dm"];
                             $tenDM=$rowSelect["ten_dm"];
-                            if (isset($_POST["dmSP"])){
                             if ( $dm== $tenDM){
                                 echo "<option value=".$idDM." selected>".$idDM." - ".$tenDM."</option>";                                                                
                             }
                             else echo "<option value=".$idDM.">".$idDM." - ".$tenDM."</option>";
-                        }
-                        else echo "<option value=".$idDM.">".$idDM." - ".$tenDM."</option>";
                         }
                     }
                 ?>

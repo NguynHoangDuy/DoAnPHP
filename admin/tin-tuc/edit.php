@@ -33,7 +33,7 @@ if (isset($_POST["ok"])) {
     if ($result) {
         header("location: ./index.php");
         session_start();
-        $_SESSION["tb"] = "xóa";
+        $_SESSION["tb"] = "remove";
         session_write_close();
     }
 }

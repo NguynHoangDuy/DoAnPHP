@@ -18,8 +18,13 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
     <div class="container">
-    <form action="" method="get" style="width: 500px; margin: 0 auto;">
+    <form action="" method="get" style="max-width: 300px; margin: 0 auto;">
             <h3 style="text-align: center;">DIỆN TÍCH HÌNH CHỮ NHẬT</h3>
             <table>
                 <tr>

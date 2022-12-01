@@ -36,10 +36,15 @@
         $r = "";
     }
 ?>
-<div class="container">
-<form action="" method="post">
-        <table align="center">
-            <tr>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
+<div class="container" >
+<form action="" method="post" style="max-width: 400px; margin: 0 auto;">
+        <table align="center" style="background-color: DarkSalmon;">
+            <tr style="background-color: pink;">
                 <td colspan="2">CHU VI VÀ DIỆN TÍCH HÌNH TRÒN</td>
             </tr>
             <tr>

@@ -32,8 +32,13 @@
             }
         }
     ?>
+    <style>
+        td{
+            padding: 10px;
+        }
+    </style>
     <div class="container">
-    <form action="" method="post">
+    <form action="" method="post" style="max-width: 300px; margin: 0 auto;">
         <table align="center">
             <tr>
                 <td colspan="2" style="text-align:center;">Nhập và tính trên dãy số</td>

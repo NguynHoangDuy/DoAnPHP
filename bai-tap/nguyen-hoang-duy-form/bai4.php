@@ -48,8 +48,13 @@
         $chiSoMoi = "";
     }
 ?>
+<style>
+        td{
+            padding: 10px;
+        }
+    </style>
 <div class="container">
-<form action="" method="post">
+<form action="" method="post" style="max-width: 400px; margin: 0 auto;">
         <table align="center" bgcolor="#faebd7">
             <tr>
                 <td colspan="2" style="text-align:center; background-color: coral;">KẾT QUẢ THI ĐẠI HỌC</td>

@@ -13,11 +13,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 800px; margin: 0 auto;
+        }
+
+
+    </style>
     <?php
         include("../../block/connection.php");
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <div class="container">
     <?php
         include("./connection.php");
         if(!$conn){
@@ -81,6 +93,7 @@
             }
         }
     ?>
+    </div>
     <?php
         include("../../block/footer.php");
     ?>
