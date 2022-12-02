@@ -16,35 +16,52 @@
     <?php
         include("../../block/connection.php");
         // include("../block/global.php");
-        include("../../block/header-2.php");
+        include("../../block/header.php");
     ?>
     <style>
-        a,b {
-            text-decoration: none;
-            color: black;
-            font-size:20px;
-            cursor: pointer;
-        }
-        .phantrang {
-            gap: 20px;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .img-product {
-            box-sizing: border-box;
-            padding: 20px;
-        }
-        td {
-            text-align: left;
-            padding: 10px;
-        }
-        </style>
-        <?php
+    a,
+    b {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    .phantrang {
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .img-product {
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    td {
+        text-align: center;
+        padding: 10px;
+    }
+    </style>
+    <style>
+    td,
+    th {
+        padding: 10px;
+        border: 1px solid grey;
+    }
+
+    table {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    </style>
+    <div class="container">
+    <?php
         $severname = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "qly_ban_sua";
+        $dbname = "quanly_ban_sua";
         $conn = mysqli_connect($severname, $username, $password, $dbname) or die('Không thể kết nối' . mysqli_connect_error());
         $query="SELECT * FROM khach_hang";
         $result=mysqli_query($conn, $query);
@@ -132,6 +149,8 @@
             echo "</div>";
         
     ?>
+    </div>
+        
 <?php
         include("../../block/footer.php");
     ?>
