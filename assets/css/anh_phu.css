@@ -128,7 +128,7 @@ i.fa-thumbtack {
   background: linear-gradient(45deg, #333, #667);
   box-shadow: 0 4px 30px #3449;
 }
-a:hover {
+.fb-anhphu:hover, .ig-anhphu:hover , .github-anhphu:hover {
   transform: scale(1.2);
 }
 .profile-button {

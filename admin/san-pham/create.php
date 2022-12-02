@@ -24,11 +24,12 @@ if (isset($_POST["submit"])){
                 $id_num=substr($id_SP,-1);//lấy phần tử cuối 
                 $id_text=substr($id_SP,0,2);//lấy 2 phần tử đầu
                 $idNum=substr($id_SP,2,1);//lấy phần tử còn lại
+                $id_num=(int)$id_num+1;
                 if ($id_num>9){
                     $id_num=0;
                     $idNum=(int)$idNum+1;
                 } else if ($id_num<=9){
-                    $id_num=(int)$id_num+1;
+                    $id_num=$id_num;
                     $idNum=$idNum;
                 }
                 $id_text.=(string)$idNum;
