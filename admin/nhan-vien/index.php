@@ -1,4 +1,5 @@
 <?php
+//thông báo xóa nhân viên
 session_start();
 if (isset($_SESSION["err"]))
 {
@@ -13,6 +14,7 @@ if (isset($_SESSION["err"]))
 session_write_close();
 ?>
 <?php
+//thông báo thêm nhân viên mới
 session_start();
 if (isset($_SESSION["noti-people"]))
 {

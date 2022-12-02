@@ -1,4 +1,5 @@
 <?php
+//thông báo cập nhật sản phẩm
 session_start();
 if (isset($_SESSION["noti-product"]))
 {
@@ -11,10 +12,11 @@ if (isset($_SESSION["noti-product"]))
     unset($_SESSION["noti-product"]);
 }
 session_write_close();
+//thông báo xóa
 session_start();
 if (isset($_SESSION["noti"]))
 {
-
+    
     echo "<div class='noti-show'>
     <p class='update-noti--text'><span>".$_SESSION["noti"]."</span>
     <i class='fa fa-close update--noti noti--close'></i>
@@ -25,12 +27,40 @@ if (isset($_SESSION["noti"]))
 session_write_close();
 include("../../block/connection.php");
 include("../../block/global.php");
+//xóa nhiều sản phẩm
+if (isset($_POST["delete"])){
+    if (count($_POST["checkbox"]) > 0){
+        $arrayDel= $_POST['checkbox'];
+        foreach ($arrayDel as $idDel){
+            $query="DELETE FROM san_pham WHERE 1 AND san_pham.ma_sp='$idDel'";
+            $result=mysqli_query($conn, $query);
+    if ($result){
+        header("Location:../../admin/san-pham/index.php");
+        $noti="Xóa sản phẩm thành công";
+        session_start();
+        $_SESSION["noti"]=$noti;
+        session_write_close();
+    }
+    else {
+        
+    }
+        }
+    }
+}
+//xóa 1 sản phẩm
 if (isset($_GET["ok"])){
     $id= $_GET['id'];
     include("../../block/connection.php");
     $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
     $result=mysqli_query($conn,$sql);
-                        }
+    if ($result){
+        header("Location:../../admin/san-pham/index.php");
+        $noti="Xóa sản phẩm thành công";
+        session_start();
+        $_SESSION["noti"]=$noti;
+        session_write_close();
+    }
+}
 function adminContent()
 {
     echo '<div class="container">';
@@ -58,10 +88,13 @@ function adminContent()
             echo "<div class='product-content--link' align='left' style='margin-bottom: 30px'>";
             echo "<h1 class='admin-product--title'>THÔNG TIN CỦA SẢN PHẨM</h1>
             <a href='../../admin/san-pham/create.php' class='product-link--edit'>Thêm sản phẩm mới</a>
-        </div>";
+            </div>";
+            echo "
+            <form method='post' action=''>
+            <input name='delete' type='submit' value='Xóa' class='admin-product--delete'></input>";
             echo "<table align='center' class='admin-product--table'>";
             echo "<tr >
-                    <th>STT</th>
+                    <th><input type='checkbox' class='check-all' /></th>
                     <th>Mã sản phẩm</th>
                     <th>Tên sản phẩm</th>
                     <th>Hình ảnh</th>
@@ -69,15 +102,16 @@ function adminContent()
                     <th>Danh mục</th>
                     <th>Chức năng</th>
                 </tr>";
-                // $temp=$_GET['page']*$rowsPerPage;
-                // if($temp<=$rowsPerPage) $dem=0;
-                // else $dem=$temp-$rowsPerPage;
                 $dem=0;
                 while ($rows=mysqli_fetch_array($result)){
                     $dem++;
                     $id=$rows["ma_sp"];
                     echo "<tr>";
-                    echo "<td>".$dem."</td>";
+                    echo "<td>
+                    
+                    <input type='checkbox' name='checkbox[]' class='check-delete' value='".$rows['ma_sp']."'>
+                    </form>
+                    </td>";
                     echo "<td><span class='id_sp'>{$rows['ma_sp']}</span></td>";
                     echo "<td>{$rows['ten_sp']}</td>";
                     echo "<td>
@@ -99,9 +133,6 @@ function adminContent()
                     echo "</tr>";
                 }
                 echo "</table>";
-                // $re = mysqli_query($conn, 'select * from san_pham');
-                // $numRows = mysqli_num_rows($re);
-                // $maxPage = floor($numRows/$rowsPerPage) + 1;
                 if($maxPage != 1)
                 {
                     echo "<div class='phanTrang'>";
@@ -172,7 +203,6 @@ function adminContent()
                         $nextPage = $_GET['page'] + 1;
                         if($nextPage == $maxPage+1)
                         {
-
                             $nextPage = 1;
                         }
                         echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$nextPage.">";
@@ -191,7 +221,18 @@ function adminContent()
 }
 include("../../block/admin-block.php");
 ?>
+
 <script>
+        const checkAllDel = document.querySelector(".check-all")
+        if(checkAllDel)
+        {
+            checkAllDel.addEventListener("click", ()=>{
+            checkboxes = document.querySelectorAll('.check-delete');
+            checkboxes.forEach((item)=>{
+                item.checked = checkAllDel.checked;
+        })
+        })
+}
         const btnDelete = document.querySelectorAll(".admin-delete");
         const container = document.querySelector(".container");
         function addModal(){
