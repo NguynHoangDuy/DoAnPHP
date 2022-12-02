@@ -39,6 +39,11 @@ include("../../block/connection.php");
     if ( ! isset($_GET['page']))
         $_GET['page'] = 1;
     $offset =($_GET['page']-1)*$rowsPerPage;
+    $query = "SELECT * FROM nhan_vien";
+    $result = mysqli_query($conn, $query);
+    $numRow = mysqli_num_rows($result);
+
+    $maxPage = ceil($numRow / $rowsPerPage); 
     $query = "SELECT * FROM nhan_vien LIMIT $offset, $rowsPerPage";
     $result = mysqli_query($conn, $query);
     if (!$result){
@@ -61,6 +66,89 @@ include("../../block/connection.php");
                 echo "</a>";
                 echo "</div>";
             }
+            if($maxPage != 1)
+                {
+                    echo "<div class='phanTrang'>";
+                    if($maxPage > 4)
+                    {
+                        $firstPage = 1;
+                        echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$firstPage.">";
+                        echo "<img src='../../assets/images/angle-double-left-solid.png' alt=''>";
+                        echo "</a>"; 
+                        $prePage = $_GET['page'] - 1;
+                        if($prePage === 0)
+                        {
+                            $prePage = $maxPage;
+                        }
+                        echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$prePage.">";
+                        echo "<img src='../../assets/images/angle-left-solid.png' alt=''>";
+                        echo "</a>";
+                    }
+                    if($maxPage > 4)
+                    {
+                        if($_GET['page'] == 1)
+                        {
+                            $i = $_GET['page'];
+                            echo '<b> '.$i.' </b>';
+                            echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".++$i."> ".$i." </a>";
+                            echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".++$i."> ".$i." </a>";
+                            echo "<span class='page-dot'>...</span>";
+                            echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".$maxPage."> ".$maxPage." </a>";
+                        }
+                        else {
+                            if($_GET['page'] == $maxPage)
+                            {
+                                echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=1>1</a>";
+                                $i = $_GET['page']-3;
+                                echo "<span class='page-dot'>...</span>";
+                                echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".++$i."> ".$i." </a>";
+                                echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".++$i."> ".$i." </a>";
+                                echo '<b> '.$maxPage.' </b>';
+                            }
+                            else {
+                                if($_GET['page'] > 2)
+                                {
+                                    echo "<span class='page-dot'>...</span>";
+                                }
+                                for($i = $_GET['page']-1; $i <= $_GET['page']+1; $i++ ){
+                                    
+                                    if($i == $_GET['page'])
+                                    echo '<b> '.$i.' </b>';
+                                    else echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".$i."> ".$i." </a>";
+                                }
+                                if($_GET['page'] < $maxPage - 1)
+                                {
+                                    echo "<span class='page-dot'>...</span>";
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        for($i = 1; $i <= $maxPage; $i++ ){
+                            if($i == $_GET['page'])
+                            echo '<b> '.$i.' </b>';
+                            else echo "<a class='link-text' href=".$_SERVER ['PHP_SELF']."?page=".$i."> ".$i." </a>";
+                        }
+                    }
+                    
+                    if($maxPage > 4)
+                    {
+                        $nextPage = $_GET['page'] + 1;
+                        if($nextPage == $maxPage+1)
+                        {
+                            $nextPage = 1;
+                        }
+                        echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$nextPage.">";
+                        echo "<img src='../../assets/images/angle-right-solid.png' alt=''>";
+                        echo "</a>"; 
+                        $lastPage = $maxPage;
+                        echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$lastPage.">";
+                        echo "<img src='../../assets/images/angle-double-right-solid.png' alt=''>";
+                        echo "</a>";  
+                    }
+                        
+                    echo "</div>";
+                }  
         }
     }
     echo "</div>";

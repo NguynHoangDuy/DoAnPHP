@@ -218,6 +218,7 @@ function adminContent()
                 }  
         }
     }
+    echo "</div>";
 }
 include("../../block/admin-block.php");
 ?>
