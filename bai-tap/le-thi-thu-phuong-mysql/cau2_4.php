@@ -18,6 +18,15 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 800px; margin: 0 auto;
+        }
+    </style>
     <div class="container">
 <?php 
         $servername="localhost";
@@ -41,7 +50,7 @@ if($numRows<>0)
 {
     echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></p>";
     echo "<table align='center' width='100%' border='1' cellpadding='2' style='border-collapse'>";
-    echo "<tr align='center' style='color:red'>
+    echo "<tr align='center'>
             
             <th>Tên Sữa</th>
             <th>Hãng Sữa</th>
