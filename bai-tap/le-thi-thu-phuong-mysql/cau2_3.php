@@ -18,6 +18,15 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 1000px; margin: 0 auto;
+        }
+        </style>
     <div class="container">
 <?php 
         $servername="localhost";
@@ -28,9 +37,9 @@
         $query="SELECT * FROM khach_hang";
         $result = mysqli_query($conn,$query);
         if(mysqli_num_rows($result)<>0){
-            echo "<p><font size='5' color='blue'> THÔNG TIN HÃNG SỮA</font></p>";
+            echo "<p align='center'><font size='5' color='blue'> THÔNG TIN HÃNG SỮA</font></p>";
             echo " <table border='1' align='center' style='border-collapse: collapse;'>";
-            echo "<tr align='center' style='color:red'>
+            echo "<tr align='center'>
                     <th>MÃ KH</th>
                     <th>Tên khách hàng</th>
                     <th>Giới tính</th>

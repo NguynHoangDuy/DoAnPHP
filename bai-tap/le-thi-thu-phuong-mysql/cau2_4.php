@@ -18,6 +18,15 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 800px; margin: 0 auto;
+        }
+    </style>
     <div class="container">
 <?php 
         $servername="localhost";
@@ -32,7 +41,7 @@ if ( ! isset($_GET['page']))
 $offset =($_GET['page']-1)*$rowsPerPage;
 //$query="Select * from sua LIMIT $offset, $rowsPerPage";
 $query="SELECT sua.Ten_sua, hang_sua.Ten_hang_sua, loai_sua.Ten_loai , sua.Trong_luong, sua.Don_gia 
-FROM sua CROSS JOIN hang_sua CROSS JOIN loai_sua WHERE `sua`.`Ma_hang_sua`=`hang_sua`.`Ma_hang_sua` and `sua`.`Ma_loai_sua`= `loai_sua`.`Ma_loai_sua` LIMIT $offset, $rowsPerPage;";
+FROM sua CROSS JOIN hang_sua CROSS JOIN loai_sua WHERE sua.`Ma_hang_sua`=`hang_sua`.`Ma_hang_sua` and sua.`Ma_loai_sua`= loai_sua.`Ma_loai_sua` LIMIT $offset, $rowsPerPage;";
 $result = mysqli_query($conn,$query);
 if (!$result ) die ('<br> <b>Query failed</b>');
 $numRows= mysqli_num_rows($result);
@@ -41,7 +50,7 @@ if($numRows<>0)
 {
     echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></p>";
     echo "<table align='center' width='100%' border='1' cellpadding='2' style='border-collapse'>";
-    echo "<tr align='center' style='color:red'>
+    echo "<tr align='center'>
             
             <th>Tên Sữa</th>
             <th>Hãng Sữa</th>

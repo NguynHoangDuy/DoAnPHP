@@ -13,11 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <?php
         include("../../block/connection.php");
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 1000px; margin: 0 auto;
+        }
+    </style>
     <div class="container">
     <?php 
         $servername="localhost";
@@ -29,14 +39,15 @@
         $result = mysqli_query($conn,$query);
         if(mysqli_num_rows($result)<>0){
             echo "<p align='center'><font size='5' color='blue'> THÔNG TIN HÃNG SỮA</font></p>";
-            echo "<table align='center' width='100%' border='1px solid black' cellpadding='2' style='border-collapse'>";
-            echo "<tr border='1px solid black'>
-                    <th border='1px solid black'>MÃ HS</th>
-                    <th border='1px solid black'>Tên hãng sữa</th>
-                    <th border='1px solid black'>Địa chỉ</th>
-                    <th border='1px solid black'>Số điện thoại</th>
-                    <th border='1px solid black'>Email</th>
-                </tr>";
+            echo "
+                    <table border='1' align='center' style='border-collapse: collapse; max-width: 800px; margin: 0 auto;'>
+                    <tr style='background-color: pink;'>
+                        <th>Mã HS</th>
+                        <th>Tên hãng sữa</th>
+                        <th>Địa chỉ</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                    </tr>";
             while($rows=mysqli_fetch_array($result)){
                 echo "<tr>";
                 for ($i=0; $i<mysqli_num_fields($result); $i++){
