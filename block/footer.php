@@ -20,7 +20,7 @@
         <li><a href="#">Đối tác</a></li>
         <li><a href="#">Hệ thống đại lý</a></li>
         <li><a href="#">Tuyển dụng</a></li>
-        <li><a href="#">Liên hệ</a></li>
+        <li><a href="../../doanphp/lien-he-chungtoi.php">Liên hệ với chúng tôi</a></li>
       </ul>
       <ul class="box">
         <li class="link_name link_name-support">Hỗ trợ khách hàng</li>
