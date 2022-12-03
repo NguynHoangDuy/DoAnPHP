@@ -28,6 +28,7 @@ session_write_close();
 include("../../block/connection.php");
 include("../../block/global.php");
 //xóa nhiều sản phẩm
+$self=$_SERVER ['PHP_SELF'];
 if (isset($_POST["delete"])){
     if (count($_POST["checkbox"]) > 0){
         $arrayDel= $_POST['checkbox'];
@@ -35,7 +36,7 @@ if (isset($_POST["delete"])){
             $query="DELETE FROM san_pham WHERE 1 AND san_pham.ma_sp='$idDel'";
             $result=mysqli_query($conn, $query);
     if ($result){
-        header("Location:../../admin/san-pham/index.php");
+        header("Location:".$self."");
         $noti="Xóa sản phẩm thành công";
         session_start();
         $_SESSION["noti"]=$noti;
@@ -48,47 +49,58 @@ if (isset($_POST["delete"])){
     }
 }
 //xóa 1 sản phẩm
+$self=$_SERVER ['PHP_SELF'];
 if (isset($_GET["ok"])){
     $id= $_GET['id'];
     include("../../block/connection.php");
     $sql= "DELETE FROM `san_pham` WHERE ma_sp='$id'";
     $result=mysqli_query($conn,$sql);
     if ($result){
-        header("Location:../../admin/san-pham/index.php");
+        header("Location:".$self."");
         $noti="Xóa sản phẩm thành công";
         session_start();
         $_SESSION["noti"]=$noti;
         session_write_close();
     }
 }
-function adminContent()
-{
-    echo '<div class="container">';
+?>
+<?php
+    include("../../block/admin-block.php");
+    function adminContent(){
+        echo '<div class="container">';
     include("../../block/connection.php");
-    $rowsPerPage = 6;
-        if(!isset($_GET['page']))
-        {
-            $_GET['page'] = 1;
-        }
-        $offset = ($_GET['page']-1)* $rowsPerPage;
-        $query= "SELECT `ma_sp`, `ten_sp`, `gia`, `mo_ta`, `ten_dm`, `hinh_anh` FROM `san_pham`
-        INNER JOIN danh_muc ON san_pham.danh_muc = danh_muc.ma_dm";
-        $result = mysqli_query($conn, $query);
-        $numRow = mysqli_num_rows($result);
+    if (isset($_GET["timKiem"])){
+        $search=$_GET["search"];
+        $rowPerPage = 6;
+            if(!isset($_GET['page']))
+                {
+                    $_GET['page'] = 1;
+                }
+        $offset = ($_GET['page']-1)* $rowPerPage;
+        if (!empty($search)){
+            $query= "SELECT ma_sp,ten_sp,ten_dm,gia,hinh_anh FROM `san_pham` 
+            inner join danh_muc on san_pham.danh_muc = danh_muc.ma_dm
+            WHERE ten_sp LIKE '%$search%'";
+            $resultSearch =  mysqli_query($conn, $query);
+            $numRowSearch=mysqli_num_rows($resultSearch);
+            $maxPage = ceil($numRowSearch / $rowPerPage); 
 
-        $maxPage = ceil($numRow / $rowsPerPage); 
-        $query = "SELECT `ma_sp`, `ten_sp`, `gia`, `mo_ta`, `ten_dm`, `hinh_anh` FROM `san_pham`
-        INNER JOIN danh_muc ON san_pham.danh_muc = danh_muc.ma_dm LIMIT $offset, $rowsPerPage";
-        $result =  mysqli_query($conn, $query);
-    if (!$result){
-        echo "Không có sản phẩm nào";
-    }
-    else {
-        if (!mysqli_num_rows($result)==0){
-            echo "<div class='product-content--link' align='left' style='margin-bottom: 30px'>";
-            echo "<h1 class='admin-product--title'>THÔNG TIN CỦA SẢN PHẨM</h1>
-            <a href='../../admin/san-pham/create.php' class='product-link--edit'>Thêm sản phẩm mới</a>
-            </div>";
+            $query = "SELECT ma_sp,ten_sp,ten_dm,gia,hinh_anh FROM `san_pham` 
+            inner join danh_muc on san_pham.danh_muc = danh_muc.ma_dm
+            WHERE ten_sp LIKE '%$search%'
+            LIMIT $offset, $rowPerPage";
+            $resultSearch =  mysqli_query($conn, $query);
+
+            if (!$resultSearch){
+                echo "Không có sản phẩm nào";
+            }
+            else {
+                
+                if (!mysqli_num_rows($resultSearch)==0 && $search!=""){
+                    echo "<div class='product-content--link' align='left' style='margin-bottom: 30px'>";
+                    echo "<h1 class='admin-product--title'>THÔNG TIN CỦA SẢN PHẨM</h1>
+                    <a href='../../admin/san-pham/create.php' class='product-link--edit'>Thêm sản phẩm mới</a>
+                    </div>";
 ?>
     <form action="/doanphp/admin/san-pham/tim-kiem.php" method="get" style="margin-bottom: 30px">
                 <div class="header-menu--search">
@@ -103,6 +115,8 @@ function adminContent()
             echo "
             <form method='post' action=''>
             <input name='delete' type='submit' value='Xóa' class='admin-product--delete absolute'></input>";
+            echo "<p style='margin-bottom: 20px'>Tìm thấy <span style='font-weight: bold'>$numRowSearch</span>
+            kết quả khớp với từ khóa <span style='font-weight:bold'>$search</span></p>";
             echo "<table align='center' class='admin-product--table' id='tableProduct'>";
             echo "<tr >
                     <th><input type='checkbox' class='check-all' /></th>
@@ -114,7 +128,7 @@ function adminContent()
                     <th>Chức năng</th>
                 </tr>";
                 $dem=0;
-                while ($rows=mysqli_fetch_array($result)){
+                while ($rows=mysqli_fetch_array($resultSearch)){
                     $dem++;
                     $id=$rows["ma_sp"];
                     echo "<tr>";
@@ -226,14 +240,26 @@ function adminContent()
                     }
                         
                     echo "</div>";
-                }  
+                }
+                
+            }
+            else {
+                echo "<p style='font-size: 18px; padding: 0 0px 20px; border-bottom: 1px solid lightgray;'>Không tìm thấy kết quả với từ khóa '<span style='font-weight: bold'>$search</span>'</p>";
+                echo "<ul style='margin-top: 10px;list-style-type: disc; padding: 0 20px'><span style='font-weight: bold'>Hãy thử lại bằng cách</span>
+                    <li> Kiểm tra lỗi chính tả của từ khóa đã nhập.</li>
+                    <li> Thử lại bằng từ khóa khác.</li>
+                    <li> Thử lại bằng những từ khóa tổng quát hơn.</li>
+                    <li> Thử lại bằng những từ khóa ngắn gọn hơn.</li>
+                    </ul>
+                ";
+                echo "<a href='../../admin/san-pham/index.php' class='product-content--link'>Quay lại danh sách sản phẩm</a>";
         }
     }
     echo "</div>";
 }
-include("../../block/admin-block.php");
+        }
+    }
 ?>
-
 <script>
         const checkAllDel = document.querySelector(".check-all")
         if(checkAllDel)
