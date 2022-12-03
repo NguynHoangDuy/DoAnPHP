@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="">
+                    <a href="../danh-muc">
                         <img src="../../assets/images/list-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Danh Mục</span>
                     </a>
