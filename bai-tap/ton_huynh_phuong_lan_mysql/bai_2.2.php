@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xuất thông tin khách hàng</title>
-    <link rel="stylesheet" href="../../assets/css/main.css"/>
+    <link rel="stylesheet" href="../../assets/css/main.css" />
     <link rel="icon" type="image/x-icon" href="../../assets/images/blue_tea_logo.webp">
-	<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
     </style>
 </head>
+
 <body>
     <?php
         include("../../block/header.php");
@@ -61,4 +60,5 @@
         include("../../block/footer.php")
     ?>
 </body>
+
 </html>

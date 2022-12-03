@@ -1,7 +1,7 @@
-
 .categorySlider {
   display: flex;
 }
+
 h1 {
   margin-bottom: 14px;
   font-size: 22px;
@@ -19,7 +19,7 @@ h1 {
   flex-direction: column;
 }
 
-.select-box .options-container  {
+.select-box .options-container {
   background: #1d48ba;
   color: #f5f6fa;
   max-height: 0;
@@ -39,7 +39,7 @@ h1 {
   background: #1d48ba;
   border-radius: 8px;
   margin-bottom: 8px;
-  color: #D6E4E5;
+  color: #d6e4e5;
   position: relative;
   font-size: 18px;
   order: 0;

@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab2.5</title>
-    <link rel="stylesheet" href="../../assets/css/main.css"/>
-	<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        .app {
-            margin: 20px auto 30px;
-            font-size: 20px;
-        }
-        .content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
+    .app {
+        margin: 20px auto 30px;
+        font-size: 20px;
+    }
 
-        table, th, td {
-            border: 1px groove #D3E4DB;
-        }
-        .content-table thead tr {
-            color: #D10E4C;
-            text-align: center;
-            font-weight: bold;
-        }
-        
-        .image-items {
-            width: 100px;
-            height: 100px;
-        }
-        /* .content-table tbody tr:nth-of-type(odd) {
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px groove #D3E4DB;
+    }
+
+    .content-table thead tr {
+        color: #D10E4C;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .image-items {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* .content-table tbody tr:nth-of-type(odd) {
             background-color: #B3D0C7;
         }        */
-        /* pagination  */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .pagination a {
-            color: black;
-            float: left;
-            padding: 8px 16px;
-            text-decoration: none;
-            
-        }
+    /* pagination  */
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
 
-        .pagination a.active {
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-        }
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
 
-        .pagination a:hover:not(.active) {
-            background-color: #ddd;
-            border-radius: 5px;
-        }
+    }
+
+    .pagination a.active {
+        background-color: #4CAF50;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
     </style>
 </head>
+
 <body>
     <?php
         include("../../block/header.php");
     ?>
-<div class="app">
-    <div class="content">
-        <table class="content-table">
-            <thead>
-                <tr>
-                    <th colspan="2">Thông tin sản phẩm</th>
-                </tr>
-            </thead>
-            <tbody>
-    <?php
+    <div class="app">
+        <div class="content">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Thông tin sản phẩm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
         require('./db_helper/DB_driver.php');
         $DB = new DB_driver();
         $rowPerPage = 7;
@@ -113,11 +117,11 @@
             ';
         }
     ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="pagination">
-    <?php
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            <?php
         $firstPage = 1;
         echo "<a href=".$_SERVER ['PHP_SELF']."?page=".$firstPage.">&laquo;</a>"; 
         $prePage = $page - 1;
@@ -138,11 +142,12 @@
         echo "<a href=".$_SERVER ['PHP_SELF']."?page=".$lastPage.">&raquo;</a>";  
         
     ?>
+        </div>
     </div>
-</div>
 
     <?php
         include("../../block/footer.php");
     ?>
 </body>
+
 </html>
