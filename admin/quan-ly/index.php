@@ -24,7 +24,7 @@ function adminContent()
     <i class='fa fa-newspaper'></i>
     <p>Tin Tức</p>
     </a>";
-    echo "<a class='admin-menu--item' href='../../admin/lien-he'>
+    echo "<a class='admin-menu--item' href='../../admin/lien-he/index.php'>
     <i class='fa fa-file-contract'></i>
     <p>Liên hệ</p>
     </a>";

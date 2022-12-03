@@ -71,7 +71,7 @@
                     </a>
                 </li>
                 <li class="admin-sidebar-item">
-                    <a href="">
+                    <a href="../lien-he/index.php">
                         <img src="../../assets/images/file-contract-solid.png" alt="" class="admin-sidebar-icon">
                         <span class="admin-sidebar-desc">Liên Hệ</span>
                     </a>
