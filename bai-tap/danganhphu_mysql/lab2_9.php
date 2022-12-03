@@ -27,7 +27,7 @@
             border-radius: 50px;
         }
 
-        .content {
+        .contentTB {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -96,7 +96,7 @@
             </form>
     </div>
 
-    <div class="content">
+    <div class="contentTB">
         <table class="content-table">
             <thead>
                 <tr>

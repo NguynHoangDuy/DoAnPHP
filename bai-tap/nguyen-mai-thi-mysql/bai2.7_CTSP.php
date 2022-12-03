@@ -19,19 +19,45 @@
         include("../../block/header.php");
     ?>
     <style>
-        td {
-        max-width: 400px;
+    a,
+    b {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        cursor: pointer;
     }
-    p{
-        margin: 5px 0;
-        font-weight: 700;
+
+    .phantrang {
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
     }
-    span{
-        font-weight: 100;
+
+    .img-product {
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    td {
+        text-align: center;
+        padding: 10px;
     }
     </style>
+    <style>
+    td,
+    th {
+        padding: 10px;
+        border: 1px solid grey;
+    }
 
-    <?php
+    table {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    </style>
+<div class="container">
+<?php
     $id = $_GET['id'];
     if ($id == "") {
         echo "Không có sản phẩm nào hết";
@@ -74,6 +100,8 @@
         }
     }
     ?>
+</div>
+    
     <?php
         include("../../block/footer.php");
     ?>

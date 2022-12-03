@@ -39,8 +39,8 @@
                     </h4>
                     <span>MSSV: 61130888</span>
                 </a>
-                <a href="" class="info-item">
-                    <img src="" alt="" class="info-img">
+                <a href="./gioi-thieu/anh-phu.php" class="info-item">
+                    <img src="./assets/images/avatar-anh-phu.jpg" alt="" class="info-img">
                     <h4 class="info-content">
                         Đặng Anh Phú
                     </h4>

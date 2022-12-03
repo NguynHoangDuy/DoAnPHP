@@ -19,7 +19,6 @@
         include("../../block/header.php");
         echo "<div class='container'>";
         $conn= mysqli_connect("localhost", "root", "", "quanly_ban_sua") or die('Không thể kết nối' . mysqli_connect_error());
-        mysqli_set_charset($conn, charset:'utf8');
         $query="SELECT * FROM khach_hang";
         $result=mysqli_query($conn, $query);
         if (mysqli_num_rows($result) <>0)

@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-    .app {
-        margin: 20px auto 30px;
-        font-size: 20px;
-    }
-
+        .app {
+            margin: 20px auto 30px;
+            font-size: 20px;
+        }
+        .contentTB {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
     .content {
         display: flex;
         align-items: center;
@@ -74,16 +79,16 @@
     <?php
         include("../../block/header.php");
     ?>
-    <div class="app">
-        <div class="content">
-            <table class="content-table">
-                <thead>
-                    <tr>
-                        <th colspan="2">Thông tin sản phẩm</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
+<div class="app">
+    <div class="contentTB">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th colspan="2">Thông tin sản phẩm</th>
+                </tr>
+            </thead>
+            <tbody>
+    <?php
         require('./db_helper/DB_driver.php');
         $DB = new DB_driver();
         $rowPerPage = 7;

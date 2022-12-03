@@ -2,6 +2,7 @@
     display: flex;
     flex-flow: row wrap;
     gap: 50px;
+    justify-content: center;
 }
 .people-item{
     width: 300px;

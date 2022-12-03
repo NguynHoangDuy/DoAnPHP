@@ -2,7 +2,7 @@
 $none = "";
 $tb = "";
 session_start() ;
-if ($_SESSION["tb"]) {
+if (isset($_SESSION["tb"])) {
     if($_SESSION["tb"] == "remove")
     {
         $tb = "Xóa";

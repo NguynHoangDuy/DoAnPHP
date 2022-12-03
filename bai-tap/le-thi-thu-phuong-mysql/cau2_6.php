@@ -18,6 +18,15 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 800px; margin: 0 auto;
+        }
+        </style>
     <div class="container">
     <?php
     $rowsPerPage = 5;

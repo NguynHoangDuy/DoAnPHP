@@ -1,72 +1,93 @@
 <?php
-//thông báo xóa nhân viên
 session_start();
-if (isset($_SESSION["err"]))
+if (isset($_SESSION["noti-category"]))
 {
 
     echo "<div class='noti-show'>
-    <p class='update-noti--text'><span>".$_SESSION["err"]."</span>
+    <p class='update-noti--text'><span>".$_SESSION["noti-category"]."</span>
     <i class='fa fa-close update--noti noti--close'></i>
     </p>
     </div>";
-    unset($_SESSION["err"]);
+    unset($_SESSION["noti-category"]);
 }
 session_write_close();
-?>
-<?php
-//thông báo thêm nhân viên mới
 session_start();
-if (isset($_SESSION["noti-people"]))
+if (isset($_SESSION["noti"]))
 {
 
     echo "<div class='noti-show'>
-    <p class='update-noti--text'><span>".$_SESSION["noti-people"]."</span>
+    <p class='update-noti--text'><span>".$_SESSION["noti"]."</span>
     <i class='fa fa-close update--noti noti--close'></i>
     </p>
     </div>";
-    unset($_SESSION["noti-people"]);
+    unset($_SESSION["noti"]);
 }
 session_write_close();
-include("../../block/admin-block.php");
-function adminContent(){
-    echo "<div class='container'>";
-    echo "<div class='product-content--link' align='left' style='margin-bottom: 30px'>";
-    echo "<h1 class='admin-product--title'>DANH SÁCH NHÂN VIÊN</h1>
-    <a href='../../admin/nhan-vien/create.php' class='product-link--edit'>Thêm nhân viên mới</a>
-</div>";
 include("../../block/connection.php");
-    $rowsPerPage=5;
-    if ( ! isset($_GET['page']))
-        $_GET['page'] = 1;
-    $offset =($_GET['page']-1)*$rowsPerPage;
-    $query = "SELECT * FROM nhan_vien";
-    $result = mysqli_query($conn, $query);
-    $numRow = mysqli_num_rows($result);
+include("../../block/global.php");
+if (isset($_GET["ok"])){
+    $id= $_GET['id'];
+    include("../../block/connection.php");
+    $sql= "DELETE FROM danh_muc WHERE ma_dm='$id'";
+    $result=mysqli_query($conn,$sql);
+                        }
+function adminContent()
+{
+    echo '<div class="container">';
+    include("../../block/connection.php");
+    $rowsPerPage = 6;
+        if(!isset($_GET['page']))
+        {
+            $_GET['page'] = 1;
+        }
+        $offset = ($_GET['page']-1)* $rowsPerPage;
+        $query="SELECT * FROM danh_muc";
+        $result = mysqli_query($conn, $query);
+        $numRow = mysqli_num_rows($result);
 
-    $maxPage = ceil($numRow / $rowsPerPage); 
-    $query = "SELECT * FROM nhan_vien LIMIT $offset, $rowsPerPage";
-    $result = mysqli_query($conn, $query);
+        $maxPage = ceil($numRow / $rowsPerPage); 
+        $query = "SELECT ma_dm, ten_dm FROM danh_muc LIMIT $offset, $rowsPerPage";
+        $result =  mysqli_query($conn, $query);
     if (!$result){
-        echo "<p sstyle='color: red; font-weight: bold'>Không có dữ liệu</p>";
+        echo "Không có danh mục nào";
     }
     else {
         if (!mysqli_num_rows($result)==0){
-            echo "<div class='people'>";
-            while ($row=mysqli_fetch_array($result)){
-                echo "<div class='people-item'>";
-                echo "<a href='../../admin/nhan-vien/edit.php?id=".$row['ma_nv']."'>";
-                if ($row['hinh_anh']==null) echo "<img src='../../assets/images/personal.png' class='people-img'>";
-                else echo "<img src='../../assets/images/".$row['hinh_anh']."' class='people-img'>";
-                echo "<div class='people-content'>";
-                echo "<p class='people-name'> <span>Tên nhân viên:</span> ".$row['ho_nv']. " " .$row['ten_nv']."</p>";
-                if ($row['gioi_tinh']==1) echo "<p class='people-gender'><span>Giới tính: </span> Nam</p>"; else echo "<p class='people-gender'><span>Giới tính: </span> Nữ</p>";
-                echo "<p class='people-tel'><span>Số điện thoại:</span> ".$row['sdt']."</p>";
-                echo "<p class='people-address'><span>Địa chỉ: </span>".$row['dia_chi']."</p>";
-                echo "</div>";
-                echo "</a>";
-                echo "</div>";
-            }
-            if($maxPage != 1)
+            echo "<div class='category-content--link' align='left' style='margin-bottom: 30px'>";
+            echo "<h1 class='admin-category--title'>THÔNG TIN DANH MỤC</h1>
+            <a href='../../admin/danh-muc/create.php' style=' border: 1px solid #1d48ba;
+            background-color: #1d48ba;'>Thêm danh mục</a>
+        </div>";
+            echo "<table align='center' class='admin-category--table' >";
+            echo "<tr >
+                    <th>STT</th>
+                    <th>Mã danh mục</th>
+                    <th>Tên danh mục</th>
+                    <th>Chức năng</th>
+                </tr>";
+                // $temp=$_GET['page']*$rowsPerPage;
+                // if($temp<=$rowsPerPage) $dem=0;
+                // else $dem=$temp-$rowsPerPage;
+                $dem=0;
+                while ($rows=mysqli_fetch_array($result)){
+                    $dem++;
+                    $id=$rows["ma_dm"];
+                    echo "<tr>";
+                    echo "<td>".$dem."</td>";
+                    echo "<td><span class='id_dm'>{$rows['ma_dm']}</span></td>";
+                    echo "<td>{$rows['ten_dm']}</td>";
+                    echo "<td align='center'><a href='../../admin/danh-muc/edit.php?id=".$id."'>
+                        <i class='fa fa-edit' title='Chỉnh sửa'></i> 
+                    </a> |
+                        <i class='fa fa-trash admin-delete' style='color: red' title='Xóa' ></i> 
+                    </td>";
+                    echo "</tr>";
+                }
+                echo "</table>";
+                // $re = mysqli_query($conn, 'select * from san_pham');
+                // $numRows = mysqli_num_rows($re);
+                // $maxPage = floor($numRows/$rowsPerPage) + 1;
+                if($maxPage != 1)
                 {
                     echo "<div class='phanTrang'>";
                     if($maxPage > 4)
@@ -136,6 +157,7 @@ include("../../block/connection.php");
                         $nextPage = $_GET['page'] + 1;
                         if($nextPage == $maxPage+1)
                         {
+
                             $nextPage = 1;
                         }
                         echo "<a class='link-btn' href=".$_SERVER ['PHP_SELF']."?page=".$nextPage.">";
@@ -151,14 +173,50 @@ include("../../block/connection.php");
                 }  
         }
     }
-    echo "</div>";
-
 }
+include("../../block/admin-block.php");
 ?>
 <script>
-    window.addEventListener("click",function(e){
+        const btnDelete = document.querySelectorAll(".admin-delete");
+        const container = document.querySelector(".container");
+        function addModal(){
+            const template =`<form action="" method="get" >
+            <div class="modal modal-hidden" align='center'>
+            <input type="hidden" class="id-category" name="id"> 
+            
+            <i class="fa fa-close modal-content--close"></i>
+                <div class="modal-content">
+                    <div class="modal-content--text">Bạn có muốn xóa danh mục này không?</div>
+                    <div class="modal-content--link">
+                        <input type="submit" name="reset" class='modal-content--close' value="Hủy"></input>
+                        <input name="ok" type="submit" class='modal-content--delete' value="Xóa"></input>
+                    </div>
+                </div>
+            </div>
+            </form>`;
+        container.insertAdjacentHTML("beforeend", template);
+        }
+        btnDelete.forEach((item, index) => item.addEventListener("click", function(e){
+            const idProduct = document.querySelectorAll(".id_dm");
+            e.preventDefault();
+            var id = idProduct[index].textContent;
+            console.log(id);
+            addModal();
+            const modal = document.querySelector(".modal");
+            const idProductDel = document.querySelector(".id-category");
+            idProductDel.value=id;
+            console.log(idProductDel.value);
+            modal.classList.remove("modal-hidden");
+            modal.classList.add("modal-show");
+            const btnClose = document.querySelectorAll(".modal-content--close");
+            btnClose.forEach((item) => item.addEventListener("click", function(){
+                modal.classList.remove("modal-show");
+                modal.classList.add("modal-hidden");
+            }))
+        }));
+        window.addEventListener("click",function(e){
     if (e.target.matches(".noti--close")){
         document.querySelector(".noti-show").style="z-index: 0; transition: all .25s linear";
     }
 })
-</script>
+    </script>

@@ -5,8 +5,15 @@ if (isset($_POST["submit"])){
     $tenSP=$_POST['tenSP'];
     $giaSP=$_POST['giaSP'];
     $motaSP= $_POST['motaSP'];
-    $dm_SP=substr($dm,0,2);
-    $idSP="";
+    if (($dm=="MUT") || ($dm=="THA") || ($dm=="TRA")) {
+        $dm_SP=substr($dm,0,2);
+    }
+    else {
+        if ($dm=="SUB") $dm_SP="SB";
+        else if ($dm=="SID") $dm_SP="SD";
+        else if ($dm=="TRC") $dm_SP="TC";
+    }
+    $idSP="";//tạo mã rỗng
     $sql = "SELECT MAX(ma_sp) FROM `san_pham` WHERE danh_muc='$dm'";
     $result=mysqli_query($conn, $sql);
     if ($result){
@@ -17,11 +24,12 @@ if (isset($_POST["submit"])){
                 $id_num=substr($id_SP,-1);//lấy phần tử cuối 
                 $id_text=substr($id_SP,0,2);//lấy 2 phần tử đầu
                 $idNum=substr($id_SP,2,1);//lấy phần tử còn lại
+                $id_num=(int)$id_num+1;
                 if ($id_num>9){
                     $id_num=0;
                     $idNum=(int)$idNum+1;
                 } else if ($id_num<=9){
-                    $id_num=(int)$id_num+1;
+                    $id_num=$id_num;
                     $idNum=$idNum;
                 }
                 $id_text.=(string)$idNum;

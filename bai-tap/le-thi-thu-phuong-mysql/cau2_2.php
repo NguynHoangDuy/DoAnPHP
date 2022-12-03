@@ -18,6 +18,15 @@
         // include("../block/global.php");
         include("../../block/header.php");
     ?>
+    <style>
+        td, th{
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        table{
+            max-width: 1000px; margin: 0 auto;
+        }
+    </style>
     <div class="container">
 <?php 
         $servername="localhost";
@@ -30,7 +39,7 @@
         if(mysqli_num_rows($result)<>0){
             echo "<p align='center'><font size='5' color='blue'> THÔNG TIN HÃNG SỮA</font></p>";
             echo "<table width='100%' border-top='1px solid black' cellpadding='2' style='border-collapse'>";
-            echo "<tr align='center' style='color:red'>
+            echo "<tr align='center'>
                     <th>MÃ KH</th>
                     <th>Tên khách hàng</th>
                     <th>Giới tính</th>

@@ -279,6 +279,20 @@ select.product-update-input {
     border-radius: 100%;
     cursor: pointer;
 }
+.admin-product--delete{
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    transition: all.25s linear;
+}
+.admin-product--delete:hover{
+    box-shadow: 0 0px 4px 4px lightgrey;
+    transition: all.25s linear;
+}
 @media screen and (max-width: 767px){
     .admin-product--detail{
         flex-direction: column;

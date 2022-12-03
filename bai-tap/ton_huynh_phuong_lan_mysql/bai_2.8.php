@@ -22,7 +22,6 @@
         $_GET['page'] = 1;
     $offset =($_GET['page']-1)*$rowsPerPage;
     $conn= mysqli_connect("localhost", "root", "", "quanly_ban_sua") or die('Không thể kết nối' . mysqli_connect_error());
-    mysqli_set_charset($conn, charset:'utf8');
     $query= "SELECT Ma_sua, Ten_sua,Ten_hang_sua, Trong_luong, Don_gia, Hinh, TP_Dinh_Duong, Loi_ich
     FROM sua inner join hang_sua on sua.Ma_hang_sua = hang_sua.Ma_hang_sua 
     inner join loai_sua on sua.Ma_loai_sua = loai_sua.Ma_loai_sua LIMIT $offset, $rowsPerPage";
