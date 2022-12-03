@@ -88,7 +88,7 @@
                     <a href="/doanphp/gio-hang.php" class="header-menu--link">Đặt hàng</a>
                 </div>
                 <div class="header-menu--item">
-                    <a href="/doanphp/lien-he.php" class="header-menu--link">liên hệ</a>
+                    <a href="/doanphp/lien-he-chungtoi.php" class="header-menu--link">liên hệ</a>
                 </div>
             </div>
             <form action="/doanphp/tim-kiem.php" method="get">
